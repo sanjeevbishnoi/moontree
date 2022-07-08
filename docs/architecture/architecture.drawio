@@ -1,0 +1,205 @@
+<mxfile host="65bd71144e">
+    <diagram id="4qzn5sLREzXGOIQIwJdZ" name="Page-1">
+        <mxGraphModel dx="1336" dy="1452" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="31" value="builds" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Infrastructure" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="243" y="780" width="365" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Domain" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="243" y="290" width="365" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Application" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="243" y="150" width="365" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.75;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="6" target="57">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="517" y="-104"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="Presentation" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="243" y="10" width="365" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="7" target="73">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="External" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="243" y="1070" width="365" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="can call" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8" target="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="450" y="840"/>
+                            <mxPoint x="450" y="840"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="54" value="returns" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="8" target="46">
+                    <mxGeometry x="-0.0302" y="10" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="200" y="833"/>
+                            <mxPoint x="200" y="218"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="66" value="calls" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="8" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Repository" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="310.5" y="825" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Repository" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="825" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="can have" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="12" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="290.5" y="435"/>
+                            <mxPoint x="380.5" y="435"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" value="passed to" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="12" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="passed to" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="12" target="35">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Entity" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="250.5" y="380" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Entity" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="340.5" y="380" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="passed to" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="14" target="35">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Entity" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="430.5" y="380" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Entity" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="520.5" y="380" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="can have" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="21" target="15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Value" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="520.5" y="505" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="can have" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;" edge="1" parent="1" source="24" target="21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Value" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="496" y="580" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="validates" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;" edge="1" parent="1" source="26" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="validation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="340.5" y="580" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&lt;h1&gt;Domain&lt;/h1&gt;&lt;p&gt;Entity Objects:&lt;/p&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;p&gt;higher level data classes. has factories, but no other functionality.&lt;/p&gt;&lt;p&gt;(the aggregated data the way the user thinks about the concepts).&amp;nbsp;&lt;/p&gt;&lt;p&gt;entities have an interface that defines how the repository should work.&lt;/p&gt;&lt;p&gt;entities can refer to other entities. in such a situation...&lt;/p&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;p&gt;the top one is the root entity.&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;p&gt;changes to lower entities go through the root.*&lt;/p&gt;&lt;p&gt;&lt;span&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&#9;&lt;/span&gt;*probably through a service because entities are data classes and don't have functioanlity of their own.&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;p&gt;Value Objects:&lt;/p&gt;&lt;blockquote style=&quot;border: none ; margin: 0px 0px 0px 40px ; padding: 0px&quot;&gt;&lt;p&gt;variable that represents a value or an error.&amp;nbsp;&lt;/p&gt;&lt;p&gt;has functionality to allow us to view the value differently.&lt;/p&gt;&lt;p&gt;entities are made up of value objects.&lt;/p&gt;&lt;p&gt;can even be made up of other value objects.&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;span&gt;Services:&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;p&gt;home of domain-specific arbitrary functionality for any needs not satisfied by validation or value objects or entity factories.&lt;/p&gt;&lt;/blockquote&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="290" width="750" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="250.5" y="555" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="&lt;h1&gt;Infrastructure&lt;/h1&gt;&lt;p&gt;Repositories:&lt;/p&gt;&lt;blockquote style=&quot;border: none ; margin: 0px 0px 0px 40px ; padding: 0px&quot;&gt;&lt;p&gt;meant to provide a means whereby to acquire and build the entity objects.&lt;/p&gt;&lt;p&gt;works according to the interface defined by domain.&lt;/p&gt;&lt;p&gt;typically a repository corresponds to an entity since it produces them.&lt;/p&gt;&lt;p&gt;can reference / use other repositories, just as entities can be built out of other entities.&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;There's more but its not modelled since it handles efficiency concerns and doing DDD we will no solve for efficiency until we have to.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="780" width="750" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="310.5" y="515" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;" edge="1" parent="1" source="42" target="21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="validation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="410.5" y="505" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;h1&gt;Application Layer&lt;/h1&gt;&lt;p&gt;Cubits and Blocs:&lt;/p&gt;&lt;blockquote style=&quot;border: none ; margin: 0px 0px 0px 40px ; padding: 0px&quot;&gt;&lt;p&gt;meant to respond to information coming from user behavior with information from repositories (entity objects).&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;State objects:&lt;/p&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;p&gt;Holds the state generated by the cubit or bloc.&lt;/p&gt;&lt;p&gt;State is what the presentation layer actually sees.&lt;/p&gt;&lt;/blockquote&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="50" width="750" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="produces" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="46" target="47">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="uses" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="46" target="8">
+                    <mxGeometry x="-0.0386" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="203"/>
+                            <mxPoint x="160" y="848"/>
+                        </Array>
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="Cubit" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="285" y="195" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="provided to" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="47" target="49">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="CubitState" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="485" y="195" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="uses" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="49" target="46">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="BlocProvider&lt;br&gt;BlocConsumer&lt;br&gt;etc." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="365" y="50" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="57" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="-110" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="implements" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="61" target="8">
+                    <mxGeometry x="0.5581" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="220" y="355"/>
+                            <mxPoint x="220" y="730"/>
+                            <mxPoint x="331" y="730"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="68" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="61" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="interface" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="340" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="62" target="13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&#10;&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;interface&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="340" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="63" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="&#10;&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;interface&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="340" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;startArrow=none;startFill=0;endArrow=none;endFill=0;" edge="1" parent="1" source="64" target="15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="&#10;&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;interface&lt;/span&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="530" y="340" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="73" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="Efficiency dictates another layer here to handle raw data&lt;br&gt;conform it to a database ameanable to generate entity objects out of.&lt;br&gt;&lt;br&gt;Conveniently, Resocoder doesn't seem to handle this requirement in his demos.&lt;br&gt;&lt;br&gt;Fortunately, we should be able to handle it such that the repositories are always calling a database and don't have to care about handling external data." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="242" y="900" width="367" height="150" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

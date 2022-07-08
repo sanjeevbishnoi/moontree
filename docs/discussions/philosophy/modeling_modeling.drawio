@@ -1,0 +1,98 @@
+<mxfile host="65bd71144e">
+    <diagram id="4BexKkC1Vq8vqz2mvJRx" name="Page-1">
+        <mxGraphModel dx="1616" dy="414" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="&lt;h1&gt;Modeling&lt;/h1&gt;&lt;p&gt;We're in the business of modeling.&lt;/p&gt;&lt;p&gt;We get the user model out of their head and map it to simple rules and simple datastructures (domain model).&lt;/p&gt;&lt;p&gt;We look at the data flow and how it happens (ETL).&lt;/p&gt;&lt;p&gt;We have to understand how the program will run (call stack).&lt;/p&gt;&lt;p&gt;We have to understand where the code is located and the separation of dependancy (architecture).&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="10" width="820" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;h1&gt;Priorities&lt;/h1&gt;&lt;p&gt;It seems in order to give the user what they want we have to model their understanding (domain model) and figure out how to get them the data they need (data flow) in an efficient way (data model and ETL).&lt;/p&gt;&lt;p&gt;That's been my main focus so far. Secondarily, as I prioritize getting the user what they want I've used my own namespace management in order to put code in a reasonable place, I've used my&amp;nbsp;&lt;span&gt;understanding of separation of conerns wherever I could foresee it's needed, and I've used dependancy injection whenever I needed it to solve particular puzzles.&amp;nbsp; These have served to form an architecture that is sensible but not obvious, modifiable but not easily testable, partly because efficiency always fought against separate concerns.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;My main concern was my understanding that modeling something as naively as possible means its inefficient and will have to be redesigned anyway. So my paradigm has always been, find a balance where you maximized efficiency in a general way such that you have to recreate what you've already done as little as possible. But I'm thinking I see a new paradigm, one that doesn't balance, but instead builds.&lt;/p&gt;&lt;p&gt;Since I've been focused on developing a new model of architecture I think I see a way forward using the process of DDD and the pattern of clean architecture to build things in such a way that things don't have to be rebuilt and rebuilt and rebuilt. My eureka moment came when I realized the domain model that the user wants to see, the most naive inefficient way of managing the information IS the first layer you build, and the one closest to the UI, indeed you might as well build the UI first (or design it in a tool first). But instead of thinking of that naive layer as junk you'll throw away for something more efficient, think of it as a persistent layer, which will eventually be supported by subsequent, more efficient layers underneath.&lt;/p&gt;&lt;p&gt;This means, in theory, ideally, unless the user changes their mind, you'll never have to change &quot;higher&quot; layers you've already made, just change and mostly create &quot;lower&quot; layers that they talk to.&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="210" width="820" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="145" y="550" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Transformation Layer" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="70" y="660" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font color=&quot;#4d4d4d&quot;&gt;Infrastructure&lt;/font&gt;" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="10" y="760" width="330" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="curved=1;endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="7" target="5">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="355" y="665" as="sourcePoint"/>
+                        <mxPoint x="437.5" y="665" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="278" y="693"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="Constant recreation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="85.5" y="690" width="179" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="UI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="158" y="590" width="35" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Paradigm Shift" style="shape=flexArrow;endArrow=classic;html=1;width=19;endSize=15.25;" edge="1" parent="1">
+                    <mxGeometry x="-0.2" width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="310" y="689.5" as="sourcePoint"/>
+                        <mxPoint x="510" y="689.5" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="605" y="550" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="First Domain Layer&lt;br&gt;(naive)" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="530" y="660" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;font color=&quot;#4d4d4d&quot;&gt;Infrastructure Interface for First Domain Layer&lt;/font&gt;" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="470" y="760" width="330" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="UI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="618" y="590" width="35" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Second Domain Layer&lt;br&gt;(slightly more efficient)&lt;br&gt;(acts as repository for First Domain Layer)" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="410" y="860" width="450" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;font color=&quot;#4d4d4d&quot;&gt;Infrastructure Interface for Second Domain Layer&lt;/font&gt;" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="350" y="960" width="570" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="etc.&lt;br&gt;Constant addition.&lt;br&gt;Refactor as occasional compression of layers.&lt;br&gt;Easy to test." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="350.5" y="1060" width="570" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="curved=1;endArrow=classic;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="26" target="20">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="815" y="665" as="sourcePoint"/>
+                        <mxPoint x="897.5" y="665" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="810" y="810"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="&lt;font color=&quot;#4d4d4d&quot;&gt;Infrastructure&lt;/font&gt;" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="200" y="1170" width="850" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="1105" y="550" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Domain Layer" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="1030" y="660" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="UI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1118" y="590" width="35" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="&lt;font color=&quot;#4d4d4d&quot;&gt;Infrastructure&lt;/font&gt;" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="910" y="870" width="460" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Transformation Layer" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=40;fontStyle=1" vertex="1" parent="1">
+                    <mxGeometry x="970" y="760" width="330" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Constant recreation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1045.5" y="790" width="179" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

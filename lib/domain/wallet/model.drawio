@@ -1,0 +1,54 @@
+<mxfile host="65bd71144e">
+    <diagram id="BWYd3KJGAr017hdOrgJx" name="Model">
+        <mxGraphModel dx="-3053" dy="-5148" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b&gt;Wallet&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=27;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;fontColor=#F0F0F0;strokeColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="4287" y="5527" width="213" height="147" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="WalletName name (id)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="27" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="HashedEntropy hashedEntropy" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="47" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="PrivKey privKey" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="67" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="PubKey pubKey" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="87" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="PubKeyAddress receiveAddress" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="107" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="List&amp;lt;Holding&amp;gt; holdings" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="127" width="213" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="Z8ve_i1k2ViZarEndNJg" name="Validation">
+        <mxGraphModel dx="942" dy="352" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="gR1c2OEO8BX57OVhKf7L-0"/>
+                <mxCell id="gR1c2OEO8BX57OVhKf7L-1" parent="gR1c2OEO8BX57OVhKf7L-0"/>
+                <mxCell id="6rJMJEAZ7CnM76fzyQ4B-0" value="Wallet" style="swimlane;" parent="gR1c2OEO8BX57OVhKf7L-1" vertex="1">
+                    <mxGeometry x="10" y="10" width="770" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="6rJMJEAZ7CnM76fzyQ4B-1" value="WalletName" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="6rJMJEAZ7CnM76fzyQ4B-0" vertex="1">
+                    <mxGeometry x="10" y="40" width="390" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6rJMJEAZ7CnM76fzyQ4B-2" value="1 -  20 characters" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="6rJMJEAZ7CnM76fzyQ4B-1" vertex="1">
+                    <mxGeometry y="30" width="390" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="sxQhP49ARwDkgvrZOIdU-0" value="Base58" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="6rJMJEAZ7CnM76fzyQ4B-0" vertex="1">
+                    <mxGeometry x="10" y="110" width="390" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sxQhP49ARwDkgvrZOIdU-1" value="TBA" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="sxQhP49ARwDkgvrZOIdU-0" vertex="1">
+                    <mxGeometry y="30" width="390" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

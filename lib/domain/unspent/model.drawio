@@ -1,0 +1,28 @@
+<mxfile host="65bd71144e">
+    <diagram id="BWYd3KJGAr017hdOrgJx" name="Model">
+        <mxGraphModel dx="-2504" dy="-5148" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3mrRI6Dg5IItE96_tzJ7-22" value="&lt;b&gt;Unspent&lt;br&gt;&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=27;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;fontColor=#F0F0F0;strokeColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="4266" y="5515" width="213" height="127" as="geometry"/>
+                </mxCell>
+                <mxCell id="3mrRI6Dg5IItE96_tzJ7-32" value="TxId txId" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="3mrRI6Dg5IItE96_tzJ7-22" vertex="1">
+                    <mxGeometry y="27" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3mrRI6Dg5IItE96_tzJ7-33" value="TxPosition position" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="3mrRI6Dg5IItE96_tzJ7-22" vertex="1">
+                    <mxGeometry y="47" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="mPQHqYZTjJ4e7mBvd5df-2" value="LockingScript lockingScript" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="3mrRI6Dg5IItE96_tzJ7-22" vertex="1">
+                    <mxGeometry y="67" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3mrRI6Dg5IItE96_tzJ7-34" value="Amount amount" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="3mrRI6Dg5IItE96_tzJ7-22" vertex="1">
+                    <mxGeometry y="87" width="213" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="PubKeyAddress toAddress" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="3mrRI6Dg5IItE96_tzJ7-22" vertex="1">
+                    <mxGeometry y="107" width="213" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,7 @@
+import 'package:dartz/dartz.dart';
+import 'package:moontree_layer_flutter/domain/wallet/entity.dart';
+import 'package:moontree_layer_flutter/domain/wallet/failure.dart';
+
+abstract class IWalletRepository {
+  Future<Either<WalletFailure, Wallet>> getWallet();
+}

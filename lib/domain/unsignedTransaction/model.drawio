@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e">
+    <diagram id="BWYd3KJGAr017hdOrgJx" name="Model">
+        <mxGraphModel dx="-2504" dy="-5148" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b&gt;UnsignedTransaction&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=27;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;fontColor=#F0F0F0;strokeColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="4656" y="5527" width="265" height="147" as="geometry"/>
+                </mxCell>
+                <mxCell id="3mrRI6Dg5IItE96_tzJ7-76" value="bool signed" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="27" width="265" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Amount fee" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="47" width="265" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3mrRI6Dg5IItE96_tzJ7-78" value="TxHash txHash" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="67" width="265" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="dynamic txBuilder&amp;nbsp;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;(ravencoin_wallet object)&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="87" width="265" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;span style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: left ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(42 , 42 , 42) ; display: inline ; float: none&quot;&gt;dynamic tx&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;(ravencoin_wallet object)&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="107" width="265" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="List&amp;lt;Unspent&amp;gt; chosenUnspents" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="2" vertex="1">
+                    <mxGeometry y="127" width="265" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="mPQHqYZTjJ4e7mBvd5df-3" value="created through service" style="edgeStyle=none;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="3mrRI6Dg5IItE96_tzJ7-66" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3mrRI6Dg5IItE96_tzJ7-66" value="&lt;b&gt;Send&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=27;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;fontColor=#F0F0F0;strokeColor=#F0F0F0;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="4270" y="5523" width="213" height="47" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,69 @@
+<mxfile host="65bd71144e">
+    <diagram id="0Jql3yVcE1Q6bpgT624G" name="nested view">
+        <mxGraphModel dx="812" dy="352" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="18" value="&lt;b&gt;Blockchain&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="19" width="446" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;b&gt;Wallet&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="119" y="54" width="330" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Holding&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="199" y="84" width="240" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Holding&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="129" y="84" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Transaction" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="209" y="114" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Transaction" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="289" y="114" width="130" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="TransactionDetail" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" parent="1" vertex="1">
+                    <mxGeometry x="299" y="149" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Wallet" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="1">
+                    <mxGeometry x="35" y="54" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="bBsp-kx0BUdNXxwTikU8" name="node view">
+        <mxGraphModel dx="812" dy="352" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="ZlvuzrWk0eXHYEwFlgUn-0"/>
+                <mxCell id="ZlvuzrWk0eXHYEwFlgUn-1" parent="ZlvuzrWk0eXHYEwFlgUn-0"/>
+                <mxCell id="vKNaxSSd3uLtBDgXRTV--0" value="&lt;b&gt;Blockchain&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="ZlvuzrWk0eXHYEwFlgUn-1">
+                    <mxGeometry x="380" y="40" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="vKNaxSSd3uLtBDgXRTV--13" value="0+" style="edgeStyle=none;html=1;" edge="1" parent="ZlvuzrWk0eXHYEwFlgUn-1" source="vKNaxSSd3uLtBDgXRTV--3" target="vKNaxSSd3uLtBDgXRTV--7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="vKNaxSSd3uLtBDgXRTV--3" value="Holding&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="ZlvuzrWk0eXHYEwFlgUn-1">
+                    <mxGeometry x="395" y="190" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="vKNaxSSd3uLtBDgXRTV--10" value="1" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="ZlvuzrWk0eXHYEwFlgUn-1" source="vKNaxSSd3uLtBDgXRTV--6" target="vKNaxSSd3uLtBDgXRTV--8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="vKNaxSSd3uLtBDgXRTV--6" value="TransactionDetail" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="ZlvuzrWk0eXHYEwFlgUn-1">
+                    <mxGeometry x="370" y="320" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="vKNaxSSd3uLtBDgXRTV--14" value="0+" style="edgeStyle=none;html=1;" edge="1" parent="ZlvuzrWk0eXHYEwFlgUn-1" source="vKNaxSSd3uLtBDgXRTV--7" target="vKNaxSSd3uLtBDgXRTV--0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="vKNaxSSd3uLtBDgXRTV--7" value="Wallet" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="ZlvuzrWk0eXHYEwFlgUn-1">
+                    <mxGeometry x="395" y="120" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="vKNaxSSd3uLtBDgXRTV--11" value="0+" style="edgeStyle=none;html=1;" edge="1" parent="ZlvuzrWk0eXHYEwFlgUn-1" source="vKNaxSSd3uLtBDgXRTV--8" target="vKNaxSSd3uLtBDgXRTV--3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="vKNaxSSd3uLtBDgXRTV--8" value="Transaction" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=2;fillColor=#647687;fontColor=#ffffff;strokeColor=#314354;" vertex="1" parent="ZlvuzrWk0eXHYEwFlgUn-1">
+                    <mxGeometry x="390" y="260" width="70" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,50 @@
+<mxfile host="65bd71144e">
+    <diagram id="jyM7Dry7akG6XX9Me1GQ" name="Model">
+        <mxGraphModel dx="-2530" dy="-5148" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="9" value="&lt;b&gt;Transaction&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=27;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;fontColor=#F0F0F0;strokeColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="4280" y="5517" width="200" height="167" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="TxId txId (id)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="9" vertex="1">
+                    <mxGeometry y="27" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Enum type" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="9" vertex="1">
+                    <mxGeometry y="47" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Enum sentReceived" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="9" vertex="1">
+                    <mxGeometry y="67" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Amount amount" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="9" vertex="1">
+                    <mxGeometry y="87" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="TxConfirmations confirmations" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="9" vertex="1">
+                    <mxGeometry y="107" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="TxDate date" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="9" vertex="1">
+                    <mxGeometry y="127" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="TransactionDetail transactionDetail" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="9" vertex="1">
+                    <mxGeometry y="147" width="200" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="Y6psbzw1-mjbJOXWfqlP" name="Definitions">
+        <mxGraphModel dx="1792" dy="352" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="SWuP3zMKrlDV6iKNwATd-0"/>
+                <mxCell id="SWuP3zMKrlDV6iKNwATd-1" parent="SWuP3zMKrlDV6iKNwATd-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="7XGxT9TCu0bTfMzZmU2E" name="validations">
+        <mxGraphModel dx="1792" dy="352" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="1NEFXrKM-2yHa-C00hY5-0"/>
+                <mxCell id="1NEFXrKM-2yHa-C00hY5-1" parent="1NEFXrKM-2yHa-C00hY5-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

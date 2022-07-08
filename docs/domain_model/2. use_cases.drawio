@@ -1,0 +1,272 @@
+<mxfile host="65bd71144e">
+    <diagram id="Y4eaHlc_QnL1sPNdRxAW" name="Page-1">
+        <mxGraphModel dx="1741" dy="-3986" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b&gt;Easily backup&lt;/b&gt; with access to mnemonic" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="2894" y="4749" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Easily &lt;b&gt;receive &lt;/b&gt;&lt;br&gt;ravencoin or assets" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="1775" y="4749" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="View a receive &lt;b&gt;address&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="1775" y="4849" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="8" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Easily &lt;b&gt;send &lt;/b&gt;ravencoin or assets" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="1442" y="4749" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Easily &lt;b&gt;scan &lt;/b&gt;someone's address" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="1336" y="4849" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Easily &lt;b&gt;specify send&lt;/b&gt; information" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="1549" y="4849" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" source="12" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;b&gt;Accept any kind&lt;/b&gt; of import&lt;br&gt;(files, &lt;font color=&quot;#cdeb8b&quot;&gt;private key, mnemonic&lt;/font&gt;, etc.)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2454" y="4749" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;h1&gt;Use Cases&lt;/h1&gt;&lt;p&gt;A set of most basic behaviors we want the user to be able to perform. Most basic requirements ignoring implementation or design considerations.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1719" y="4410" width="511" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="17" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="17" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" source="17" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;b&gt;Wallet&lt;/b&gt; functionality" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2116" y="4548" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="21" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="21" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;labelBackgroundColor=default;fontColor=#F0F0F0;endArrow=classic;endFill=1;strokeColor=#F0F0F0;dashed=1;" parent="1" source="21" target="72" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1228" y="4744" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="&lt;b&gt;Send / Receive&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="1605" y="4647" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="24" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;dashed=1;" parent="1" source="24" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;b&gt;See Holdings&lt;/b&gt;&lt;br&gt;(Coins, Assets, with amounts and as fiat)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2116" y="4647" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" source="28" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" source="28" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="28" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&lt;b&gt;Import / Export&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2674" y="4647" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;b&gt;Export &lt;/b&gt;to normal formats" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2674" y="4749" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;b&gt;Accept any kind&lt;/b&gt; of wallet&lt;br&gt;(&lt;font color=&quot;#cdeb8b&quot;&gt;key-pair, hd,&lt;/font&gt; watch only, etc.)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2454" y="4849" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" source="32" target="33" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;b&gt;See Transactions&lt;/b&gt;&lt;br&gt;by Coin or Asset" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="2005" y="4749" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="&lt;b&gt;See Transaction Details&lt;/b&gt;&lt;br&gt;by Coin or Asset" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="2005" y="4849" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;font&gt;&lt;b&gt;See All Transactions&lt;/b&gt;&lt;br&gt;by wallet or device or other filters&lt;br&gt;(suggestion)&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="2225" y="4749" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Easily &lt;b&gt;specify &lt;/b&gt;create information per asset type" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;labelBackgroundColor=none;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="1878" y="5216" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="&lt;b&gt;Reissue &lt;/b&gt;asset" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;labelBackgroundColor=none;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="2234" y="5216" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;labelBackgroundColor=none;fontColor=#CDEB8B;" parent="1" source="40" target="43" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;labelBackgroundColor=none;fontColor=#CDEB8B;" parent="1" source="40" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#FFFFCC;labelBackgroundColor=none;fontColor=#FFFFCC;" parent="1" source="40" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="&lt;b&gt;Manage&lt;/b&gt;&amp;nbsp;functionality" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;labelBackgroundColor=none;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2117" y="5015" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;labelBackgroundColor=none;fontColor=#CDEB8B;" parent="1" source="43" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;labelBackgroundColor=none;fontColor=#F0F0F0;endArrow=classic;endFill=1;strokeColor=#F0F0F0;dashed=1;" parent="1" source="43" target="66" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;b&gt;Create&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;labelBackgroundColor=none;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="1878" y="5114" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;b&gt;See Owned Assets&lt;/b&gt;&lt;br&gt;The ones I can administrate" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#CDEB8B;labelBackgroundColor=none;fontColor=#CDEB8B;" parent="1" vertex="1">
+                    <mxGeometry x="2117" y="5114" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#CDEB8B;labelBackgroundColor=none;fontColor=#CDEB8B;" parent="1" source="49" target="36" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#FFFFCC;labelBackgroundColor=none;fontColor=#FFFFCC;" parent="1" source="49" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#FFFFCC;" parent="1" source="49" target="53" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#FFFFCC;" parent="1" source="49" target="64" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="&lt;b&gt;Manage&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;labelBackgroundColor=none;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2674" y="5114" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="edgeStyle=none;html=1;" parent="1" source="51" target="76" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="&lt;b&gt;Tag &lt;/b&gt;addresses&lt;br&gt;qualifier, restricted asset owner" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="2454" y="5216" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" style="edgeStyle=none;html=1;" parent="1" source="53" target="75" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="&lt;b&gt;Freeze &lt;/b&gt;assets" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="2674" y="5216" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;" parent="1" source="57" target="58" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;" parent="1" source="57" target="60" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;" parent="1" source="57" target="61" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="&lt;b&gt;Swap&lt;/b&gt;&amp;nbsp;functionality" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2117" y="5372" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="&lt;b&gt;See assets&lt;/b&gt; I own" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2117" y="5471" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;endArrow=classic;endFill=1;" parent="1" source="60" target="62" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;b&gt;See offerings&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2365" y="5471" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;b&gt;Produce Offer&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1869" y="5471" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&lt;b&gt;Fulfill Offer&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="2365" y="5565" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="&lt;b&gt;Distribute&amp;nbsp;&lt;/b&gt;dividends" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="860" y="4849" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="&lt;b&gt;Broadcast&amp;nbsp;&lt;/b&gt;messages" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="2894" y="5213" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;labelBackgroundColor=none;fontColor=#F0F0F0;endArrow=classic;endFill=1;strokeColor=#F0F0F0;" parent="1" source="66" target="68" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="Ancilary &lt;b&gt;Data Storage&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="1583" y="5216" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;labelBackgroundColor=none;fontColor=#F0F0F0;endArrow=classic;endFill=1;strokeColor=#F0F0F0;" parent="1" source="68" target="69" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="&lt;b&gt;Upload &lt;/b&gt;files to&lt;b&gt; &lt;/b&gt;IPFS" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1583" y="5315" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="&lt;b&gt;Renew&lt;/b&gt;&amp;nbsp;files by signing transaction" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1583" y="5409" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;fontColor=#F0F0F0;endArrow=classic;endFill=1;strokeColor=#F0F0F0;" parent="1" source="72" target="73" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;" parent="1" source="72" target="63" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="&lt;b&gt;Advanced&lt;/b&gt; send abilities?" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="981" y="4750" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="&lt;b&gt;Multi-sig&lt;/b&gt;&amp;nbsp;etc." style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="1098" y="4849" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" style="edgeStyle=none;html=1;" parent="1" source="75" target="76" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="&lt;b&gt;Global, singluar, unfreeze&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="2674" y="5318" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="Explore details here" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;fontColor=#F0F0F0;rounded=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="2490" y="5318" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="Ability to &lt;b&gt;Sign&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F0F0F0;labelBackgroundColor=none;fontColor=#F0F0F0;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="4750" width="192" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;labelBackgroundColor=default;fontColor=#F0F0F0;endArrow=classic;endFill=1;strokeColor=#F0F0F0;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="17" target="77" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="800" y="4720" as="targetPoint"/>
+                        <mxPoint x="1630" y="4570" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="80" value="&lt;b&gt;Account&amp;nbsp;&lt;/b&gt;view?" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2250" y="4510" width="115" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="&lt;b&gt;Device&amp;nbsp;&lt;/b&gt;view?" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#FFFFCC;fontColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="2340" y="4470" width="103" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;labelBackgroundColor=default;fontColor=#F0F0F0;endArrow=classic;endFill=1;strokeColor=#F0F0F0;dashed=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="80" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2340" y="4650" as="targetPoint"/>
+                        <mxPoint x="2361" y="4560" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="2336" y="4640"/>
+                            <mxPoint x="2369" y="4640"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="84" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;labelBackgroundColor=default;fontColor=#F0F0F0;endArrow=classic;endFill=1;strokeColor=#F0F0F0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="81" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2372" y="4740" as="targetPoint"/>
+                        <mxPoint x="2330" y="4550" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="2392" y="4640"/>
+                            <mxPoint x="2369" y="4640"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
