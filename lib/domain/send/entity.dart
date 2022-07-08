@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:moontree_layer_flutter/domain/holding/entity.dart';
-import 'package:moontree_layer_flutter/domain/core/common/values.dart';
-import 'package:moontree_layer_flutter/domain/send/values.dart';
-import 'package:moontree_layer_flutter/domain/unspent/entity.dart';
-import 'package:moontree_layer_flutter/utils/extensions/list.dart';
+import 'package:moontree/domain/holding/entity.dart';
+import 'package:moontree/domain/core/common/values.dart';
+import 'package:moontree/domain/send/values.dart';
+import 'package:moontree/domain/unspent/entity.dart';
+import 'package:moontree/utils/extensions/list.dart';
 
 part 'entity.freezed.dart';
 

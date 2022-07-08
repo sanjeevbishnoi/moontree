@@ -5,11 +5,10 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:moontree_layer_flutter/domain/wallet/entity.dart';
-import 'package:moontree_layer_flutter/domain/wallet/failure.dart';
-import 'package:moontree_layer_flutter/domain/wallet/irepository.dart';
-import 'package:moontree_layer_flutter/application/wallet/holding_service.dart'
-    as holding;
+import 'package:moontree/domain/wallet/entity.dart';
+import 'package:moontree/domain/wallet/failure.dart';
+import 'package:moontree/domain/wallet/irepository.dart';
+import 'package:moontree/application/wallet/holding_service.dart' as holding;
 
 part 'cubit.freezed.dart';
 

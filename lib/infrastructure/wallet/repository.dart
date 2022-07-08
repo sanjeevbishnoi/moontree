@@ -2,14 +2,14 @@ import 'dart:math';
 
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:moontree_layer_flutter/domain/core/common/values.dart';
-import 'package:moontree_layer_flutter/domain/holding/entity.dart';
-import 'package:moontree_layer_flutter/domain/holding/values.dart';
-import 'package:moontree_layer_flutter/domain/transaction/entity.dart';
-import 'package:moontree_layer_flutter/domain/wallet/values.dart';
-import 'package:moontree_layer_flutter/domain/wallet/entity.dart';
-import 'package:moontree_layer_flutter/domain/wallet/failure.dart';
-import 'package:moontree_layer_flutter/domain/wallet/irepository.dart';
+import 'package:moontree/domain/core/common/values.dart';
+import 'package:moontree/domain/holding/entity.dart';
+import 'package:moontree/domain/holding/values.dart';
+import 'package:moontree/domain/transaction/entity.dart';
+import 'package:moontree/domain/wallet/values.dart';
+import 'package:moontree/domain/wallet/entity.dart';
+import 'package:moontree/domain/wallet/failure.dart';
+import 'package:moontree/domain/wallet/irepository.dart';
 
 @Environment('prod')
 @Injectable(as: IWalletRepository)

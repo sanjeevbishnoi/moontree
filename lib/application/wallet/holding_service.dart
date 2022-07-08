@@ -1,4 +1,4 @@
-import 'package:moontree_layer_flutter/domain/holding/entity.dart';
+import 'package:moontree/domain/holding/entity.dart';
 
 String getName(Holding holding) => holding.name.value.fold(
       (l) => 'unknown',

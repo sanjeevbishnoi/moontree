@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:moontree_layer_client/moontree_layer_client.dart';
-import 'package:moontree_layer_flutter/injection.dart';
-import 'package:moontree_layer_flutter/presentation/core/app.dart';
+import 'package:moontree_client/moontree_client.dart';
+import 'package:moontree/injection.dart';
+import 'package:moontree/presentation/core/app.dart';
 
 // Sets up a singleton client object that can be used to talk to the server from
 // anywhere in our app. The client is generated from your server code.

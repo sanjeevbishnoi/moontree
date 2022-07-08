@@ -1,7 +1,6 @@
 import 'dart:async';
 
-import 'package:moontree_layer_flutter/utils/exceptions.dart'
-    show AlreadyListening;
+import 'package:moontree/utils/exceptions.dart' show AlreadyListening;
 
 typedef Listener<T> = void Function(T event);
 typedef Check<T> = bool Function(T event);

@@ -5,11 +5,11 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:moontree_layer_flutter/domain/transaction/entity.dart';
-import 'package:moontree_layer_flutter/domain/transaction/failure.dart';
-import 'package:moontree_layer_flutter/domain/transaction/irepository.dart';
-import 'package:moontree_layer_flutter/domain/transaction/values.dart';
-import 'package:moontree_layer_flutter/application/transaction/transactionDetails_service.dart'
+import 'package:moontree/domain/transaction/entity.dart';
+import 'package:moontree/domain/transaction/failure.dart';
+import 'package:moontree/domain/transaction/irepository.dart';
+import 'package:moontree/domain/transaction/values.dart';
+import 'package:moontree/application/transaction/transactionDetails_service.dart'
     as details;
 
 part 'cubit.freezed.dart';

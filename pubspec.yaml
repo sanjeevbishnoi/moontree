@@ -1,4 +1,4 @@
-name: moontree_layer_flutter
+name: moontree
 description: A new Flutter project with Serverpod.
 
 # The following line prevents the package from being accidentally published to
@@ -23,8 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  moontree_layer_client:
-    path: ../moontree_layer_client
+  moontree_client:
+    path: ../moontree_client
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2

@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:moontree_layer_flutter/domain/unspent/entity.dart';
+import 'package:moontree/domain/unspent/entity.dart';
 
 Random deterministicRandom(List<Unspent> unspents) =>
     Random(unspents.map((e) => e.txId).join().hashCode);

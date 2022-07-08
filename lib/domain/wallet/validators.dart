@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:moontree_layer_flutter/domain/core/value_failures.dart';
-import 'package:moontree_layer_flutter/utils/validation.dart';
+import 'package:moontree/domain/core/value_failures.dart';
+import 'package:moontree/utils/validation.dart';
 
 Either<ValueFailure<String>, String> validateWalletName(String walletName) {
   if (walletName.isEmpty /* TODO && doesn't already exist in wallets... */) {

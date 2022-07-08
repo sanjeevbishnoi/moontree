@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:moontree_layer_flutter/domain/address/values.dart';
-import 'package:moontree_layer_flutter/domain/core/common/values.dart';
+import 'package:moontree/domain/address/values.dart';
+import 'package:moontree/domain/core/common/values.dart';
 
 part 'entity.freezed.dart';
 

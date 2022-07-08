@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:moontree_layer_flutter/application/blockchain/cubit.dart';
+import 'package:moontree/application/blockchain/cubit.dart';
 
 class BlockchainWidget extends StatelessWidget {
   const BlockchainWidget({Key? key}) : super(key: key);

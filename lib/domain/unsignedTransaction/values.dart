@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:moontree_layer_flutter/domain/core/value_object.dart';
-import 'package:moontree_layer_flutter/domain/core/value_failures.dart';
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/validators.dart';
+import 'package:moontree/domain/core/value_object.dart';
+import 'package:moontree/domain/core/value_failures.dart';
+import 'package:moontree/domain/unsignedTransaction/validators.dart';
 
 class TxHash extends ValueObject<String> {
   @override

@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:moontree_layer_flutter/domain/core/value_failures.dart';
-import 'package:moontree_layer_flutter/utils/validation.dart';
+import 'package:moontree/domain/core/value_failures.dart';
+import 'package:moontree/utils/validation.dart';
 
 Either<ValueFailure<String>, String> validateFullName(String name) {
   if (!isAssetPath(name.toUpperCase()) &&

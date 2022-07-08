@@ -5,9 +5,9 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:moontree_layer_flutter/domain/address/entity.dart';
-import 'package:moontree_layer_flutter/domain/address/failure.dart';
-import 'package:moontree_layer_flutter/domain/address/irepository.dart';
+import 'package:moontree/domain/address/entity.dart';
+import 'package:moontree/domain/address/failure.dart';
+import 'package:moontree/domain/address/irepository.dart';
 
 part 'cubit.freezed.dart';
 

@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:moontree_layer_flutter/domain/core/value_object.dart';
-import 'package:moontree_layer_flutter/domain/core/value_failures.dart';
-import 'package:moontree_layer_flutter/domain/address/validators.dart';
-import 'package:moontree_layer_flutter/utils/derivation.dart' as derivation;
+import 'package:moontree/domain/core/value_object.dart';
+import 'package:moontree/domain/core/value_failures.dart';
+import 'package:moontree/domain/address/validators.dart';
+import 'package:moontree/utils/derivation.dart' as derivation;
 
 class PrivKey extends ValueObject<String> {
   @override

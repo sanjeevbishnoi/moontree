@@ -340,10 +340,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-  moontree_layer_client:
+  moontree_client:
     dependency: "direct main"
     description:
-      path: "../moontree_layer_client"
+      path: "../moontree_client"
       relative: true
     source: path
     version: "0.0.0"

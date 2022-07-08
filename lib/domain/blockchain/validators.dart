@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:moontree_layer_flutter/domain/blockchain/values.dart';
-import 'package:moontree_layer_flutter/domain/core/value_failures.dart';
+import 'package:moontree/domain/blockchain/values.dart';
+import 'package:moontree/domain/core/value_failures.dart';
 
 Either<ValueFailure<Protocols>, Protocols> validateProtocol(
     Protocols protocol) {

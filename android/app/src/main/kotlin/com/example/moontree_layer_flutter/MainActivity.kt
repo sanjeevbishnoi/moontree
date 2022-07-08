@@ -1,4 +1,4 @@
-package com.example.moontree_layer_flutter
+package com.example.moontree
 
 import io.flutter.embedding.android.FlutterActivity
 

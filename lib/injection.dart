@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'package:moontree_layer_flutter/injection.config.dart';
+import 'package:moontree/injection.config.dart';
 
 final GetIt getIt = GetIt.instance;
 

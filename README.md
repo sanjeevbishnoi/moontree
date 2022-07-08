@@ -1,4 +1,4 @@
-# moontree_layer_flutter
+# moontree
 
 A new Flutter project with Serverpod.
 

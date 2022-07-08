@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:moontree_layer_flutter/presentation/components/colors.dart'
-    as colors;
-import 'package:moontree_layer_flutter/presentation/components/styles/text.dart'
+import 'package:moontree/presentation/components/colors.dart' as colors;
+import 'package:moontree/presentation/components/styles/text.dart'
     as text_styles;
 
 extension ValueColorExtension on ThemeData {

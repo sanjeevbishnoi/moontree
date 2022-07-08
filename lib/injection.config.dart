@@ -6,72 +6,51 @@
 
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:moontree_layer_flutter/application/address/cubit.dart' as _i38;
-import 'package:moontree_layer_flutter/application/blockchain/cubit.dart'
-    as _i39;
-import 'package:moontree_layer_flutter/application/holding/cubit.dart' as _i40;
-import 'package:moontree_layer_flutter/application/send/cubit.dart' as _i32;
-import 'package:moontree_layer_flutter/application/transaction/cubit.dart'
-    as _i33;
-import 'package:moontree_layer_flutter/application/wallet/cubit.dart' as _i37;
-import 'package:moontree_layer_flutter/domain/address/irepository.dart' as _i3;
-import 'package:moontree_layer_flutter/domain/blockchain/irepository.dart'
-    as _i5;
-import 'package:moontree_layer_flutter/domain/holding/irepository.dart' as _i7;
-import 'package:moontree_layer_flutter/domain/send/irepository.dart' as _i11;
-import 'package:moontree_layer_flutter/domain/transaction/irepository.dart'
-    as _i18;
-import 'package:moontree_layer_flutter/domain/transactionDetail/irepository.dart'
-    as _i14;
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/irepository.dart'
-    as _i22;
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/service_dev.dart'
-    as _i34;
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/service_test.dart'
-    as _i35;
-import 'package:moontree_layer_flutter/domain/unspent/irepository.dart' as _i25;
-import 'package:moontree_layer_flutter/domain/unspent/service.dart' as _i36;
-import 'package:moontree_layer_flutter/domain/wallet/irepository.dart' as _i28;
-import 'package:moontree_layer_flutter/infrastructure/address/dev_repository.dart'
-    as _i4;
-import 'package:moontree_layer_flutter/infrastructure/blockchain/dev_repository.dart'
-    as _i6;
-import 'package:moontree_layer_flutter/infrastructure/holding/dev_repository.dart'
-    as _i8;
-import 'package:moontree_layer_flutter/infrastructure/holding/repository.dart'
-    as _i9;
-import 'package:moontree_layer_flutter/infrastructure/holding/test_repository.dart'
-    as _i10;
-import 'package:moontree_layer_flutter/infrastructure/send/dev_repository.dart'
-    as _i12;
-import 'package:moontree_layer_flutter/infrastructure/send/test_repository.dart'
-    as _i13;
-import 'package:moontree_layer_flutter/infrastructure/transaction/dev_repository.dart'
+import 'package:moontree/application/address/cubit.dart' as _i38;
+import 'package:moontree/application/blockchain/cubit.dart' as _i39;
+import 'package:moontree/application/holding/cubit.dart' as _i40;
+import 'package:moontree/application/send/cubit.dart' as _i32;
+import 'package:moontree/application/transaction/cubit.dart' as _i33;
+import 'package:moontree/application/wallet/cubit.dart' as _i37;
+import 'package:moontree/domain/address/irepository.dart' as _i3;
+import 'package:moontree/domain/blockchain/irepository.dart' as _i5;
+import 'package:moontree/domain/holding/irepository.dart' as _i7;
+import 'package:moontree/domain/send/irepository.dart' as _i11;
+import 'package:moontree/domain/transaction/irepository.dart' as _i18;
+import 'package:moontree/domain/transactionDetail/irepository.dart' as _i14;
+import 'package:moontree/domain/unsignedTransaction/irepository.dart' as _i22;
+import 'package:moontree/domain/unsignedTransaction/service_dev.dart' as _i34;
+import 'package:moontree/domain/unsignedTransaction/service_test.dart' as _i35;
+import 'package:moontree/domain/unspent/irepository.dart' as _i25;
+import 'package:moontree/domain/unspent/service.dart' as _i36;
+import 'package:moontree/domain/wallet/irepository.dart' as _i28;
+import 'package:moontree/infrastructure/address/dev_repository.dart' as _i4;
+import 'package:moontree/infrastructure/blockchain/dev_repository.dart' as _i6;
+import 'package:moontree/infrastructure/holding/dev_repository.dart' as _i8;
+import 'package:moontree/infrastructure/holding/repository.dart' as _i9;
+import 'package:moontree/infrastructure/holding/test_repository.dart' as _i10;
+import 'package:moontree/infrastructure/send/dev_repository.dart' as _i12;
+import 'package:moontree/infrastructure/send/test_repository.dart' as _i13;
+import 'package:moontree/infrastructure/transaction/dev_repository.dart'
     as _i19;
-import 'package:moontree_layer_flutter/infrastructure/transaction/repository.dart'
-    as _i20;
-import 'package:moontree_layer_flutter/infrastructure/transaction/test_repository.dart'
+import 'package:moontree/infrastructure/transaction/repository.dart' as _i20;
+import 'package:moontree/infrastructure/transaction/test_repository.dart'
     as _i21;
-import 'package:moontree_layer_flutter/infrastructure/transactionDetail/dev_repository.dart'
+import 'package:moontree/infrastructure/transactionDetail/dev_repository.dart'
     as _i15;
-import 'package:moontree_layer_flutter/infrastructure/transactionDetail/repository.dart'
+import 'package:moontree/infrastructure/transactionDetail/repository.dart'
     as _i16;
-import 'package:moontree_layer_flutter/infrastructure/transactionDetail/test_repository.dart'
+import 'package:moontree/infrastructure/transactionDetail/test_repository.dart'
     as _i17;
-import 'package:moontree_layer_flutter/infrastructure/unsignedTransaction/dev_repository.dart'
+import 'package:moontree/infrastructure/unsignedTransaction/dev_repository.dart'
     as _i23;
-import 'package:moontree_layer_flutter/infrastructure/unsignedTransaction/test_repository.dart'
+import 'package:moontree/infrastructure/unsignedTransaction/test_repository.dart'
     as _i24;
-import 'package:moontree_layer_flutter/infrastructure/unspent/dev_repository.dart'
-    as _i26;
-import 'package:moontree_layer_flutter/infrastructure/unspent/test_repository.dart'
-    as _i27;
-import 'package:moontree_layer_flutter/infrastructure/wallet/dev_repository.dart'
-    as _i29;
-import 'package:moontree_layer_flutter/infrastructure/wallet/repository.dart'
-    as _i30;
-import 'package:moontree_layer_flutter/infrastructure/wallet/test_repository.dart'
-    as _i31;
+import 'package:moontree/infrastructure/unspent/dev_repository.dart' as _i26;
+import 'package:moontree/infrastructure/unspent/test_repository.dart' as _i27;
+import 'package:moontree/infrastructure/wallet/dev_repository.dart' as _i29;
+import 'package:moontree/infrastructure/wallet/repository.dart' as _i30;
+import 'package:moontree/infrastructure/wallet/test_repository.dart' as _i31;
 
 const String _dev = 'dev';
 const String _prod = 'prod';

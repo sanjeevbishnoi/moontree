@@ -2,16 +2,16 @@
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:moontree_layer_flutter/domain/core/common/values.dart';
-import 'package:moontree_layer_flutter/domain/send/entity.dart';
-import 'package:moontree_layer_flutter/domain/send/irepository.dart';
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/entity.dart';
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/service_test.dart';
-import 'package:moontree_layer_flutter/domain/unspent/entity.dart';
-import 'package:moontree_layer_flutter/domain/unspent/failure.dart';
-import 'package:moontree_layer_flutter/domain/unspent/irepository.dart';
-import 'package:moontree_layer_flutter/domain/unspent/service.dart';
-import 'package:moontree_layer_flutter/injection.dart';
+import 'package:moontree/domain/core/common/values.dart';
+import 'package:moontree/domain/send/entity.dart';
+import 'package:moontree/domain/send/irepository.dart';
+import 'package:moontree/domain/unsignedTransaction/entity.dart';
+import 'package:moontree/domain/unsignedTransaction/service_test.dart';
+import 'package:moontree/domain/unspent/entity.dart';
+import 'package:moontree/domain/unspent/failure.dart';
+import 'package:moontree/domain/unspent/irepository.dart';
+import 'package:moontree/domain/unspent/service.dart';
+import 'package:moontree/injection.dart';
 
 void main() async {
   configureInjection(Env.test);

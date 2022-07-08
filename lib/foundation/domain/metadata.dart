@@ -1,4 +1,4 @@
-import 'package:moontree_layer_client/moontree_layer_client.dart' as client;
+import 'package:moontree_client/moontree_client.dart' as client;
 import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
 

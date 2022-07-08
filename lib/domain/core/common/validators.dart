@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:moontree_layer_flutter/domain/core/value_failures.dart';
-import 'package:moontree_layer_flutter/utils/validation.dart';
+import 'package:moontree/domain/core/value_failures.dart';
+import 'package:moontree/utils/validation.dart';
 
 /// the problem with validating decimals on Amounts, so we should not.
 //  } if (amount amount.floor() < 0 || decimal > 8) {

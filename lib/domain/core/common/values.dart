@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:moontree_layer_flutter/domain/core/errors.dart';
-import 'package:moontree_layer_flutter/domain/core/value_object.dart';
-import 'package:moontree_layer_flutter/domain/core/value_failures.dart';
-import 'package:moontree_layer_flutter/domain/core/common/validators.dart';
+import 'package:moontree/domain/core/errors.dart';
+import 'package:moontree/domain/core/value_object.dart';
+import 'package:moontree/domain/core/value_failures.dart';
+import 'package:moontree/domain/core/common/validators.dart';
 
 class Amount extends ValueObject<double> {
   static final int satsFactor = 10000000;

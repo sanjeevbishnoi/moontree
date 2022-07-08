@@ -1,12 +1,12 @@
 // ignore_for_file: avoid_print
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:moontree_layer_flutter/domain/address/values.dart';
-import 'package:moontree_layer_flutter/domain/address/entity.dart';
-import 'package:moontree_layer_flutter/domain/address/failure.dart';
-import 'package:moontree_layer_flutter/domain/address/irepository.dart';
-import 'package:moontree_layer_flutter/domain/core/common/values.dart';
-import 'package:moontree_layer_flutter/utils/dev.dart';
+import 'package:moontree/domain/address/values.dart';
+import 'package:moontree/domain/address/entity.dart';
+import 'package:moontree/domain/address/failure.dart';
+import 'package:moontree/domain/address/irepository.dart';
+import 'package:moontree/domain/core/common/values.dart';
+import 'package:moontree/utils/dev.dart';
 
 @Environment('dev')
 @Injectable(as: IAddressRepository)

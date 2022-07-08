@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:moontree_layer_flutter/domain/blockchain/values.dart';
-import 'package:moontree_layer_flutter/domain/core/common/values.dart';
-import 'package:moontree_layer_flutter/domain/send/values.dart';
-import 'package:moontree_layer_flutter/domain/transactionDetail/values.dart';
+import 'package:moontree/domain/blockchain/values.dart';
+import 'package:moontree/domain/core/common/values.dart';
+import 'package:moontree/domain/send/values.dart';
+import 'package:moontree/domain/transactionDetail/values.dart';
 
 part 'value_failures.freezed.dart';
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:moontree_layer_flutter/presentation/components/fonts.dart';
-import 'package:moontree_layer_flutter/presentation/components/colors.dart'
-    as colors;
+import 'package:moontree/presentation/components/fonts.dart';
+import 'package:moontree/presentation/components/colors.dart' as colors;
 
 const TextStyle h1 = TextStyle(
     fontSize: 24.0,

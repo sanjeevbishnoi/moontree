@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:moontree_layer_flutter/domain/core/value_object.dart';
-import 'package:moontree_layer_flutter/domain/core/value_failures.dart';
-import 'package:moontree_layer_flutter/domain/holding/validators.dart';
+import 'package:moontree/domain/core/value_object.dart';
+import 'package:moontree/domain/core/value_failures.dart';
+import 'package:moontree/domain/holding/validators.dart';
 
 class FullName extends ValueObject<String> {
   @override

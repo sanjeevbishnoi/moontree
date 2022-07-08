@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:moontree_layer_flutter/domain/core/common/values.dart';
-import 'package:moontree_layer_flutter/domain/core/errors.dart';
-import 'package:moontree_layer_flutter/domain/core/value_object.dart';
-import 'package:moontree_layer_flutter/domain/core/value_failures.dart';
-import 'package:moontree_layer_flutter/domain/transactionDetail/validators.dart';
+import 'package:moontree/domain/core/common/values.dart';
+import 'package:moontree/domain/core/errors.dart';
+import 'package:moontree/domain/core/value_object.dart';
+import 'package:moontree/domain/core/value_failures.dart';
+import 'package:moontree/domain/transactionDetail/validators.dart';
 
 class IpfsHash extends ValueObject<String> {
   @override

@@ -1,15 +1,14 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:moontree_layer_flutter/utils/extensions/string.dart';
-import 'package:moontree_layer_flutter/domain/core/common/values.dart';
-import 'package:moontree_layer_flutter/domain/send/entity.dart';
-import 'package:moontree_layer_flutter/domain/send/values.dart';
-import 'package:moontree_layer_flutter/domain/unspent/entity.dart';
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/values.dart';
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/entity.dart';
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/failure.dart';
-import 'package:moontree_layer_flutter/domain/unsignedTransaction/util.dart'
-    as util;
+import 'package:moontree/utils/extensions/string.dart';
+import 'package:moontree/domain/core/common/values.dart';
+import 'package:moontree/domain/send/entity.dart';
+import 'package:moontree/domain/send/values.dart';
+import 'package:moontree/domain/unspent/entity.dart';
+import 'package:moontree/domain/unsignedTransaction/values.dart';
+import 'package:moontree/domain/unsignedTransaction/entity.dart';
+import 'package:moontree/domain/unsignedTransaction/failure.dart';
+import 'package:moontree/domain/unsignedTransaction/util.dart' as util;
 import 'package:ravencoin_wallet/ravencoin_wallet.dart' as ravencoin;
 
 @Environment('dev')

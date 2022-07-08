@@ -1,8 +1,8 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:moontree_layer_flutter/domain/wallet/irepository.dart';
-import 'package:moontree_layer_flutter/injection.dart';
+import 'package:moontree/domain/wallet/irepository.dart';
+import 'package:moontree/injection.dart';
 
 void main() {
   setUp(() {

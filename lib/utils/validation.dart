@@ -1,12 +1,12 @@
 // ignore_for_file: constant_identifier_names, non_constant_identifier_names, implementation_imports
 
 import 'package:bip39/bip39.dart' as bip39;
-import 'package:moontree_layer_flutter/utils/derivation.dart';
+import 'package:moontree/utils/derivation.dart';
 import 'package:ravencoin_wallet/ravencoin_wallet.dart'
     show Address, ECPair, KPWallet;
 import 'package:ravencoin_wallet/src/models/networks.dart' as network;
-import 'package:moontree_layer_flutter/utils/extensions/string.dart';
-import 'package:moontree_layer_flutter/utils/hex.dart';
+import 'package:moontree/utils/extensions/string.dart';
+import 'package:moontree/utils/hex.dart';
 
 // https://github.com/RavenProject/Ravencoin/blob/master/src/assets/assets.cpp
 const int MAX_FULLNAME_LENGTH = 32; // Without $, !

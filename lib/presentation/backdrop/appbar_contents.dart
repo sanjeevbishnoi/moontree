@@ -1,11 +1,9 @@
 import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:moontree_layer_flutter/presentation/backdrop/curve.dart';
-import 'package:moontree_layer_flutter/presentation/components/shapes.dart'
-    as shapes;
-import 'package:moontree_layer_flutter/presentation/components/colors.dart'
-    as colors;
+import 'package:moontree/presentation/backdrop/curve.dart';
+import 'package:moontree/presentation/components/shapes.dart' as shapes;
+import 'package:moontree/presentation/components/colors.dart' as colors;
 
 class BackdropAppBarContents extends StatelessWidget
     implements PreferredSizeWidget {
