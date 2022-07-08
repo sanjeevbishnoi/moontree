@@ -343,7 +343,7 @@ packages:
   moontree_client:
     dependency: "direct main"
     description:
-      path: "../moontree_client"
+      path: "../server/moontree_client"
       relative: true
     source: path
     version: "0.0.0"
@@ -406,14 +406,14 @@ packages:
   ravencoin_wallet:
     dependency: "direct main"
     description:
-      path: "../../ravencoin_wallet"
+      path: "../ravencoin_wallet"
       relative: true
     source: path
     version: "3.0.0"
   reservoir:
     dependency: "direct main"
     description:
-      path: "../../reservoir"
+      path: "../reservoir"
       relative: true
     source: path
     version: "4.0.1"
