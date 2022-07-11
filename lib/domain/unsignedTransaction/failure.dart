@@ -12,4 +12,6 @@ abstract class UnsignedTransactionFailure with _$UnsignedTransactionFailure {
       sendHasNoRavenForFee;
   const factory UnsignedTransactionFailure.sendAmountAndFeeLargerThanSendUnspents() =
       sendAmountAndFeeLargerThanSendUnspents;
+  const factory UnsignedTransactionFailure.feeAmountSimplyTooLarge() =
+      feeAmountSimplyTooLarge;
 }

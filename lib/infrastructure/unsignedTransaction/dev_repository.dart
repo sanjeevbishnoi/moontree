@@ -75,6 +75,12 @@ class UnsignedTransactionRepository implements IUnsignedTransactionRepository {
                 'could not create UnsignedTransaction, TODO return failure here')),
           );
     }
+
+    /// extra guard clause should never happen
+    if ((_unsignedTransaction?.fee ?? Amount(0.0)) > Amount(2.0)) {
+      return left(UnsignedTransactionFailure.feeAmountSimplyTooLarge());
+    }
+
     return _unsignedTransaction == null
         ? left(UnsignedTransactionFailure.invalidUnsignedTransaction())
         : right(_unsignedTransaction);
