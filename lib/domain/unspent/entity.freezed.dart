@@ -198,15 +198,15 @@ abstract class _Unspent implements Unspent {
       required final LockingScript lockingScript}) = _$_Unspent;
 
   @override
-  TxId get txId => throw _privateConstructorUsedError;
+  TxId get txId;
   @override
-  TxPosition get position => throw _privateConstructorUsedError;
+  TxPosition get position;
   @override
-  PubKeyAddress get toAddress => throw _privateConstructorUsedError;
+  PubKeyAddress get toAddress;
   @override
-  Amount get amount => throw _privateConstructorUsedError;
+  Amount get amount;
   @override
-  LockingScript get lockingScript => throw _privateConstructorUsedError;
+  LockingScript get lockingScript;
   @override
   @JsonKey(ignore: true)
   _$$_UnspentCopyWith<_$_Unspent> get copyWith =>

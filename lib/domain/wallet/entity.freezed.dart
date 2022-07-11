@@ -222,17 +222,17 @@ abstract class _Wallet implements Wallet {
       required final List<Holding> holdings}) = _$_Wallet;
 
   @override
-  WalletName get name => throw _privateConstructorUsedError;
+  WalletName get name;
   @override
-  HashedEntropy get hashedEntropy => throw _privateConstructorUsedError;
+  HashedEntropy get hashedEntropy;
   @override
-  PrivKey get privKey => throw _privateConstructorUsedError;
+  PrivKey get privKey;
   @override
-  PubKey get pubKey => throw _privateConstructorUsedError;
+  PubKey get pubKey;
   @override
-  PubKeyAddress get receiveAddress => throw _privateConstructorUsedError;
+  PubKeyAddress get receiveAddress;
   @override
-  List<Holding> get holdings => throw _privateConstructorUsedError;
+  List<Holding> get holdings;
   @override
   @JsonKey(ignore: true)
   _$$_WalletCopyWith<_$_Wallet> get copyWith =>

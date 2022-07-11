@@ -203,15 +203,15 @@ abstract class _Holding implements Holding {
       required final List<Transaction> transactions}) = _$_Holding;
 
   @override
-  FullName get fullName => throw _privateConstructorUsedError;
+  FullName get fullName;
   @override
-  AssetType get assetType => throw _privateConstructorUsedError;
+  AssetType get assetType;
   @override
-  Name get name => throw _privateConstructorUsedError;
+  Name get name;
   @override
-  Amount get amount => throw _privateConstructorUsedError;
+  Amount get amount;
   @override
-  List<Transaction> get transactions => throw _privateConstructorUsedError;
+  List<Transaction> get transactions;
   @override
   @JsonKey(ignore: true)
   _$$_HoldingCopyWith<_$_Holding> get copyWith =>

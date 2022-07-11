@@ -317,25 +317,25 @@ abstract class _Send implements Send {
       required final List<Unspent> ravenUnspents}) = _$_Send;
 
   @override
-  Holding get holding => throw _privateConstructorUsedError;
+  Holding get holding;
   @override
-  Amount get amount => throw _privateConstructorUsedError;
+  Amount get amount;
   @override
-  PubKeyAddress get address => throw _privateConstructorUsedError;
+  PubKeyAddress get address;
   @override
-  PubKeyAddress get change => throw _privateConstructorUsedError;
+  PubKeyAddress get change;
   @override
-  FeeSelection get feeSelection => throw _privateConstructorUsedError;
+  FeeSelection get feeSelection;
   @override
-  Memo get memo => throw _privateConstructorUsedError;
+  Memo get memo;
   @override
-  Note get note => throw _privateConstructorUsedError;
+  Note get note;
   @override
-  bool get sendAll => throw _privateConstructorUsedError;
+  bool get sendAll;
   @override
-  List<Unspent> get assetUnspents => throw _privateConstructorUsedError;
+  List<Unspent> get assetUnspents;
   @override
-  List<Unspent> get ravenUnspents => throw _privateConstructorUsedError;
+  List<Unspent> get ravenUnspents;
   @override
   @JsonKey(ignore: true)
   _$$_SendCopyWith<_$_Send> get copyWith => throw _privateConstructorUsedError;

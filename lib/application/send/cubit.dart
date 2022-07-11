@@ -185,6 +185,7 @@ class SendCubit extends Cubit<SendCubitState> {
                 invalidUnsignedTransaction: (_) => error,
                 sendAmountLargerThanSendUnspents: (_) => error,
                 sendAmountAndFeeLargerThanSendUnspents: (_) => error,
+                feeAmountSimplyTooLarge: (_) => error,
               ),
           (r) => r);
   dynamic _unfoldItem(dynamic item, [dynamic error = 'unknown']) =>

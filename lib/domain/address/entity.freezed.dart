@@ -179,13 +179,13 @@ abstract class _Address implements Address {
       required final DerivationPath derivationPath}) = _$_Address;
 
   @override
-  PrivKey get privKey => throw _privateConstructorUsedError;
+  PrivKey get privKey;
   @override
-  PubKey get pubKey => throw _privateConstructorUsedError;
+  PubKey get pubKey;
   @override
-  PubKeyAddress get address => throw _privateConstructorUsedError;
+  PubKeyAddress get address;
   @override
-  DerivationPath get derivationPath => throw _privateConstructorUsedError;
+  DerivationPath get derivationPath;
   @override
   @JsonKey(ignore: true)
   _$$_AddressCopyWith<_$_Address> get copyWith =>

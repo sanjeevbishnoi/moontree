@@ -168,12 +168,11 @@ abstract class _WalletCubitState implements WalletCubitState {
       required final bool isSubmitting}) = _$_WalletCubitState;
 
   @override
-  Either<WalletFailure, Wallet> get wallet =>
-      throw _privateConstructorUsedError;
+  Either<WalletFailure, Wallet> get wallet;
   @override
-  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get showErrorMessages;
   @override
-  bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get isSubmitting;
   @override
   @JsonKey(ignore: true)
   _$$_WalletCubitStateCopyWith<_$_WalletCubitState> get copyWith =>

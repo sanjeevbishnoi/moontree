@@ -254,19 +254,19 @@ abstract class _Transaction implements Transaction {
       required final TransactionDetail transactionDetail}) = _$_Transaction;
 
   @override
-  TxId get txId => throw _privateConstructorUsedError;
+  TxId get txId;
   @override
-  TxType get type => throw _privateConstructorUsedError;
+  TxType get type;
   @override
-  SentReceived get sentReceived => throw _privateConstructorUsedError;
+  SentReceived get sentReceived;
   @override
-  Amount get amount => throw _privateConstructorUsedError;
+  Amount get amount;
   @override
-  TxConfirmations get confirmations => throw _privateConstructorUsedError;
+  TxConfirmations get confirmations;
   @override
-  TxDate get date => throw _privateConstructorUsedError;
+  TxDate get date;
   @override
-  TransactionDetail get transactionDetail => throw _privateConstructorUsedError;
+  TransactionDetail get transactionDetail;
   @override
   @JsonKey(ignore: true)
   _$$_TransactionCopyWith<_$_Transaction> get copyWith =>

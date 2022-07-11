@@ -170,12 +170,11 @@ abstract class _BlockchainCubitState implements BlockchainCubitState {
       required final bool isSubmitting}) = _$_BlockchainCubitState;
 
   @override
-  Either<BlockchainFailure, Blockchain> get blockchain =>
-      throw _privateConstructorUsedError;
+  Either<BlockchainFailure, Blockchain> get blockchain;
   @override
-  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get showErrorMessages;
   @override
-  bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get isSubmitting;
   @override
   @JsonKey(ignore: true)
   _$$_BlockchainCubitStateCopyWith<_$_BlockchainCubitState> get copyWith =>

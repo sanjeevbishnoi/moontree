@@ -192,14 +192,14 @@ abstract class _SendCubitState implements SendCubitState {
       required final bool isSubmitting}) = _$_SendCubitState;
 
   @override
-  Either<SendFailure, Send> get send => throw _privateConstructorUsedError;
+  Either<SendFailure, Send> get send;
   @override
   Either<UnsignedTransactionFailure, UnsignedTransaction>
-      get unsignedTransaction => throw _privateConstructorUsedError;
+      get unsignedTransaction;
   @override
-  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get showErrorMessages;
   @override
-  bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get isSubmitting;
   @override
   @JsonKey(ignore: true)
   _$$_SendCubitStateCopyWith<_$_SendCubitState> get copyWith =>

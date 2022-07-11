@@ -229,17 +229,17 @@ abstract class _UnsignedTransaction implements UnsignedTransaction {
       required final List<Unspent> chosenUnspents}) = _$_UnsignedTransaction;
 
   @override
-  bool get signed => throw _privateConstructorUsedError;
+  bool get signed;
   @override
-  Amount get fee => throw _privateConstructorUsedError;
+  Amount get fee;
   @override
-  TxHash get txHash => throw _privateConstructorUsedError;
+  TxHash get txHash;
   @override
-  dynamic get txBuilder => throw _privateConstructorUsedError;
+  dynamic get txBuilder;
   @override
-  dynamic get tx => throw _privateConstructorUsedError;
+  dynamic get tx;
   @override
-  List<Unspent> get chosenUnspents => throw _privateConstructorUsedError;
+  List<Unspent> get chosenUnspents;
   @override
   @JsonKey(ignore: true)
   _$$_UnsignedTransactionCopyWith<_$_UnsignedTransaction> get copyWith =>

@@ -171,12 +171,11 @@ abstract class _TransactionCubitState implements TransactionCubitState {
       required final bool isSubmitting}) = _$_TransactionCubitState;
 
   @override
-  Either<TransactionFailure, Transaction> get transaction =>
-      throw _privateConstructorUsedError;
+  Either<TransactionFailure, Transaction> get transaction;
   @override
-  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get showErrorMessages;
   @override
-  bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get isSubmitting;
   @override
   @JsonKey(ignore: true)
   _$$_TransactionCubitStateCopyWith<_$_TransactionCubitState> get copyWith =>

@@ -358,31 +358,31 @@ abstract class _TransactionDetail implements TransactionDetail {
       required final Memo memo}) = _$_TransactionDetail;
 
   @override
-  TxId get txId => throw _privateConstructorUsedError;
+  TxId get txId;
   @override
-  TxType get type => throw _privateConstructorUsedError;
+  TxType get type;
   @override
-  SentReceived get sentReceived => throw _privateConstructorUsedError;
+  SentReceived get sentReceived;
   @override
-  Amount get amount => throw _privateConstructorUsedError;
+  Amount get amount;
   @override
-  TxConfirmations get confirmations => throw _privateConstructorUsedError;
+  TxConfirmations get confirmations;
   @override
-  TxDate get date => throw _privateConstructorUsedError;
+  TxDate get date;
   @override
-  FullName get fullName => throw _privateConstructorUsedError;
+  FullName get fullName;
   @override
-  AssetType get assetType => throw _privateConstructorUsedError;
+  AssetType get assetType;
   @override
-  Name get name => throw _privateConstructorUsedError;
+  Name get name;
   @override
-  Fees get fees => throw _privateConstructorUsedError;
+  Fees get fees;
   @override
-  IpfsHash get ipfsHash => throw _privateConstructorUsedError;
+  IpfsHash get ipfsHash;
   @override
-  Note get note => throw _privateConstructorUsedError;
+  Note get note;
   @override
-  Memo get memo => throw _privateConstructorUsedError;
+  Memo get memo;
   @override
   @JsonKey(ignore: true)
   _$$_TransactionDetailCopyWith<_$_TransactionDetail> get copyWith =>

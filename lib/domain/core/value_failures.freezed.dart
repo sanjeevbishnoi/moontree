@@ -415,7 +415,7 @@ class _$InvalidAmount<T> implements InvalidAmount<T> {
 abstract class InvalidAmount<T> implements ValueFailure<T> {
   const factory InvalidAmount(final double amount) = _$InvalidAmount<T>;
 
-  double get amount => throw _privateConstructorUsedError;
+  double get amount;
   @JsonKey(ignore: true)
   _$$InvalidAmountCopyWith<T, _$InvalidAmount<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -657,7 +657,7 @@ class _$InvalidAssetName<T> implements InvalidAssetName<T> {
 abstract class InvalidAssetName<T> implements ValueFailure<T> {
   const factory InvalidAssetName(final String name) = _$InvalidAssetName<T>;
 
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @JsonKey(ignore: true)
   _$$InvalidAssetNameCopyWith<T, _$InvalidAssetName<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -898,7 +898,7 @@ class _$InvalidTxId<T> implements InvalidTxId<T> {
 abstract class InvalidTxId<T> implements ValueFailure<T> {
   const factory InvalidTxId(final String txId) = _$InvalidTxId<T>;
 
-  String get txId => throw _privateConstructorUsedError;
+  String get txId;
   @JsonKey(ignore: true)
   _$$InvalidTxIdCopyWith<T, _$InvalidTxId<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1139,7 +1139,7 @@ class _$InvalidTxDate<T> implements InvalidTxDate<T> {
 abstract class InvalidTxDate<T> implements ValueFailure<T> {
   const factory InvalidTxDate(final DateTime date) = _$InvalidTxDate<T>;
 
-  DateTime get date => throw _privateConstructorUsedError;
+  DateTime get date;
   @JsonKey(ignore: true)
   _$$InvalidTxDateCopyWith<T, _$InvalidTxDate<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1384,7 +1384,7 @@ abstract class InvalidTxConfirmations<T> implements ValueFailure<T> {
   const factory InvalidTxConfirmations(final int txConfirmations) =
       _$InvalidTxConfirmations<T>;
 
-  int get txConfirmations => throw _privateConstructorUsedError;
+  int get txConfirmations;
   @JsonKey(ignore: true)
   _$$InvalidTxConfirmationsCopyWith<T, _$InvalidTxConfirmations<T>>
       get copyWith => throw _privateConstructorUsedError;
@@ -1626,7 +1626,7 @@ class _$invalidIpfsHash<T> implements invalidIpfsHash<T> {
 abstract class invalidIpfsHash<T> implements ValueFailure<T> {
   const factory invalidIpfsHash(final String ipfsHash) = _$invalidIpfsHash<T>;
 
-  String get ipfsHash => throw _privateConstructorUsedError;
+  String get ipfsHash;
   @JsonKey(ignore: true)
   _$$invalidIpfsHashCopyWith<T, _$invalidIpfsHash<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1867,7 +1867,7 @@ class _$invalidNote<T> implements invalidNote<T> {
 abstract class invalidNote<T> implements ValueFailure<T> {
   const factory invalidNote(final String note) = _$invalidNote<T>;
 
-  String get note => throw _privateConstructorUsedError;
+  String get note;
   @JsonKey(ignore: true)
   _$$invalidNoteCopyWith<T, _$invalidNote<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2108,7 +2108,7 @@ class _$invalidMemo<T> implements invalidMemo<T> {
 abstract class invalidMemo<T> implements ValueFailure<T> {
   const factory invalidMemo(final String memo) = _$invalidMemo<T>;
 
-  String get memo => throw _privateConstructorUsedError;
+  String get memo;
   @JsonKey(ignore: true)
   _$$invalidMemoCopyWith<T, _$invalidMemo<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2353,7 +2353,7 @@ class _$invalidFees<T> implements invalidFees<T> {
 abstract class invalidFees<T> implements ValueFailure<T> {
   const factory invalidFees(final Map<FeeType, Amount> fees) = _$invalidFees<T>;
 
-  Map<FeeType, Amount> get fees => throw _privateConstructorUsedError;
+  Map<FeeType, Amount> get fees;
   @JsonKey(ignore: true)
   _$$invalidFeesCopyWith<T, _$invalidFees<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2595,7 +2595,7 @@ class _$invalidWalletName<T> implements invalidWalletName<T> {
 abstract class invalidWalletName<T> implements ValueFailure<T> {
   const factory invalidWalletName(final String note) = _$invalidWalletName<T>;
 
-  String get note => throw _privateConstructorUsedError;
+  String get note;
   @JsonKey(ignore: true)
   _$$invalidWalletNameCopyWith<T, _$invalidWalletName<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2839,7 +2839,7 @@ abstract class invalidHashedEntropy<T> implements ValueFailure<T> {
   const factory invalidHashedEntropy(final String memo) =
       _$invalidHashedEntropy<T>;
 
-  String get memo => throw _privateConstructorUsedError;
+  String get memo;
   @JsonKey(ignore: true)
   _$$invalidHashedEntropyCopyWith<T, _$invalidHashedEntropy<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -3080,7 +3080,7 @@ class _$invalidPrivKey<T> implements invalidPrivKey<T> {
 abstract class invalidPrivKey<T> implements ValueFailure<T> {
   const factory invalidPrivKey(final String privKey) = _$invalidPrivKey<T>;
 
-  String get privKey => throw _privateConstructorUsedError;
+  String get privKey;
   @JsonKey(ignore: true)
   _$$invalidPrivKeyCopyWith<T, _$invalidPrivKey<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -3321,7 +3321,7 @@ class _$invalidPubKey<T> implements invalidPubKey<T> {
 abstract class invalidPubKey<T> implements ValueFailure<T> {
   const factory invalidPubKey(final String pubKey) = _$invalidPubKey<T>;
 
-  String get pubKey => throw _privateConstructorUsedError;
+  String get pubKey;
   @JsonKey(ignore: true)
   _$$invalidPubKeyCopyWith<T, _$invalidPubKey<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -3565,7 +3565,7 @@ abstract class invalidPubKeyAddress<T> implements ValueFailure<T> {
   const factory invalidPubKeyAddress(final String address) =
       _$invalidPubKeyAddress<T>;
 
-  String get address => throw _privateConstructorUsedError;
+  String get address;
   @JsonKey(ignore: true)
   _$$invalidPubKeyAddressCopyWith<T, _$invalidPubKeyAddress<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -3811,7 +3811,7 @@ abstract class invalidDerivationPath<T> implements ValueFailure<T> {
   const factory invalidDerivationPath(final String derivationPath) =
       _$invalidDerivationPath<T>;
 
-  String get derivationPath => throw _privateConstructorUsedError;
+  String get derivationPath;
   @JsonKey(ignore: true)
   _$$invalidDerivationPathCopyWith<T, _$invalidDerivationPath<T>>
       get copyWith => throw _privateConstructorUsedError;
@@ -4053,7 +4053,7 @@ class _$invalidTxPosition<T> implements invalidTxPosition<T> {
 abstract class invalidTxPosition<T> implements ValueFailure<T> {
   const factory invalidTxPosition(final int position) = _$invalidTxPosition<T>;
 
-  int get position => throw _privateConstructorUsedError;
+  int get position;
   @JsonKey(ignore: true)
   _$$invalidTxPositionCopyWith<T, _$invalidTxPosition<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -4297,7 +4297,7 @@ abstract class invalidLockingScript<T> implements ValueFailure<T> {
   const factory invalidLockingScript(final String script) =
       _$invalidLockingScript<T>;
 
-  String get script => throw _privateConstructorUsedError;
+  String get script;
   @JsonKey(ignore: true)
   _$$invalidLockingScriptCopyWith<T, _$invalidLockingScript<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -4540,7 +4540,7 @@ abstract class invalidProtocol<T> implements ValueFailure<T> {
   const factory invalidProtocol(final Protocols protocol) =
       _$invalidProtocol<T>;
 
-  Protocols get protocol => throw _privateConstructorUsedError;
+  Protocols get protocol;
   @JsonKey(ignore: true)
   _$$invalidProtocolCopyWith<T, _$invalidProtocol<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -4781,7 +4781,7 @@ class _$invalidTxHash<T> implements invalidTxHash<T> {
 abstract class invalidTxHash<T> implements ValueFailure<T> {
   const factory invalidTxHash(final String txHash) = _$invalidTxHash<T>;
 
-  String get txHash => throw _privateConstructorUsedError;
+  String get txHash;
   @JsonKey(ignore: true)
   _$$invalidTxHashCopyWith<T, _$invalidTxHash<T>> get copyWith =>
       throw _privateConstructorUsedError;

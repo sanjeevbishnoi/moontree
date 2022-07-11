@@ -22,6 +22,7 @@ mixin _$UnsignedTransactionFailure {
     required TResult Function() sendAmountLargerThanSendUnspents,
     required TResult Function() sendHasNoRavenForFee,
     required TResult Function() sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function() feeAmountSimplyTooLarge,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$UnsignedTransactionFailure {
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$UnsignedTransactionFailure {
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -50,6 +53,8 @@ mixin _$UnsignedTransactionFailure {
     required TResult Function(sendHasNoRavenForFee value) sendHasNoRavenForFee,
     required TResult Function(sendAmountAndFeeLargerThanSendUnspents value)
         sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function(feeAmountSimplyTooLarge value)
+        feeAmountSimplyTooLarge,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,6 +66,7 @@ mixin _$UnsignedTransactionFailure {
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +78,7 @@ mixin _$UnsignedTransactionFailure {
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -143,6 +150,7 @@ class _$InvalidUnsignedTransaction implements InvalidUnsignedTransaction {
     required TResult Function() sendAmountLargerThanSendUnspents,
     required TResult Function() sendHasNoRavenForFee,
     required TResult Function() sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function() feeAmountSimplyTooLarge,
   }) {
     return invalidUnsignedTransaction();
   }
@@ -154,6 +162,7 @@ class _$InvalidUnsignedTransaction implements InvalidUnsignedTransaction {
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
   }) {
     return invalidUnsignedTransaction?.call();
   }
@@ -165,6 +174,7 @@ class _$InvalidUnsignedTransaction implements InvalidUnsignedTransaction {
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) {
     if (invalidUnsignedTransaction != null) {
@@ -183,6 +193,8 @@ class _$InvalidUnsignedTransaction implements InvalidUnsignedTransaction {
     required TResult Function(sendHasNoRavenForFee value) sendHasNoRavenForFee,
     required TResult Function(sendAmountAndFeeLargerThanSendUnspents value)
         sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function(feeAmountSimplyTooLarge value)
+        feeAmountSimplyTooLarge,
   }) {
     return invalidUnsignedTransaction(this);
   }
@@ -197,6 +209,7 @@ class _$InvalidUnsignedTransaction implements InvalidUnsignedTransaction {
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
   }) {
     return invalidUnsignedTransaction?.call(this);
   }
@@ -211,6 +224,7 @@ class _$InvalidUnsignedTransaction implements InvalidUnsignedTransaction {
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) {
     if (invalidUnsignedTransaction != null) {
@@ -275,6 +289,7 @@ class _$sendAmountLargerThanSendUnspents
     required TResult Function() sendAmountLargerThanSendUnspents,
     required TResult Function() sendHasNoRavenForFee,
     required TResult Function() sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function() feeAmountSimplyTooLarge,
   }) {
     return sendAmountLargerThanSendUnspents();
   }
@@ -286,6 +301,7 @@ class _$sendAmountLargerThanSendUnspents
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
   }) {
     return sendAmountLargerThanSendUnspents?.call();
   }
@@ -297,6 +313,7 @@ class _$sendAmountLargerThanSendUnspents
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) {
     if (sendAmountLargerThanSendUnspents != null) {
@@ -315,6 +332,8 @@ class _$sendAmountLargerThanSendUnspents
     required TResult Function(sendHasNoRavenForFee value) sendHasNoRavenForFee,
     required TResult Function(sendAmountAndFeeLargerThanSendUnspents value)
         sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function(feeAmountSimplyTooLarge value)
+        feeAmountSimplyTooLarge,
   }) {
     return sendAmountLargerThanSendUnspents(this);
   }
@@ -329,6 +348,7 @@ class _$sendAmountLargerThanSendUnspents
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
   }) {
     return sendAmountLargerThanSendUnspents?.call(this);
   }
@@ -343,6 +363,7 @@ class _$sendAmountLargerThanSendUnspents
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) {
     if (sendAmountLargerThanSendUnspents != null) {
@@ -403,6 +424,7 @@ class _$sendHasNoRavenForFee implements sendHasNoRavenForFee {
     required TResult Function() sendAmountLargerThanSendUnspents,
     required TResult Function() sendHasNoRavenForFee,
     required TResult Function() sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function() feeAmountSimplyTooLarge,
   }) {
     return sendHasNoRavenForFee();
   }
@@ -414,6 +436,7 @@ class _$sendHasNoRavenForFee implements sendHasNoRavenForFee {
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
   }) {
     return sendHasNoRavenForFee?.call();
   }
@@ -425,6 +448,7 @@ class _$sendHasNoRavenForFee implements sendHasNoRavenForFee {
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) {
     if (sendHasNoRavenForFee != null) {
@@ -443,6 +467,8 @@ class _$sendHasNoRavenForFee implements sendHasNoRavenForFee {
     required TResult Function(sendHasNoRavenForFee value) sendHasNoRavenForFee,
     required TResult Function(sendAmountAndFeeLargerThanSendUnspents value)
         sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function(feeAmountSimplyTooLarge value)
+        feeAmountSimplyTooLarge,
   }) {
     return sendHasNoRavenForFee(this);
   }
@@ -457,6 +483,7 @@ class _$sendHasNoRavenForFee implements sendHasNoRavenForFee {
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
   }) {
     return sendHasNoRavenForFee?.call(this);
   }
@@ -471,6 +498,7 @@ class _$sendHasNoRavenForFee implements sendHasNoRavenForFee {
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) {
     if (sendHasNoRavenForFee != null) {
@@ -535,6 +563,7 @@ class _$sendAmountAndFeeLargerThanSendUnspents
     required TResult Function() sendAmountLargerThanSendUnspents,
     required TResult Function() sendHasNoRavenForFee,
     required TResult Function() sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function() feeAmountSimplyTooLarge,
   }) {
     return sendAmountAndFeeLargerThanSendUnspents();
   }
@@ -546,6 +575,7 @@ class _$sendAmountAndFeeLargerThanSendUnspents
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
   }) {
     return sendAmountAndFeeLargerThanSendUnspents?.call();
   }
@@ -557,6 +587,7 @@ class _$sendAmountAndFeeLargerThanSendUnspents
     TResult Function()? sendAmountLargerThanSendUnspents,
     TResult Function()? sendHasNoRavenForFee,
     TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) {
     if (sendAmountAndFeeLargerThanSendUnspents != null) {
@@ -575,6 +606,8 @@ class _$sendAmountAndFeeLargerThanSendUnspents
     required TResult Function(sendHasNoRavenForFee value) sendHasNoRavenForFee,
     required TResult Function(sendAmountAndFeeLargerThanSendUnspents value)
         sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function(feeAmountSimplyTooLarge value)
+        feeAmountSimplyTooLarge,
   }) {
     return sendAmountAndFeeLargerThanSendUnspents(this);
   }
@@ -589,6 +622,7 @@ class _$sendAmountAndFeeLargerThanSendUnspents
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
   }) {
     return sendAmountAndFeeLargerThanSendUnspents?.call(this);
   }
@@ -603,6 +637,7 @@ class _$sendAmountAndFeeLargerThanSendUnspents
     TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
     TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
         sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
     required TResult orElse(),
   }) {
     if (sendAmountAndFeeLargerThanSendUnspents != null) {
@@ -616,4 +651,139 @@ abstract class sendAmountAndFeeLargerThanSendUnspents
     implements UnsignedTransactionFailure {
   const factory sendAmountAndFeeLargerThanSendUnspents() =
       _$sendAmountAndFeeLargerThanSendUnspents;
+}
+
+/// @nodoc
+abstract class _$$feeAmountSimplyTooLargeCopyWith<$Res> {
+  factory _$$feeAmountSimplyTooLargeCopyWith(_$feeAmountSimplyTooLarge value,
+          $Res Function(_$feeAmountSimplyTooLarge) then) =
+      __$$feeAmountSimplyTooLargeCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$feeAmountSimplyTooLargeCopyWithImpl<$Res>
+    extends _$UnsignedTransactionFailureCopyWithImpl<$Res>
+    implements _$$feeAmountSimplyTooLargeCopyWith<$Res> {
+  __$$feeAmountSimplyTooLargeCopyWithImpl(_$feeAmountSimplyTooLarge _value,
+      $Res Function(_$feeAmountSimplyTooLarge) _then)
+      : super(_value, (v) => _then(v as _$feeAmountSimplyTooLarge));
+
+  @override
+  _$feeAmountSimplyTooLarge get _value =>
+      super._value as _$feeAmountSimplyTooLarge;
+}
+
+/// @nodoc
+
+class _$feeAmountSimplyTooLarge implements feeAmountSimplyTooLarge {
+  const _$feeAmountSimplyTooLarge();
+
+  @override
+  String toString() {
+    return 'UnsignedTransactionFailure.feeAmountSimplyTooLarge()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$feeAmountSimplyTooLarge);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() invalidUnsignedTransaction,
+    required TResult Function() sendAmountLargerThanSendUnspents,
+    required TResult Function() sendHasNoRavenForFee,
+    required TResult Function() sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function() feeAmountSimplyTooLarge,
+  }) {
+    return feeAmountSimplyTooLarge();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? invalidUnsignedTransaction,
+    TResult Function()? sendAmountLargerThanSendUnspents,
+    TResult Function()? sendHasNoRavenForFee,
+    TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
+  }) {
+    return feeAmountSimplyTooLarge?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? invalidUnsignedTransaction,
+    TResult Function()? sendAmountLargerThanSendUnspents,
+    TResult Function()? sendHasNoRavenForFee,
+    TResult Function()? sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function()? feeAmountSimplyTooLarge,
+    required TResult orElse(),
+  }) {
+    if (feeAmountSimplyTooLarge != null) {
+      return feeAmountSimplyTooLarge();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidUnsignedTransaction value)
+        invalidUnsignedTransaction,
+    required TResult Function(sendAmountLargerThanSendUnspents value)
+        sendAmountLargerThanSendUnspents,
+    required TResult Function(sendHasNoRavenForFee value) sendHasNoRavenForFee,
+    required TResult Function(sendAmountAndFeeLargerThanSendUnspents value)
+        sendAmountAndFeeLargerThanSendUnspents,
+    required TResult Function(feeAmountSimplyTooLarge value)
+        feeAmountSimplyTooLarge,
+  }) {
+    return feeAmountSimplyTooLarge(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidUnsignedTransaction value)?
+        invalidUnsignedTransaction,
+    TResult Function(sendAmountLargerThanSendUnspents value)?
+        sendAmountLargerThanSendUnspents,
+    TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
+    TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
+        sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
+  }) {
+    return feeAmountSimplyTooLarge?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidUnsignedTransaction value)?
+        invalidUnsignedTransaction,
+    TResult Function(sendAmountLargerThanSendUnspents value)?
+        sendAmountLargerThanSendUnspents,
+    TResult Function(sendHasNoRavenForFee value)? sendHasNoRavenForFee,
+    TResult Function(sendAmountAndFeeLargerThanSendUnspents value)?
+        sendAmountAndFeeLargerThanSendUnspents,
+    TResult Function(feeAmountSimplyTooLarge value)? feeAmountSimplyTooLarge,
+    required TResult orElse(),
+  }) {
+    if (feeAmountSimplyTooLarge != null) {
+      return feeAmountSimplyTooLarge(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class feeAmountSimplyTooLarge implements UnsignedTransactionFailure {
+  const factory feeAmountSimplyTooLarge() = _$feeAmountSimplyTooLarge;
 }

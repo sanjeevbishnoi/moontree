@@ -169,12 +169,11 @@ abstract class _AddressCubitState implements AddressCubitState {
       required final bool isSubmitting}) = _$_AddressCubitState;
 
   @override
-  Either<AddressFailure, Address> get address =>
-      throw _privateConstructorUsedError;
+  Either<AddressFailure, Address> get address;
   @override
-  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get showErrorMessages;
   @override
-  bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get isSubmitting;
   @override
   @JsonKey(ignore: true)
   _$$_AddressCubitStateCopyWith<_$_AddressCubitState> get copyWith =>

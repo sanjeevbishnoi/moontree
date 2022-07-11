@@ -144,9 +144,9 @@ abstract class _Blockchain implements Blockchain {
       required final List<Wallet> wallets}) = _$_Blockchain;
 
   @override
-  Protocol get protocol => throw _privateConstructorUsedError;
+  Protocol get protocol;
   @override
-  List<Wallet> get wallets => throw _privateConstructorUsedError;
+  List<Wallet> get wallets;
   @override
   @JsonKey(ignore: true)
   _$$_BlockchainCopyWith<_$_Blockchain> get copyWith =>

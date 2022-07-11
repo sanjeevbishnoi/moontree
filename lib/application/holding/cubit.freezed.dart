@@ -169,12 +169,11 @@ abstract class _HoldingCubitState implements HoldingCubitState {
       required final bool isSubmitting}) = _$_HoldingCubitState;
 
   @override
-  Either<HoldingFailure, Holding> get holding =>
-      throw _privateConstructorUsedError;
+  Either<HoldingFailure, Holding> get holding;
   @override
-  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get showErrorMessages;
   @override
-  bool get isSubmitting => throw _privateConstructorUsedError;
+  bool get isSubmitting;
   @override
   @JsonKey(ignore: true)
   _$$_HoldingCubitStateCopyWith<_$_HoldingCubitState> get copyWith =>
