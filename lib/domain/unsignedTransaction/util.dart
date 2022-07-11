@@ -8,8 +8,8 @@ extension SignEachInput on ravencoin.TransactionBuilder {
   /// inputs. input order of the created transaction.
   Future<void> signEachInput(List<Unspent> unspents) async {
     for (var e in unspents.enumerated()) {
-      int i = e[0];
-      Unspent unspent = e[1];
+      //int i = e[0];
+      //Unspent unspent = e[1];
       // TODO: convert this logic over to new v2 structure...
       //var keyPair = services.wallet.getAddressKeypair(unspent.address!);
       //sign(

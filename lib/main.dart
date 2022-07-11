@@ -12,7 +12,7 @@ var client = Client('http://localhost:8080/');
 
 void main() {
   configureInjection(Env.dev);
-  runApp(const MyApp());
+  runApp(const MyApp()); //shouldn't this be App from core/app?
 }
 
 class MyApp extends StatelessWidget {
