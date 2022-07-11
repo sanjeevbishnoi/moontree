@@ -37,7 +37,7 @@ dependencies:
   date_format: ^2.0.6
   bip39: ^1.0.6
   ravencoin_wallet: ^3.0.0
-  reservoir: ^4.0.1
+  proclaim: ^4.0.1
   quiver: ^3.0.1
   tuple: ^2.0.0
   hive: ^2.2.3
@@ -45,8 +45,8 @@ dependencies:
 dependency_overrides:
   #raven_electrum:
   #  path: ../raven_electrum
-  reservoir:
-    path: ../reservoir
+  proclaim:
+    path: ../proclaim
   ravencoin_wallet:
     path: ../ravencoin_wallet
 

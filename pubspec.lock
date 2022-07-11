@@ -382,6 +382,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.6.0"
+  proclaim:
+    dependency: "direct main"
+    description:
+      path: "../proclaim"
+      relative: true
+    source: path
+    version: "4.0.1"
   provider:
     dependency: transitive
     description:
@@ -410,13 +417,6 @@ packages:
       relative: true
     source: path
     version: "3.0.0"
-  reservoir:
-    dependency: "direct main"
-    description:
-      path: "../reservoir"
-      relative: true
-    source: path
-    version: "4.0.1"
   rxdart:
     dependency: transitive
     description:
