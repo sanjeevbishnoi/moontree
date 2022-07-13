@@ -2,7 +2,7 @@
 
 import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
-import 'package:moontree/utils/string.dart';
+import 'package:utils/mixins/string.dart';
 
 class WalletBalance with HiveObjectMixin, EquatableMixin, ToStringMixin {
   @HiveField(0)

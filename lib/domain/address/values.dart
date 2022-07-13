@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
+import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
 import 'package:moontree/domain/core/value_object.dart';
 import 'package:moontree/domain/core/value_failures.dart';
 import 'package:moontree/domain/address/validators.dart';
-import 'package:moontree/utils/derivation.dart' as derivation;
 
 class PrivKey extends ValueObject<String> {
   @override
@@ -43,8 +43,8 @@ class DerivationPath extends ValueObject<String> {
   String get receiveNumber => _splitPath()[4];
   String get hdIndexNumber => _splitPath()[5];
 
-  bool get isReceive => receiveNumber == derivation.receiveNumber();
-  bool get isMainnet => mainnetNumber == derivation.mainnetNumber();
-  bool get isRavencoin => networkNumber == derivation.ravencoinNumber;
+  bool get isReceive => receiveNumber == Derivation.receiveNumber();
+  bool get isMainnet => mainnetNumber == Derivation.mainnetNumber();
+  bool get isRavencoin => networkNumber == Derivation.ravencoinNumber;
   int get index => int.parse(hdIndexNumber);
 }

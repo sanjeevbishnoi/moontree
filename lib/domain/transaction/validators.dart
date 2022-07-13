@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
+import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Validation;
 import 'package:moontree/domain/core/value_failures.dart';
-import 'package:moontree/utils/validation.dart';
 
 Either<ValueFailure<String>, String> validateTxId(String txId) {
-  if (!isTxIdRVN(txId)) {
+  if (!Validation.isTxIdRVN(txId)) {
     return left(ValueFailure.invalidTxId(txId));
   } else {
     return right(txId);

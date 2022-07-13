@@ -1,5 +1,5 @@
 import 'package:moontree/domain/unspent/entity.dart';
-import 'package:moontree/utils/extensions/list.dart';
+import 'package:utils/extensions/iterable.dart';
 import 'package:ravencoin_wallet/ravencoin_wallet.dart' as ravencoin;
 
 extension SignEachInput on ravencoin.TransactionBuilder {

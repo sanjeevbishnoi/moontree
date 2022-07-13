@@ -1,7 +1,7 @@
 import 'package:moontree_client/moontree_client.dart' as client;
 import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
-import 'package:moontree/utils/string.dart';
+import 'package:utils/mixins/string.dart';
 
 class Wallet with HiveObjectMixin, EquatableMixin, ToStringMixin {
   @HiveField(0)

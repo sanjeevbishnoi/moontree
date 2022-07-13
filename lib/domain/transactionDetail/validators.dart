@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
+import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Validation;
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/core/value_failures.dart';
 import 'package:moontree/domain/transactionDetail/values.dart';
-import 'package:moontree/utils/validation.dart' show isIpfs;
 
 Either<ValueFailure<String>, String> validateIpfsHash(String ipfsHash) {
-  if (ipfsHash.isNotEmpty && !isIpfs(ipfsHash)) {
+  if (ipfsHash.isNotEmpty && !Validation.isIpfs(ipfsHash)) {
     return left(ValueFailure.invalidIpfsHash(ipfsHash));
   } else {
     return right(ipfsHash);

@@ -1,9 +1,9 @@
 /// since we want to be able to see the nested entity object, we'll put those
 /// calls here in a separate service called by the cubit.
 
+import 'package:utils/extensions/string.dart';
 import 'package:moontree/domain/transaction/values.dart';
 import 'package:moontree/domain/transactionDetail/entity.dart';
-import 'package:moontree/utils/extensions/string.dart';
 
 String getTxId(TransactionDetail transactionDetail) =>
     transactionDetail.txId.value.fold(

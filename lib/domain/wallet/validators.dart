@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
+import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Validation;
 import 'package:moontree/domain/core/value_failures.dart';
-import 'package:moontree/utils/validation.dart';
 
 Either<ValueFailure<String>, String> validateWalletName(String walletName) {
   if (walletName.isEmpty /* TODO && doesn't already exist in wallets... */) {
@@ -19,7 +19,7 @@ Either<ValueFailure<String>, String> validateHashedEntropy(String entropy) {
 }
 
 Either<ValueFailure<String>, String> validatePrivKey(String key) {
-  if (!isPrivateKey(key)) {
+  if (!Validation.isPrivateKey(key)) {
     return left(ValueFailure.invalidPrivKey(key));
   } else {
     return right(key);
@@ -27,7 +27,7 @@ Either<ValueFailure<String>, String> validatePrivKey(String key) {
 }
 
 Either<ValueFailure<String>, String> validatePubKey(String key) {
-  if (!isPublicKey(key)) {
+  if (!Validation.isPublicKey(key)) {
     return left(ValueFailure.invalidPubKey(key));
   } else {
     return right(key);
@@ -35,7 +35,7 @@ Either<ValueFailure<String>, String> validatePubKey(String key) {
 }
 
 Either<ValueFailure<String>, String> validatePubKeyAddress(String key) {
-  if (!isPublicKeyAddress(key)) {
+  if (!Validation.isPublicKeyAddress(key)) {
     return left(ValueFailure.invalidPubKeyAddress(key));
   } else {
     return right(key);

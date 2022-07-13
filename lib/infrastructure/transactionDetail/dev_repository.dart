@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
+import 'package:utils/future.dart';
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/holding/values.dart';
 import 'package:moontree/domain/transaction/values.dart';
@@ -7,7 +8,6 @@ import 'package:moontree/domain/transactionDetail/failure.dart';
 import 'package:moontree/domain/transactionDetail/irepository.dart';
 import 'package:moontree/domain/transactionDetail/values.dart';
 import 'package:moontree/domain/transactionDetail/entity.dart';
-import 'package:moontree/utils/dev.dart';
 
 @Environment('dev')
 @Injectable(as: ITransactionDetailRepository)

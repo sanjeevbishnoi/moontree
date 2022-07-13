@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:moontree/utils/extensions/string.dart';
+import 'package:utils/extensions/uint8list.dart';
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/send/entity.dart';
 import 'package:moontree/domain/send/values.dart';

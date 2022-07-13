@@ -1,8 +1,5 @@
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/unspent/entity.dart';
-import 'package:collection/src/iterable_extensions.dart';
-import 'package:quiver/iterables.dart';
-import 'package:tuple/tuple.dart';
 
 /// unused
 //extension AdditionOnUnspent on Unspent {
@@ -22,15 +19,4 @@ extension SumAnUnspentList on List<Unspent> {
           Amount(0),
           (Amount previousValue, Unspent element) =>
               previousValue + element.amount);
-}
-
-extension EnumeratedIteratable on Iterable {
-  Iterable<List> enumerated() =>
-      zip([mapIndexed((index, element) => index).toList(), this]);
-
-  Iterable<Tuple2<int, T>> enumeratedTuple<T>() => [
-        for (var x
-            in zip([mapIndexed((index, element) => index).toList(), this]))
-          Tuple2(x[0] as int, x[1] as T)
-      ];
 }

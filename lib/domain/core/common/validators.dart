@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
+import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Validation;
 import 'package:moontree/domain/core/value_failures.dart';
-import 'package:moontree/utils/validation.dart';
 
 /// the problem with validating decimals on Amounts, so we should not.
 //  } if (amount amount.floor() < 0 || decimal > 8) {
@@ -27,7 +27,7 @@ Either<ValueFailure<String>, String> validateNote(String note) {
 }
 
 Either<ValueFailure<String>, String> validateMemo(String memo) {
-  if (memo.isNotEmpty && !isMemo(memo)) {
+  if (memo.isNotEmpty && !Validation.isMemo(memo)) {
     return left(ValueFailure.invalidMemo(memo));
   } else {
     return right(memo);
@@ -35,7 +35,7 @@ Either<ValueFailure<String>, String> validateMemo(String memo) {
 }
 
 Either<ValueFailure<String>, String> validateTxId(String txId) {
-  if (!isTxIdRVN(txId)) {
+  if (!Validation.isTxIdRVN(txId)) {
     return left(ValueFailure.invalidTxId(txId));
   } else {
     return right(txId);
@@ -55,7 +55,7 @@ Either<ValueFailure<String>, String> validatePubKeyAddress(
   String key, {
   bool mainnet = true,
 }) {
-  if (!isPublicKeyAddress(key, mainnet: mainnet)) {
+  if (!Validation.isPublicKeyAddress(key, mainnet: mainnet)) {
     return left(ValueFailure.invalidPubKeyAddress(key));
   } else {
     return right(key);
