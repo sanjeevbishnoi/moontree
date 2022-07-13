@@ -3,6 +3,8 @@ import 'package:hive/hive.dart';
 import 'package:utils/mixins/string.dart';
 
 class Asset with HiveObjectMixin, EquatableMixin, ToStringMixin {
+  /// probably need asset type here too.
+
   @HiveField(0)
   final String symbol;
 
@@ -21,7 +23,7 @@ class Asset with HiveObjectMixin, EquatableMixin, ToStringMixin {
   @HiveField(5)
   final String? verifierString;
 
-  @HiveField(5)
+  @HiveField(6)
   final String? assetName;
 
   Asset({
@@ -69,4 +71,8 @@ class Asset with HiveObjectMixin, EquatableMixin, ToStringMixin {
   //      associatedData: assetMetadata.associated_data,
   //      verifierString: assetMetadata.verifier_string,
   //    );
+
+  String get id => getId(symbol);
+
+  static String getId(String symbol) => symbol;
 }
