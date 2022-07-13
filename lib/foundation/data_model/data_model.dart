@@ -9,7 +9,6 @@
 export 'address.dart';
 export 'asset.dart';
 export 'balance.dart';
-export 'metadata.dart';
 export 'transaction.dart';
 export 'vin.dart';
 export 'vout.dart';

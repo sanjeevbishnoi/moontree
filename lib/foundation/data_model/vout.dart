@@ -1,8 +1,9 @@
 import 'package:moontree_client/moontree_client.dart' as client;
 import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
+import 'package:moontree/utils/string.dart';
 
-class Vout with HiveObjectMixin, EquatableMixin {
+class Vout with HiveObjectMixin, EquatableMixin, ToStringMixin {
   @HiveField(0)
   final int transactionId;
 
@@ -27,6 +28,17 @@ class Vout with HiveObjectMixin, EquatableMixin {
   @HiveField(7)
   final int? assetMemoTimestamp;
 
+  Vout({
+    required this.transactionId,
+    required this.assetId,
+    required this.addressId,
+    required this.idx,
+    required this.sats,
+    required this.lockingScript,
+    required this.assetMemo,
+    required this.assetMemoTimestamp,
+  });
+
   @override
   List<Object?> get props => [
         transactionId,
@@ -39,16 +51,20 @@ class Vout with HiveObjectMixin, EquatableMixin {
         assetMemoTimestamp,
       ];
 
-  Vout({
-    required this.transactionId,
-    required this.assetId,
-    required this.addressId,
-    required this.idx,
-    required this.sats,
-    required this.lockingScript,
-    required this.assetMemo,
-    required this.assetMemoTimestamp,
-  });
+  @override
+  List<String> get propNames => [
+        'transactionId',
+        'assetId',
+        'addressId',
+        'idx',
+        'sats',
+        'lockingScript',
+        'assetMemo',
+        'assetMemoTimestamp',
+      ];
+
+  @override
+  bool? get stringify => true;
 
   factory Vout.from(client.Vout vout) => Vout(
         transactionId: vout.transaction_id,
