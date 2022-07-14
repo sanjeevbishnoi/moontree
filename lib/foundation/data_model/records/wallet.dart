@@ -8,35 +8,23 @@ class Wallet with HiveObjectMixin, EquatableMixin, ToStringMixin {
   final String masterPublicKey;
 
   @HiveField(1)
-  final String derivationPath;
-
-  @HiveField(2)
-  final int highestUsedReceiveIndex;
-
-  @HiveField(3)
-  final int highestUsedChangeIndex;
+  final List<int> derivationIds;
 
   Wallet({
     required this.masterPublicKey,
-    required this.derivationPath,
-    required this.highestUsedReceiveIndex,
-    required this.highestUsedChangeIndex,
+    required this.derivationIds,
   });
 
   @override
   List<Object?> get props => [
         masterPublicKey,
-        derivationPath,
-        highestUsedReceiveIndex,
-        highestUsedChangeIndex,
+        derivationIds,
       ];
 
   @override
   List<String> get propNames => [
         'masterPublicKey',
-        'derivationPath',
-        'highestUsedReceiveIndex',
-        'highestUsedChangeIndex',
+        'derivationIds',
       ];
 
   @override
@@ -44,8 +32,6 @@ class Wallet with HiveObjectMixin, EquatableMixin, ToStringMixin {
 
   factory Wallet.from(client.Wallet wallet) => Wallet(
         masterPublicKey: wallet.master_public_key,
-        derivationPath: wallet.derivation_path,
-        highestUsedReceiveIndex: wallet.highest_used_external_index,
-        highestUsedChangeIndex: wallet.highest_used_internal_index,
+        derivationIds: wallet.derivation_ids,
       );
 }

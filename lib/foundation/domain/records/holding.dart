@@ -1,7 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/holding/values.dart';
-import 'package:moontree/domain/transaction/entity.dart';
+import 'package:moontree/foundation/domain/records/asset.dart';
+import 'package:moontree/foundation/domain/records/transaction.dart';
 import 'package:utils/mixins/string.dart';
 
 class DomainHolding with EquatableMixin, ToStringMixin {
@@ -12,7 +13,7 @@ class DomainHolding with EquatableMixin, ToStringMixin {
   // amount
   final Amount amount;
   // link to
-  final List<Transaction> transactions;
+  final List<DomainTransaction> transactions;
 
   DomainHolding({
     required this.fullName,
@@ -50,8 +51,19 @@ class DomainHolding with EquatableMixin, ToStringMixin {
         amount: x.amount,
         transactions: x.transactions,
       );
+  factory DomainHolding.fromAssetAndAmountAndTransactions(DomainAsset asset,
+          Amount amount, List<DomainTransaction> transactions) =>
+      DomainHolding(
+        fullName: asset.fullName,
+        assetType: asset.assetType,
+        name: asset.name,
+        amount: amount,
+        transactions: transactions,
+      );
 
   // needs wallet id
-  String get id =>
+  String get id => getId(fullName, assetType, amount);
+
+  static String getId(FullName fullName, AssetType assetType, Amount amount) =>
       '${fullName.getOrCrash()}:${assetType.name}:${amount.getOrCrash()}';
 }

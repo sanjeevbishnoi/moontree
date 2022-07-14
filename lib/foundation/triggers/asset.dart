@@ -16,6 +16,8 @@ class AssetToDomain extends Trigger {
       doThis: (Change<Asset> change) async => change.when(
           loaded: (loaded) {},
           added: (added) {
+            // a domain asset is merely a subset of a datamodel asset,
+            // no other information needed.
             domain_pros.assets.save(DomainAsset(
                 fullName: FullName(added.data.symbol),
                 assetType: AssetType
