@@ -11,15 +11,11 @@ class RavenTransaction with HiveObjectMixin, EquatableMixin, ToStringMixin {
   final int height;
 
   @HiveField(2)
-  final DateTime blocktime;
-
-  @HiveField(3)
   final String? opReturn;
 
   RavenTransaction({
     required this.hash,
     required this.height,
-    required this.blocktime,
     this.opReturn,
   });
 
@@ -27,7 +23,6 @@ class RavenTransaction with HiveObjectMixin, EquatableMixin, ToStringMixin {
   List<Object?> get props => [
         hash,
         height,
-        blocktime,
         opReturn,
       ];
 
@@ -35,7 +30,6 @@ class RavenTransaction with HiveObjectMixin, EquatableMixin, ToStringMixin {
   List<String> get propNames => [
         'hash',
         'height',
-        'blocktime',
         'opReturn',
       ];
 
@@ -46,7 +40,6 @@ class RavenTransaction with HiveObjectMixin, EquatableMixin, ToStringMixin {
       RavenTransaction(
         hash: ravenTransaction.hash,
         height: ravenTransaction.height,
-        blocktime: ravenTransaction.blocktime,
         opReturn: ravenTransaction.op_return,
       );
 }
