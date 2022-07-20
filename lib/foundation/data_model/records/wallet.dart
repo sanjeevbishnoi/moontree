@@ -5,33 +5,33 @@ import 'package:utils/mixins/string.dart';
 
 class Wallet with HiveObjectMixin, EquatableMixin, ToStringMixin {
   @HiveField(0)
-  final String masterPublicKey;
+  final String publicKey;
 
   @HiveField(1)
-  final List<int> derivationIds;
+  final int? derivationId;
 
   Wallet({
-    required this.masterPublicKey,
-    required this.derivationIds,
+    required this.publicKey,
+    required this.derivationId,
   });
 
   @override
   List<Object?> get props => [
-        masterPublicKey,
-        derivationIds,
+        publicKey,
+        derivationId,
       ];
 
   @override
   List<String> get propNames => [
-        'masterPublicKey',
-        'derivationIds',
+        'publicKey',
+        'derivationId',
       ];
 
   @override
   bool? get stringify => true;
 
   factory Wallet.from(client.Wallet wallet) => Wallet(
-        masterPublicKey: wallet.master_public_key,
-        derivationIds: wallet.derivation_ids,
+        publicKey: wallet.public_key,
+        derivationId: wallet.derivation_id,
       );
 }
