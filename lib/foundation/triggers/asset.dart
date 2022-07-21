@@ -19,10 +19,10 @@ class AssetToDomain extends Trigger {
             // a domain asset is merely a subset of a datamodel asset,
             // no other information needed.
             domain_pros.assets.save(DomainAsset(
-                fullName: FullName(added.data.symbol),
+                fullName: FullName(added.record.symbol),
                 assetType: AssetType
                     .unknown, // pass the record to a function to get type
-                name: Name(added.data.assetName ?? added.data.symbol)));
+                name: Name(added.record.assetName ?? added.record.symbol)));
           },
           updated: (updated) {},
           removed: (removed) {}),
