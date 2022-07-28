@@ -2,11 +2,11 @@ part of 'asset.dart';
 
 // primary key - Symbol
 
-class _AssetKey extends Key<Asset> {
+class _SymbolKey extends Key<AssetDeviceRecord> {
   @override
-  String getKey(Asset asset) => asset.id;
+  String getKey(AssetDeviceRecord asset) => asset.symbol;
 }
 
-extension ByAssetMethodsForAsset on Index<_AssetKey, Asset> {
-  Asset? getOne(String symbol) => getByKeyStr(symbol).firstOrNull;
+extension BySymbolKeyMethodsForAsset on Index<_SymbolKey, AssetDeviceRecord> {
+  AssetDeviceRecord? getOne(String symbol) => getByKeyStr(symbol).firstOrNull;
 }

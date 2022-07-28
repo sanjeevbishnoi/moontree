@@ -1,5 +1,5 @@
 import 'package:moontree/domain/holding/values.dart';
-import 'package:moontree/foundation/data_model/records/asset.dart';
+import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain/records/asset.dart';
 import 'package:proclaim/change.dart';
 import 'package:utils/trigger.dart';
@@ -13,7 +13,7 @@ class AssetToDomain extends Trigger {
     when(
       thereIsA: pros.assets.changes,
       andIf: null,
-      doThis: (Change<Asset> change) async => change.when(
+      doThis: (Change<AssetDeviceRecord> change) async => change.when(
           loaded: (loaded) {},
           added: (added) {
             // a domain asset is merely a subset of a datamodel asset,
@@ -22,7 +22,7 @@ class AssetToDomain extends Trigger {
                 fullName: FullName(added.record.symbol),
                 assetType: AssetType
                     .unknown, // pass the record to a function to get type
-                name: Name(added.record.assetName ?? added.record.symbol)));
+                name: Name(/*added.record.assetName ??*/ added.record.symbol)));
           },
           updated: (updated) {},
           removed: (removed) {}),
