@@ -1,63 +1,93 @@
 import 'package:equatable/equatable.dart';
-import 'package:moontree/domain/core/common/values.dart';
-import 'package:moontree/domain/transaction/values.dart';
-import 'package:moontree/domain/transactionDetail/entity.dart';
+import 'package:moontree/foundation/domain/records/asset.dart';
+import 'package:moontree/foundation/domain/records/wallet.dart';
+import 'package:moontree/foundation/utils/structs.dart';
 import 'package:utils/mixins/string.dart';
 
 class DomainTransaction with EquatableMixin, ToStringMixin {
   // connect to a wallet or address?
-  final TxId txId;
+  final String transactionHash;
   final TxType type;
   final SentReceived sentReceived;
-  final Amount amount;
-  final TxConfirmations confirmations;
-  final TxDate date;
-  final TransactionDetail transactionDetail;
+  final int sats;
+  final int height;
+  final DateTime date;
+  // asset
+  final String symbol;
+  final Protocol protocol;
+  // wallet
+  final String pub;
+  final String derivation;
+  // details
+  final Map<FeeType, int> fees;
+  final String ipfsHash;
+  final String note;
+  final String memo;
 
   DomainTransaction({
-    required this.txId,
+    required this.transactionHash,
     required this.type,
     required this.sentReceived,
-    required this.amount,
-    required this.confirmations,
+    required this.sats,
+    required this.height,
     required this.date,
-    required this.transactionDetail,
+    required this.symbol,
+    required this.protocol,
+    required this.pub,
+    required this.derivation,
+    required this.fees,
+    required this.ipfsHash,
+    required this.note,
+    required this.memo,
   });
+
+  String get id =>
+      generateId(transactionHash, symbol, protocol, pub, derivation);
+  static String generateId(String transactionHash, String symbol,
+          Protocol protocol, String pub, String derviation) =>
+      '$transactionHash:$symbol:${protocol.name}:$pub:$derviation';
+
+  String get assetId => DomainAsset.generateId(symbol, protocol);
+  String get walletId => DomainWallet.generateId(pub, derivation);
+
+  String get walletAssetId =>
+      generateWalletAssetId(pub, derivation, symbol, protocol);
+  static String generateWalletAssetId(
+          String pub, String derivation, String symbol, Protocol protocol) =>
+      '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub, derivation)}';
 
   @override
   List<Object?> get props => [
-        txId,
+        transactionHash,
         type,
         sentReceived,
-        amount,
-        confirmations,
+        sats,
+        height,
         date,
-        transactionDetail,
+        symbol,
+        protocol,
+        fees,
+        ipfsHash,
+        note,
+        memo,
       ];
 
   @override
   List<String> get propNames => [
-        'txId',
+        'transactionHash',
         'type',
         'sentReceived',
-        'amount',
-        'confirmations',
+        'sats',
+        'height',
         'date',
-        'transactionDetail',
+        'symbol',
+        'protocol',
+        'fees',
+        'ipfsHash',
+        'note',
+        'memo',
       ];
 
   @override
   bool? get stringify => true;
-
-  factory DomainTransaction.from(dynamic x) => DomainTransaction(
-        txId: x.txId,
-        type: x.type,
-        sentReceived: x.sentReceived,
-        amount: x.amount,
-        confirmations: x.confirmations,
-        date: x.date,
-        transactionDetail: x.transactionDetail,
-      );
-
-  String get id => txId.getOrCrash();
 }

@@ -4,10 +4,11 @@ import 'package:moontree/domain/core/value_failures.dart';
 import 'package:moontree/domain/blockchain/validators.dart';
 
 enum Protocols {
-  RavencoinTestnet,
-  RavencoinMainnet,
-  EvrmoreTestnet,
-  EvrmoreMainnet,
+  ravencoinTestnet,
+  ravencoinMainnet,
+  evrmoreTestnet,
+  evrmoreMainnet,
+  fiat,
   unknown,
 }
 

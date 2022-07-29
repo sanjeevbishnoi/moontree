@@ -2,23 +2,23 @@ part of 'address.dart';
 
 // primary key - address
 
-class _AddressKey extends Key<DomainAddress> {
+class _IdKey extends Key<DomainAddress> {
   @override
   String getKey(DomainAddress address) => address.id;
 }
 
-extension ByAddressMethodsForAddress on Index<_AddressKey, DomainAddress> {
+extension ByIdMethodsForAddress on Index<_IdKey, DomainAddress> {
   DomainAddress? getOne(String address) => getByKeyStr(address).firstOrNull;
 }
 
 /// byId
 
-class _IdKey extends Key<DomainAddress> {
+class _WalletIdKey extends Key<DomainAddress> {
   @override
-  String getKey(DomainAddress address) => address.id.toString();
+  String getKey(DomainAddress address) => address.walletId;
 }
 
-extension ByIdMethodsForAddress on Index<_IdKey, DomainAddress> {
-  DomainAddress? getOne(int addressId) =>
-      getByKeyStr(addressId.toString()).firstOrNull;
+extension ByWalletIdMethodsForAddress on Index<_WalletIdKey, DomainAddress> {
+  List<DomainAddress> getAll(String walletPub, String walletDerivation) =>
+      getByKeyStr(DomainWallet.generateId(walletPub, walletDerivation));
 }

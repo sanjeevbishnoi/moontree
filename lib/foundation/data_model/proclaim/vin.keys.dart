@@ -19,7 +19,7 @@ extension ByIdMethodsForVin on Index<_IdKey, VinDeviceRecord> {
 
 class _VoutKey extends Key<VinDeviceRecord> {
   @override
-  String getKey(VinDeviceRecord vin) => vin.voutId.toString();
+  String getKey(VinDeviceRecord vin) => vin.voutId;
 }
 
 extension ByVoutMethodsForVin on Index<_VoutKey, VinDeviceRecord> {
@@ -28,7 +28,7 @@ extension ByVoutMethodsForVin on Index<_VoutKey, VinDeviceRecord> {
     int voutPosition,
   ) =>
       getByKeyStr(
-              VinDeviceRecord.generateVoutId(voutTransactionHash, voutPosition))
+              VoutDeviceRecord.generateId(voutTransactionHash, voutPosition))
           .firstOrNull;
 }
 
@@ -36,12 +36,11 @@ extension ByVoutMethodsForVin on Index<_VoutKey, VinDeviceRecord> {
 
 class _CoinbaseKey extends Key<VinDeviceRecord> {
   @override
-  String getKey(VinDeviceRecord vin) => vin.voutId.toString();
+  String getKey(VinDeviceRecord vin) => vin.voutId;
 }
 
 extension ByCoinbaseMethodsForVin on Index<_CoinbaseKey, VinDeviceRecord> {
-  Iterable<VinDeviceRecord> getAll() =>
-      getByKeyStr(VinDeviceRecord.generateVoutId(null, null));
+  Iterable<VinDeviceRecord> getAll() => getByKeyStr('null:null');
 }
 
 /// txHash

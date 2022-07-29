@@ -1,43 +1,40 @@
 import 'package:equatable/equatable.dart';
-import 'package:moontree/domain/holding/values.dart';
 import 'package:utils/mixins/string.dart';
+import 'package:moontree/foundation/utils/structs.dart';
 
 class DomainAsset with EquatableMixin, ToStringMixin {
-  final FullName fullName;
+  final String symbol;
+  final Protocol protocol;
   final AssetType assetType;
-  final Name name;
+  final String name;
 
   DomainAsset({
-    required this.fullName,
+    required this.symbol,
+    required this.protocol,
     required this.assetType,
     required this.name,
   });
 
+  String get id => generateId(symbol, protocol);
+  static String generateId(String symbol, Protocol protocol) =>
+      '$symbol:${protocol.name}';
+
   @override
   List<Object?> get props => [
-        fullName,
+        symbol,
+        protocol,
         assetType,
         name,
       ];
 
   @override
   List<String> get propNames => [
-        'fullName',
+        'symbol',
+        'protocol',
         'assetType',
         'name',
       ];
 
   @override
   bool? get stringify => true;
-
-  factory DomainAsset.from(dynamic x) => DomainAsset(
-        fullName: x.fullName,
-        assetType: x.assetType,
-        name: x.name,
-      );
-
-  String get id => getId(fullName, assetType);
-
-  static String getId(FullName fullName, AssetType assetType) =>
-      '${fullName.getOrCrash()}:${assetType.name}';
 }

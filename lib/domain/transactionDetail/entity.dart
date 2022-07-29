@@ -26,7 +26,7 @@ abstract class TransactionDetail with _$TransactionDetail {
 
   factory TransactionDetail.emptyRVN() => TransactionDetail(
         txId: TxId(''),
-        type: TxType(TxTypeOptions.transfer),
+        type: TxType(TxTypes.transfer),
         sentReceived: SentReceived.received,
         amount: Amount(0.0),
         confirmations: TxConfirmations(0),
@@ -42,7 +42,7 @@ abstract class TransactionDetail with _$TransactionDetail {
 
   factory TransactionDetail.empty() => TransactionDetail(
         txId: TxId(''),
-        type: TxType(TxTypeOptions.transfer),
+        type: TxType(TxTypes.transfer),
         sentReceived: SentReceived.received,
         amount: Amount(0.0),
         confirmations: TxConfirmations(0),

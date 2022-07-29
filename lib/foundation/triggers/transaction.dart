@@ -1,13 +1,15 @@
 import 'package:moontree/foundation/data_model/records/records.dart';
-import 'package:moontree/foundation/domain/records/holding.dart';
+import 'package:moontree/foundation/domain/records-alt/holding.dart';
 import 'package:proclaim/change.dart';
 import 'package:utils/trigger.dart';
 import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as pros;
 import 'package:moontree/foundation/domain/proclaim/proclaim.dart'
     as domain_pros;
 
-// working example where tranlsation happens here.
-class ToHoldingDomain extends Trigger {
+/// upon receiving a message that we have downloaded all existing vins and vouts
+/// and transactions we analyse them and create domain transaction objects.
+
+class ToTransactionDomain extends Trigger {
   void init() {
     when(
       thereIsA: pros.walletBalances.changes,

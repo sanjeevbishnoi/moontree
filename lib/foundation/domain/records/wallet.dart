@@ -1,57 +1,46 @@
 import 'package:equatable/equatable.dart';
-import 'package:moontree/domain/core/common/values.dart';
-import 'package:moontree/domain/holding/entity.dart';
-import 'package:moontree/domain/wallet/values.dart';
 import 'package:utils/mixins/string.dart';
 
 class DomainWallet with EquatableMixin, ToStringMixin {
-  final WalletName name;
-  final HashedEntropy hashedEntropy;
-  final PrivKey privKey;
-  final PubKey pubKey;
-  final PubKeyAddress receiveAddress;
-  final List<Holding> holdings;
+  final String name;
+  final String hashedEntropy;
+  final String priv;
+  final String pub;
+  final String derivation;
+  final String receiveAddress;
 
   DomainWallet({
     required this.name,
     required this.hashedEntropy,
-    required this.privKey,
-    required this.pubKey,
+    required this.priv,
+    required this.pub,
+    required this.derivation,
     required this.receiveAddress,
-    required this.holdings,
   });
+
+  String get id => generateId(pub, derivation);
+  static String generateId(String pub, String derviation) => '$pub:$derviation';
 
   @override
   List<Object?> get props => [
         name,
         hashedEntropy,
-        privKey,
-        pubKey,
+        priv,
+        pub,
+        derivation,
         receiveAddress,
-        holdings,
       ];
 
   @override
   List<String> get propNames => [
         'name',
         'hashedEntropy',
-        'privKey',
-        'pubKey',
+        'priv',
+        'pub',
+        'derivation',
         'receiveAddress',
-        'holdings',
       ];
 
   @override
   bool? get stringify => true;
-
-  factory DomainWallet.from(dynamic x) => DomainWallet(
-        name: x.name,
-        hashedEntropy: x.hashedEntropy,
-        privKey: x.privKey,
-        pubKey: x.pubKey,
-        receiveAddress: x.receiveAddress,
-        holdings: x.holdings,
-      );
-
-  String get id => hashedEntropy.getOrCrash();
 }

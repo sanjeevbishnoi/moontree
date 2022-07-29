@@ -20,7 +20,7 @@ abstract class Transaction with _$Transaction {
   factory Transaction.empty() => Transaction(
         txId: TxId(''),
         confirmations: TxConfirmations(0),
-        type: TxType(TxTypeOptions.transfer),
+        type: TxType(TxTypes.transfer),
         sentReceived: SentReceived.sent,
         amount: Amount(0),
         date: TxDate(DateTime.now()),

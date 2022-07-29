@@ -1,16 +1,20 @@
 import 'package:collection/collection.dart';
-import 'package:moontree/domain/holding/values.dart';
 import 'package:moontree/foundation/domain/records/asset.dart';
+import 'package:moontree/foundation/utils/structs.dart';
 import 'package:proclaim/proclaim.dart';
 
 part 'asset.keys.dart';
 
-class AssetProclaim extends Proclaim<_AssetKey, DomainAsset> {
-  late IndexMultiple<_AssetKey, DomainAsset> byId;
-  late IndexMultiple<_AssetKey, DomainAsset> byFullNameAssetType;
+class AssetProclaim extends Proclaim<_IdKey, DomainAsset> {
+  late IndexMultiple<_IdKey, DomainAsset> byId;
+  late IndexMultiple<_IdKey, DomainAsset> bySymbolProtocol;
+  late IndexMultiple<_SymbolKey, DomainAsset> bySymbol;
+  late IndexMultiple<_ProtocolKey, DomainAsset> byProtocol;
 
-  AssetProclaim() : super(_AssetKey()) {
-    byId = addIndexMultiple('id', _AssetKey());
-    byFullNameAssetType = addIndexMultiple('byFullNameAssetType', _AssetKey());
+  AssetProclaim() : super(_IdKey()) {
+    bySymbol = addIndexMultiple('bySymbol', _SymbolKey());
+    bySymbolProtocol = addIndexMultiple('bySymbolProtocol', _IdKey());
+    byProtocol = addIndexMultiple('byProtocol', _ProtocolKey());
+    byId = bySymbolProtocol;
   }
 }

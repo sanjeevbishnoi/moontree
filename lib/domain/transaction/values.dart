@@ -10,7 +10,7 @@ enum SentReceived {
   received,
 }
 
-enum TxTypeOptions {
+enum TxTypes {
   transfer,
   self,
   fee,
@@ -23,36 +23,36 @@ enum TxTypeOptions {
   unknown,
 }
 
-class TxType extends ValueObject<TxTypeOptions> {
+class TxType extends ValueObject<TxTypes> {
   @override
-  final Either<ValueFailure<TxTypeOptions>, TxTypeOptions> value;
+  final Either<ValueFailure<TxTypes>, TxTypes> value;
 
   const TxType._(this.value);
 
-  factory TxType(TxTypeOptions txType) => TxType._(right(txType));
-  factory TxType.empty() => TxType(TxTypeOptions.unknown);
+  factory TxType(TxTypes txType) => TxType._(right(txType));
+  factory TxType.empty() => TxType(TxTypes.unknown);
 
   String get asText => value.fold(
         (l) => throw UnexpectedValueError(l),
         (r) {
           switch (r) {
-            case TxTypeOptions.transfer:
+            case TxTypes.transfer:
               return '';
-            case TxTypeOptions.self:
+            case TxTypes.self:
               return 'Sent to Self';
-            case TxTypeOptions.fee:
+            case TxTypes.fee:
               return 'Transaction Fee'; // rvn view, sent asset
-            case TxTypeOptions.burn:
+            case TxTypes.burn:
               return 'Burn';
-            case TxTypeOptions.creation:
+            case TxTypes.creation:
               return 'Asset Creation';
-            case TxTypeOptions.reissue:
+            case TxTypes.reissue:
               return 'Reissue';
-            case TxTypeOptions.dividend:
+            case TxTypes.dividend:
               return 'Dividend';
-            case TxTypeOptions.message:
+            case TxTypes.message:
               return 'Sent Message';
-            case TxTypeOptions.tag:
+            case TxTypes.tag:
               return 'Tag';
             default:
               return '';

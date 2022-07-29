@@ -21,7 +21,7 @@ class BlockchainRepository implements IBlockchainRepository {
   Future<Either<BlockchainFailure, Blockchain>> getBlockchain() async {
     await simulateWait('BlockchainRepository');
     return right(Blockchain(
-      protocol: Protocol(Protocols.RavencoinTestnet),
+      protocol: Protocol(Protocols.ravencoinTestnet),
       wallets: <Wallet>[
         Wallet(
             name: WalletName('name'),

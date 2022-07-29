@@ -1,51 +1,76 @@
 import 'package:equatable/equatable.dart';
-import 'package:moontree/domain/core/common/values.dart';
-import 'package:moontree/domain/unspent/values.dart';
+import 'package:moontree/foundation/domain/records/asset.dart';
+import 'package:moontree/foundation/domain/records/wallet.dart';
+import 'package:moontree/foundation/utils/structs.dart';
 import 'package:utils/mixins/string.dart';
 
 class DomainUnspent with EquatableMixin, ToStringMixin {
-  final TxId txId;
-  final TxPosition position;
-  final PubKeyAddress toAddress;
-  final Amount amount;
-  final LockingScript lockingScript;
+  final String transactionHash;
+  final int position;
+  final String address;
+  final int sats;
+  final String lockingScript;
+  // link to asset
+  final String symbol;
+  final Protocol protocol;
+
+  /// optimization...
+  // link to wallet instead of through address
+  final String pub;
+  final String derivation;
 
   DomainUnspent({
-    required this.txId,
+    required this.transactionHash,
     required this.position,
-    required this.toAddress,
-    required this.amount,
+    required this.address,
+    required this.sats,
     required this.lockingScript,
+    required this.symbol,
+    required this.protocol,
+    required this.pub,
+    required this.derivation,
   });
+
+  String get id => generateId(transactionHash, position, protocol);
+  static String generateId(
+          String transactionHash, int position, Protocol protocol) =>
+      '$transactionHash:$position:${protocol.name}';
+
+  String get assetId => DomainAsset.generateId(symbol, protocol);
+  String get walletId => DomainWallet.generateId(pub, derivation);
+
+  String get walletAssetId =>
+      generateWalletAssetId(pub, derivation, symbol, protocol);
+  static String generateWalletAssetId(
+          String pub, String derivation, String symbol, Protocol protocol) =>
+      '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub, derivation)}';
 
   @override
   List<Object?> get props => [
-        txId,
+        transactionHash,
         position,
-        toAddress,
-        amount,
+        address,
+        sats,
         lockingScript,
+        symbol,
+        protocol,
+        pub,
+        derivation,
       ];
 
   @override
   List<String> get propNames => [
-        'txId',
+        'transactionHash',
         'position',
-        'toAddress',
-        'amount',
+        'address',
+        'sats',
         'lockingScript',
+        'symbol',
+        'protocol',
+        'pub',
+        'derivation',
       ];
 
   @override
   bool? get stringify => true;
-
-  factory DomainUnspent.from(dynamic x) => DomainUnspent(
-        txId: x.txId,
-        position: x.position,
-        toAddress: x.toAddress,
-        amount: x.amount,
-        lockingScript: x.lockingScript,
-      );
-
-  String get id => '${txId.getOrCrash()}:${position.getOrCrash()}';
 }
