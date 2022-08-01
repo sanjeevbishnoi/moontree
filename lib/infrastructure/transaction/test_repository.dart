@@ -18,7 +18,7 @@ class TransactionRepository implements ITransactionRepository {
     return right(Transaction(
       txId: TxId(
           'd6a0532aff8d1c075e5cb97ae595e4323c909bc527dcad86321cc074b4c12adc'),
-      type: TxType(TxTypeOptions.transfer),
+      type: TxType(TxTypes.transfer),
       sentReceived: SentReceived.received,
       amount: Amount(1),
       confirmations: TxConfirmations(100),
@@ -37,7 +37,7 @@ class TransactionRepository implements ITransactionRepository {
       Transaction(
         txId: TxId(
             'd6a0532aff8d1c075e5cb97ae595e4323c909bc527dcad86321cc074b4c12adc'),
-        type: TxType(TxTypeOptions.transfer),
+        type: TxType(TxTypes.transfer),
         sentReceived: SentReceived.sent,
         amount: Amount(1),
         confirmations: TxConfirmations(0),
@@ -50,7 +50,7 @@ class TransactionRepository implements ITransactionRepository {
       Transaction(
         txId: TxId(
             'd6a0532aff8d1c075e5cb97ae595e4323c909bc527dcad86321cc074b4c12adc'),
-        type: TxType(TxTypeOptions.transfer),
+        type: TxType(TxTypes.transfer),
         sentReceived: SentReceived.received,
         amount: Amount(100),
         confirmations: TxConfirmations(100),
@@ -63,7 +63,7 @@ class TransactionRepository implements ITransactionRepository {
       Transaction(
         txId: TxId(
             'd6a0532aff8d1c075e5cb97ae595e4323c909bc527dcad86321cc074b4c12adc'),
-        type: TxType(TxTypeOptions.reissue),
+        type: TxType(TxTypes.reissue),
         sentReceived: SentReceived.received,
         amount: Amount(100),
         confirmations: TxConfirmations(100),

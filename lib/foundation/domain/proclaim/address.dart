@@ -15,4 +15,6 @@ class AddressProclaim extends Proclaim<_IdKey, DomainAddress> {
     byWallet = addIndexMultiple('wallet', _WalletIdKey());
     byId = byAddress;
   }
+
+  static Map<String, DomainAddress> get defaults => {};
 }

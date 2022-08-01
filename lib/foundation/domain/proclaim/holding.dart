@@ -17,4 +17,15 @@ class HoldingProclaim extends Proclaim<_IdKey, DomainHolding> {
     byWallet = addIndexMultiple('wallet', _WalletIdKey());
     byAsset = addIndexMultiple('asset', _AssetIdKey());
   }
+
+  static Map<String, DomainHolding> get defaults => {
+        // unable to connect to wallet means we shouldn't use this as default.
+        //'RVN': DomainHolding(
+        //   symbol: 'RVN',
+        //   protocol: Protocol.ravencoinMainnet,
+        //   sats: 0,
+        //   pub: '',
+        //   derivation: '',
+        //  )
+      };
 }

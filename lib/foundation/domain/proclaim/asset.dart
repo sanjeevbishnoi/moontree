@@ -17,4 +17,17 @@ class AssetProclaim extends Proclaim<_IdKey, DomainAsset> {
     byProtocol = addIndexMultiple('byProtocol', _ProtocolKey());
     byId = bySymbolProtocol;
   }
+
+  static Map<String, DomainAsset> get defaults => {
+        DomainAsset.generateId('RVN', Protocol.ravencoinMainnet): DomainAsset(
+            assetType: AssetType.currency,
+            protocol: Protocol.ravencoinMainnet,
+            symbol: 'RVN',
+            name: 'Ravencoin'),
+        DomainAsset.generateId('RVN', Protocol.ravencoinTestnet): DomainAsset(
+            assetType: AssetType.currency,
+            protocol: Protocol.ravencoinTestnet,
+            symbol: 'RVN',
+            name: 'Ravencoin')
+      };
 }

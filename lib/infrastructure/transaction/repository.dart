@@ -20,7 +20,7 @@ class TransactionRepository implements ITransactionRepository {
     await Future.delayed(Duration(milliseconds: Random().nextInt(10000)));
     return right(Transaction(
       txId: TxId(''),
-      type: TxType(TxTypeOptions.transfer),
+      type: TxType(TxTypes.transfer),
       sentReceived: SentReceived.received,
       amount: Amount(1),
       confirmations: TxConfirmations(0),

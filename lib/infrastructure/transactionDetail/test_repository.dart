@@ -20,7 +20,7 @@ class TransactionDetailRepository implements ITransactionDetailRepository {
       TransactionDetail(
         txId: TxId(
             'd6a0532aff8d1c075e5cb97ae595e4323c909bc527dcad86321cc074b4c12adc'),
-        type: TxType(TxTypeOptions.transfer),
+        type: TxType(TxTypes.transfer),
         sentReceived: SentReceived.received,
         amount: Amount(0.0),
         confirmations: TxConfirmations(0),

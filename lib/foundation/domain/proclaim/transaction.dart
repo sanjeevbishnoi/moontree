@@ -19,4 +19,6 @@ class TransactionProclaim extends Proclaim<_IdKey, DomainTransaction> {
     byAsset = addIndexMultiple('asset', _AssetIdKey());
     byWalletAsset = addIndexMultiple('walletasset', _WalletAssetIdKey());
   }
+
+  static Map<String, DomainTransaction> get defaults => {};
 }

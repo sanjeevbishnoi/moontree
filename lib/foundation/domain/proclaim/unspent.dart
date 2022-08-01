@@ -19,4 +19,6 @@ class UnspentProclaim extends Proclaim<_IdKey, DomainUnspent> {
     byAddress = addIndexMultiple('address', _AddressKey());
     byWallet = addIndexMultiple('wallet', _WalletIdKey());
   }
+
+  static Map<String, DomainUnspent> get defaults => {};
 }

@@ -1,0 +1,1 @@
+/// initialize hive for this cache
