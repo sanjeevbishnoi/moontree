@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain/records/wallet.dart';
 import 'package:utils/mixins/string.dart';
 
@@ -22,6 +23,22 @@ class DomainAddress with EquatableMixin, ToStringMixin {
   String get id => address;
 
   String get walletId => DomainWallet.generateId(walletPub, walletDerivation);
+
+  factory DomainAddress.from(
+    AddressDeviceRecord address,
+    String privkey,
+    String pubkey,
+    String walletPub,
+    String walletDerivation,
+  ) =>
+      DomainAddress(
+        address: address.address,
+        walletPub: walletPub,
+        walletDerivation: walletDerivation,
+        index: address.index,
+        priv: privkey,
+        pub: pubkey,
+      );
 
   @override
   List<Object?> get props => [

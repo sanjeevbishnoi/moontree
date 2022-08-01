@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain/records/asset.dart';
 import 'package:moontree/foundation/domain/records/wallet.dart';
 import 'package:moontree/foundation/utils/structs.dart';
@@ -55,6 +56,29 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
   static String generateWalletAssetId(
           String pub, String derivation, String symbol, Protocol protocol) =>
       '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub, derivation)}';
+
+  /* how to solve?
+  factory DomainTransaction.from(
+    TransactionDeviceRecord transaction,
+    Protocol protocol,
+  ) =>
+      DomainTransaction(
+        transactionHash: transaction., 
+        type: transaction., 
+        sentReceived: transaction., 
+        sats: transaction., 
+        height: transaction., 
+        date: transaction., 
+        symbol: transaction.symbol,
+        protocol: protocol,
+        pub: transaction., 
+        derivation: transaction., 
+        fees: transaction.,
+        ipfsHash: transaction., 
+        note: transaction., 
+        memo: transaction., 
+      );
+  */
 
   @override
   List<Object?> get props => [

@@ -1,31 +1,34 @@
-import 'package:moontree/domain/holding/values.dart';
-import 'package:moontree/foundation/data_model/records/records.dart';
-import 'package:moontree/foundation/domain/records/asset.dart';
 import 'package:proclaim/change.dart';
 import 'package:utils/trigger.dart';
-import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as pros;
-import 'package:moontree/foundation/domain/proclaim/proclaim.dart'
-    as domain_pros;
+import 'package:moontree/foundation/utils/structs.dart';
+import 'package:moontree/foundation/domain/records/asset.dart';
+import 'package:moontree/foundation/data_model/records/records.dart';
+import 'package:moontree/foundation/data_model/proclaim/proclaim.dart'
+    as datamodel;
+import 'package:moontree/foundation/domain/proclaim/proclaim.dart' as domain;
 
-// working example where tranlsation happens here.
-class AssetToDomain extends Trigger {
-  void init() {
-    when(
-      thereIsA: pros.assets.changes,
+class ToAssetDomain extends Trigger {
+  void init() => when(
+      thereIsA: datamodel.assets.changes,
       andIf: null,
       doThis: (Change<AssetDeviceRecord> change) async => change.when(
-          loaded: (loaded) {},
-          added: (added) {
-            // a domain asset is merely a subset of a datamodel asset,
-            // no other information needed.
-            domain_pros.assets.save(DomainAsset(
-                fullName: FullName(added.record.symbol),
-                assetType: AssetType
-                    .unknown, // pass the record to a function to get type
-                name: Name(/*added.record.assetName ??*/ added.record.symbol)));
-          },
-          updated: (updated) {},
-          removed: (removed) {}),
-    );
-  }
+            loaded: (loaded) => load(loaded.record),
+            added: (added) => load(added.record),
+            updated: (updated) => load(updated.record),
+            removed: (removed) => remove(removed.record),
+          ));
+
+  /// puts the record into memory
+  Future<void> load(AssetDeviceRecord asset) async =>
+      await domain.assets.save(DomainAsset.from(
+        asset,
+        Protocol.ravencoinMainnet,
+      ));
+
+  /// only happens on reorgs
+  Future<void> remove(AssetDeviceRecord asset) async =>
+      await domain.assets.remove(DomainAsset.from(
+        asset,
+        Protocol.ravencoinMainnet,
+      ));
 }
