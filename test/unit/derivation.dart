@@ -1,8 +1,10 @@
 // ignore_for_file: avoid_print
 
+/// this is mainly for illustrative perposes: how to generate an address from a
+/// wallet
+
 import 'package:test/test.dart';
-import 'package:ravencoin_wallet/ravencoin_wallet.dart'
-    show HDWallet, Derive, Derivation;
+import 'package:ravencoin_wallet/ravencoin_wallet.dart' show HDWallet, Derive;
 import 'package:moontree/foundation/utils/derivation.dart';
 
 void main() {

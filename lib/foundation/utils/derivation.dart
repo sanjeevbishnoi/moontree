@@ -65,13 +65,16 @@ AddressDeviceRecord generateAddress({
   required WalletDeviceRecord wallet,
   required int index,
   required bool used,
-}) =>
-    AddressDeviceRecord(
-      address: Derive.subWallet(
-        hdWallet: generateHDWallet(wallet.mnemonic),
-        path: wallet.derivation ?? '',
-        index: index,
-      ).address!,
-      used: used,
-      index: index,
-    );
+}) {
+  final addressHDWallet = Derive.subWallet(
+    hdWallet: generateHDWallet(wallet.mnemonic),
+    path: wallet.derivation ?? 'm/0',
+    index: index,
+  );
+  return AddressDeviceRecord(
+    address: addressHDWallet.address!,
+    seed: addressHDWallet.seed!,
+    used: used,
+    index: index,
+  );
+}
