@@ -17,7 +17,7 @@
 /// - but we wont save them until the server tells us how many we should derive.
 /// - then we'll save that many addresses to database and cache
 /// - we can then subscribe to certain types of data. 
-/// - whenever it gives us a new address object, which is will on a new tx
+/// - whenever it gives us a new address object, which it will on a new tx
 ///   - we'll derive the same address so we know it's private key.
 /// - as far as subscriptions go...
 ///   - the first one we subscribe to is holdings.
