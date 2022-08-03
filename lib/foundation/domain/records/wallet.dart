@@ -33,7 +33,7 @@ class DomainWallet with EquatableMixin, ToStringMixin {
         hashedEntropy: hashedEntropy,
         priv: privkey,
         pub: wallet.pubkey,
-        derivation: wallet.derivation ?? '',
+        derivation: wallet.derivation,
         receiveAddress: receiveAddress,
       );
 

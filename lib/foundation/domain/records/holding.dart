@@ -48,7 +48,7 @@ class DomainHolding with EquatableMixin, ToStringMixin {
         protocol: protocol,
         sats: balance.sats,
         pub: balance.pubkey,
-        derivation: balance.derivation ?? '',
+        derivation: balance.derivation,
       );
 
   @override
