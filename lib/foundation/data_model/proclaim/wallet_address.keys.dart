@@ -11,7 +11,7 @@ class _IdKey extends Key<WalletAddressDeviceRecord> {
 extension ByIdMethodsForWalletAddress
     on Index<_IdKey, WalletAddressDeviceRecord> {
   WalletAddressDeviceRecord? getOne(
-          String pubkey, String? derivation, String address) =>
+          String pubkey, String derivation, String address) =>
       getByKeyStr(
               WalletAddressDeviceRecord.generateId(pubkey, derivation, address))
           .firstOrNull;

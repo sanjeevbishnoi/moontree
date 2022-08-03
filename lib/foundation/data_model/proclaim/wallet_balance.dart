@@ -20,7 +20,7 @@ class WalletBalanceProclaim
 
   Iterable<WalletBalanceDeviceRecord> byPubkeyAndLessThanHeight(
     String pubkey,
-    String? derivation,
+    String derivation,
     int? height, // null is mempool
   ) =>
       height == null
