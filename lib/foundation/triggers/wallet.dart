@@ -1,10 +1,11 @@
 import 'package:proclaim/change.dart';
 import 'package:utils/trigger.dart';
-import 'package:moontree/foundation/domain/records/wallet.dart';
+import 'package:moontree/foundation/domain_model/records/wallet.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/data_model/proclaim/proclaim.dart'
     as datamodel;
-import 'package:moontree/foundation/domain/proclaim/proclaim.dart' as domain;
+import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
+    as domain;
 
 class ToWalletDomain extends Trigger {
   void init() => when(

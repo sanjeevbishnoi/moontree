@@ -6,35 +6,12 @@
 /// derviations to the database.
 ///
 /// the process of deriving addresses isn't contained here. it is the context in
-/// which this functional code is used. But we'll describe it here until it's
-/// built out. it looks like this:
-/// - we start the app
-/// - we load wallets from the database to the cache
-///   - if there are no wallets, we make one and save it to cache and database
-///   - then we would normally derive addresses, but we don't.
-///     - unlike v1 we don't have to do anything special during this process
-///       like checking each address for transactions. instead we merely...
-/// - checkin with the server, proving the public key of the wallets we have.
-/// - it then does derivation on it's side, it figures out which addresses are
-///   ours, sends us that number, agregates it's precomputed AddressBalances
-///   into WalletBalances (by asset), and sends those wallet balances to us.
-/// - The first thing it sends us is the number of addresses it has derived for
-///   this wallet. We can then derive the same number (or up to the same number)
-///   of addresses, and save them to the database:
-///   - we derive the same addresses since when we derive it we can get the
-///     private key
-///   - then we attach the private key to the address record we received from
-///     the server.
-/// - whenever it gives us a new address object, which it will on a new tx we'll
-///   derive the same address so we know it's private key.
-/// - as far as subscriptions go...
-///   - the first one we subscribe to is holdings.
-///   - then transactions
-///   - ...but this is out side the scope of the derviation process now.
+/// which this functional code is used. see services/derivation.dart
 
 import 'dart:typed_data';
 import 'package:bip39/bip39.dart' as bip39;
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' show HDWallet, Derive;
+import 'package:ravencoin_wallet/ravencoin_wallet.dart'
+    show HDWallet, Derive, Derivation;
 import 'package:moontree/foundation/data_model/records/records.dart';
 
 String generateMnemoic([String? entropy]) => entropy == null
@@ -53,19 +30,19 @@ Uint8List generateSeedFromEntropy(String entropy) =>
 HDWallet generateHDWallet([String? mnemonic]) =>
     HDWallet.fromSeed(generateSeed(mnemonic));
 
-WalletDeviceRecord generateWallet({
+WalletDeviceRecord generateWalletRecord({
   required String name,
-  required String derivation,
+  String? derivation,
   String? mnemonic,
 }) =>
     WalletDeviceRecord(
       pubkey: HDWallet.fromSeed(generateSeed(mnemonic)).pubKey,
-      derivation: derivation,
+      derivation: derivation ?? Derivation.getPath(),
       name: name,
       mnemonic: mnemonic,
     );
 
-AddressDeviceRecord generateAddress({
+AddressDeviceRecord generateAddressRecord({
   required WalletDeviceRecord wallet,
   required int index,
   required bool used,

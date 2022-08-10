@@ -1,12 +1,13 @@
 /// initialize hive for this cache
 import 'package:moontree/foundation/data_model/hive.dart';
-
-final DataLoadingHelper HIVE_INIT = DataLoadingHelper();
+export 'package:moontree/foundation/data_model/proclaim/proclaim.dart';
 
 /// can be called from or moved to anywhere - like spash screen:
 class DataModel {
+  static final DataLoadingHelper HIVE_INIT = DataLoadingHelper();
+
   static Future<void> init() async {
-    await HIVE_INIT.setupDatabaseStart();
-    await HIVE_INIT.setupDatabase();
+    await DataModel.HIVE_INIT.setupDatabaseStart();
+    await DataModel.HIVE_INIT.setupDatabase();
   }
 }

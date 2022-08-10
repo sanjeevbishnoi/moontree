@@ -15,8 +15,8 @@ void main() {
     final address = Derive.subWallet(hdWallet: hdwallet, path: 'm/0', index: 1);
     print(address.privKey);
     print(address.base58Priv);
-    final wallet =
-        generateWallet(name: 'name', derivation: 'm/0', mnemonic: mnemonic);
+    final wallet = generateWalletRecord(
+        name: 'name', derivation: 'm/0', mnemonic: mnemonic);
     final addressfromwallet = Derive.subWallet(
         hdWallet: generateHDWallet(wallet.mnemonic), path: 'm/0', index: 1);
     print(addressfromwallet.privKey);
