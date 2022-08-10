@@ -1,0 +1,13 @@
+<mxfile host="65bd71144e">
+    <diagram id="b8dnpcTVCMgwrkYQq0vV" name="Page-1">
+        <mxGraphModel dx="1157" dy="347" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;h1&gt;White Labeling&lt;/h1&gt;&lt;p&gt;white labelled version will have:&lt;/p&gt;&lt;p&gt;- modified colors&lt;/p&gt;&lt;p&gt;- modified fonts&lt;/p&gt;&lt;p&gt;- filter on what assets are shown in this wallet&lt;/p&gt;&lt;p&gt;- no swap section?&lt;/p&gt;&lt;p&gt;- no management section?&lt;/p&gt;&lt;p&gt;- modified swap and management sections?&lt;/p&gt;&lt;p&gt;- custom NFT views?&lt;/p&gt;&lt;p&gt;- ability to associate wallet with account?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="760" height="290" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

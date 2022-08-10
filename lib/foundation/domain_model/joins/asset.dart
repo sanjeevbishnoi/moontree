@@ -1,5 +1,6 @@
-import 'package:moontree/foundation/domain/proclaim/proclaim.dart' as cache;
-import 'package:moontree/foundation/domain/records/records.dart';
+import 'package:moontree/foundation/domain_model/records/records.dart';
+import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
+    as cache;
 
 extension DomainAssetHasManyDomainHoldings on DomainAsset {
   Iterable<DomainHolding> get holdings =>

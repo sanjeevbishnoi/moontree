@@ -1,9 +1,9 @@
 import 'package:collection/collection.dart';
-import 'package:moontree/foundation/domain/records/asset.dart';
-import 'package:moontree/foundation/domain/records/wallet.dart';
-import 'package:moontree/foundation/utils/structs.dart';
-import 'package:moontree/foundation/domain/records/holding.dart';
 import 'package:proclaim/proclaim.dart';
+import 'package:moontree/foundation/utils/structs.dart';
+import 'package:moontree/foundation/domain_model/records/asset.dart';
+import 'package:moontree/foundation/domain_model/records/wallet.dart';
+import 'package:moontree/foundation/domain_model/records/holding.dart';
 
 part 'holding.keys.dart';
 

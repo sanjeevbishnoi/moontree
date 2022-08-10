@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moontree_client/moontree_client.dart';
 import 'package:moontree/injection.dart';
+import 'package:moontree/foundation/foundation.dart'; // setsup hive sources
 import 'package:moontree/presentation/core/app.dart';
 
 // Sets up a singleton client object that can be used to talk to the server from
@@ -12,6 +13,14 @@ var client = Client('http://localhost:8080/');
 
 void main() {
   configureInjection(Env.dev);
+
+  /// should we use this? was in v1
+  // Catch errors without crashing the app:
+  //WidgetsFlutterBinding.ensureInitialized();
+
+  DataModel.init();
+  DomainModel.init();
+
   runApp(const MyApp()); //shouldn't this be App from core/app?
 }
 

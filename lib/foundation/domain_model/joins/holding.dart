@@ -1,5 +1,6 @@
-import 'package:moontree/foundation/domain/proclaim/proclaim.dart' as cache;
-import 'package:moontree/foundation/domain/records/records.dart';
+import 'package:moontree/foundation/domain_model/records/records.dart';
+import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
+    as cache;
 
 extension DomainHoldingHasOneDomainWallet on DomainHolding {
   DomainWallet get wallet => cache.wallets.byId.getOne(pub, derivation)!;

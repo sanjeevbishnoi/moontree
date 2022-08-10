@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
-import 'package:moontree/foundation/domain/records/address.dart';
-import 'package:moontree/foundation/domain/records/wallet.dart';
 import 'package:proclaim/proclaim.dart';
+import 'package:moontree/foundation/domain_model/records/address.dart';
+import 'package:moontree/foundation/domain_model/records/wallet.dart';
 
 part 'address.keys.dart';
 

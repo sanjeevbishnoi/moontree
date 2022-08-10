@@ -15,14 +15,18 @@
 ///     - unlike v1 we don't have to do anything special during this process
 ///       like checking each address for transactions. instead we merely...
 /// - checkin with the server, proving the public key of the wallets we have.
-/// - it then does derivation on it's side figures out which addresses are ours
-///   and sends their balances to us.
-/// - we derive the same addresses since when we derive it we can get the
-///   private key
-/// - then we attach the private key to the address record we received from the
-///   server.
-/// - whenever it gives us a new address object, which it will on a new tx
-///   - we'll derive the same address so we know it's private key.
+/// - it then does derivation on it's side, it figures out which addresses are
+///   ours, sends us that number, agregates it's precomputed AddressBalances
+///   into WalletBalances (by asset), and sends those wallet balances to us.
+/// - The first thing it sends us is the number of addresses it has derived for
+///   this wallet. We can then derive the same number (or up to the same number)
+///   of addresses, and save them to the database:
+///   - we derive the same addresses since when we derive it we can get the
+///     private key
+///   - then we attach the private key to the address record we received from
+///     the server.
+/// - whenever it gives us a new address object, which it will on a new tx we'll
+///   derive the same address so we know it's private key.
 /// - as far as subscriptions go...
 ///   - the first one we subscribe to is holdings.
 ///   - then transactions
