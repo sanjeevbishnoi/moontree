@@ -9,7 +9,7 @@ import 'package:moontree/presentation/core/app.dart';
 // The client is set up to connect to a Serverpod running on a local server on
 // the default port. You will need to modify this to connect to staging or
 // production servers.
-var client = Client('http://localhost:8080/');
+//var client = Client('http://localhost:8080/');
 
 void main() {
   configureInjection(Env.dev);
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
   // is successful.
   void _callHello() async {
     try {
-      final result = await client.example.hello(_textEditingController.text);
+      final result = await client().example.hello(_textEditingController.text);
       setState(() {
         _resultMessage = result;
       });

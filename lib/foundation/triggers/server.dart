@@ -18,9 +18,30 @@ import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
 
 /// maybe this should be used to save all datamodel objects to cache? idk.
 class FromServerToDatamodel extends Trigger {
-  void init() => when(
-      thereIsA: client.session.stream.addressCount,
-      andIf: null,
-      doThis: (AddressDeviceRecord address) async =>
-          DerivationProcessor.saveAddress(address));
+  /// From server DeviceRecord to client DeviceRecord:
+  void init() {
+    /// handles addresses from derviation process for keypair and hd wallets
+    /// as well as runtime derivation process for hd wallets
+    when(
+        thereIsA: client().ConnectionEndpoint.stream,
+        andIf: null,
+        doThis: (ComboDeviceRecord linkAddress) async =>
+            DerivationProcessor().saveAddress(
+              linkAddress.item1 as WalletDeviceRecord,
+              linkAddress.item2 as AddressDeviceRecord,
+            ));
+
+    /// handles something else...
+    //when(
+    //    thereIsA: client().ConnectionEndpoint.stream,
+    //    andIf: null,
+    //    doThis: (ComboDeviceRecord linkAddress) async =>
+    //        DerivationProcessor().saveAddress(
+    //          linkAddress.item1 as WalletDeviceRecord,
+    //          linkAddress.item2 as AddressDeviceRecord,
+    //        ));
+  }
+  //Future<void> listen() async => await for (var message in client.myEndpoint.stream) {
+  //  _handleMessage(message);
+  //}
 }
