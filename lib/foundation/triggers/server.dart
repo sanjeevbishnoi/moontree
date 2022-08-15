@@ -31,7 +31,7 @@ class FromServerToDatamodel extends Trigger {
               linkAddress.item2 as AddressDeviceRecord,
             ));
 
-    /// handles something else...
+    /// handles something address balance, wallet balance, transactions etc.
     //when(
     //    thereIsA: client().ConnectionEndpoint.stream,
     //    andIf: null,

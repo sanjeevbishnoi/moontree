@@ -1,17 +1,17 @@
+//import 'package:example_client/example_client.dart';
+//import 'package:serverpod_auth_shared_flutter/serverpod_auth_shared_flutter.dart';
+//import 'package:serverpod_chat_flutter/serverpod_chat_flutter.dart';
+
 import 'package:flutter/material.dart';
-import 'package:moontree_client/moontree_client.dart';
+//import 'package:moontree_client/moontree_client.dart';
 import 'package:moontree/injection.dart';
 import 'package:moontree/foundation/foundation.dart'; // setsup hive sources
 import 'package:moontree/presentation/core/app.dart';
 
-// Sets up a singleton client object that can be used to talk to the server from
-// anywhere in our app. The client is generated from your server code.
-// The client is set up to connect to a Serverpod running on a local server on
-// the default port. You will need to modify this to connect to staging or
-// production servers.
-//var client = Client('http://localhost:8080/');
+//late SessionManager sessionManager;
+//late Client client_;
 
-void main() {
+void main() async {
   configureInjection(Env.dev);
 
   /// should we use this? was in v1
@@ -20,6 +20,29 @@ void main() {
 
   DataModel.init();
   DomainModel.init();
+
+  /// setup client and session manager the suggested way:
+  //// Need to call this as SessionManager is using Flutter bindings before runApp
+  //// is called.
+  //WidgetsFlutterBinding.ensureInitialized();
+  //
+  //// Sets up a singleton client object that can be used to talk to the server
+  //// from anywhere in our app. The client is generated from your server code.
+  //// The client is set up to connect to a Serverpod running on a local server on
+  //// the default port. You will need to modify this to connect to staging or
+  //// production servers.
+  //client_ = Client(
+  //  'http://localhost:8080/',
+  //  authenticationKeyManager: FlutterAuthenticationKeyManager(),
+  //);
+  //
+  //// The session manager keeps track of the signed-in state of the user. You
+  //// can query it to see if the user is currently signed in and get information
+  //// about the user.
+  //sessionManager = SessionManager(
+  //  caller: client_.modules.auth,
+  //);
+  //await sessionManager.initialize();
 
   runApp(const MyApp()); //shouldn't this be App from core/app?
 }
