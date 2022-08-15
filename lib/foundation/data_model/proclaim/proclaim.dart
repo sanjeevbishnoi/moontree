@@ -1,3 +1,5 @@
+import 'package:moontree/foundation/data_model/joins/joins.dart';
+
 import 'address_balance.dart';
 import 'address.dart';
 import 'asset.dart';
@@ -27,3 +29,18 @@ VoutProclaim vouts = VoutProclaim();
 WalletAddressProclaim walletAddresses = WalletAddressProclaim();
 WalletBalanceProclaim walletBalances = WalletBalanceProclaim();
 WalletProclaim wallets = WalletProclaim();
+
+// namespace
+class DatamodelCache {
+  static Future<void> deleteAllWithHeightGreaterThan(int height) async {
+    await addressBalances
+        .removeAll(addressBalances.byHeightGreaterThan(height));
+    final reorgedTransactions = transactions.byHeightGreaterThan(height);
+    reorgedTransactions.forEach((transaction) async {
+      await vins.removeAll(transaction.vins);
+      await vouts.removeAll(transaction.vouts);
+    });
+    await transactions.removeAll(reorgedTransactions);
+    await walletBalances.removeAll(walletBalances.byHeightGreaterThan(height));
+  }
+}

@@ -28,4 +28,7 @@ class WalletBalanceProclaim
           : byWallet
               .getAll(pubkey, derivation)
               .where((e) => e.height != null && e.height! < height);
+
+  Iterable<WalletBalanceDeviceRecord> byHeightGreaterThan(int height) =>
+      records.where((e) => e.height != null && e.height! > height);
 }

@@ -48,25 +48,29 @@ class DerivationProcessor {
 
   /// triggered by a listener on data incoming from server.
   Future<void> saveAddress(
-    WalletDeviceRecord wallet,
-    AddressDeviceRecord addressFromServer,
+    WalletDeviceRecord serverWallet,
+    AddressDeviceRecord serverAddress,
   ) async {
-    final addressFromDatamodel =
-        datamodel.addresses.byId.getOne(addressFromServer.id);
-    if (addressFromDatamodel != null) {
+    final localAddress = datamodel.addresses.byId.getOne(serverAddress.id);
+    if (localAddress != null) {
       // update the address in the cache and database
       await datamodel.addresses.save(AddressDeviceRecord(
-        address: addressFromDatamodel.address,
-        seed: addressFromDatamodel.seed!,
-        used: addressFromServer.used,
-        index: addressFromServer.index,
+        address: localAddress.address,
+        seed: localAddress.seed!,
+        used: serverAddress.used,
+        index: serverAddress.index,
       ));
     } else {
+      // find the wallet so it has a mnemonic present
+      final localWallet = datamodel.wallets.byId.getOne(
+        serverWallet.pubkey,
+        serverWallet.derivation,
+      )!; // if it's not there... I wanna hear about it.
       // save the address to the cache and database
       await datamodel.addresses.save(generateAddressRecord(
-        wallet: wallet,
-        index: addressFromServer.index,
-        used: addressFromServer.used,
+        wallet: localWallet,
+        index: serverAddress.index,
+        used: serverAddress.used,
       ));
     }
   }

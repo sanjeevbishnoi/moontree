@@ -23,4 +23,7 @@ class AddressBalanceProclaim
       byAddress
           .getAll(address)
           .where((e) => e.height != null && e.height! < height);
+
+  Iterable<AddressBalanceDeviceRecord> byHeightGreaterThan(int height) =>
+      records.where((e) => e.height != null && e.height! > height);
 }
