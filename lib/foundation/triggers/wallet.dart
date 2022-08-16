@@ -1,3 +1,5 @@
+import 'package:moontree/foundation/data_model/joins/joins.dart';
+import 'package:moontree/foundation/utils/derivation.dart';
 import 'package:proclaim/change.dart';
 import 'package:utils/trigger.dart';
 import 'package:moontree/foundation/domain_model/records/wallet.dart';
@@ -15,28 +17,26 @@ class ToWalletDomain extends Trigger {
             loaded: (loaded) => load(loaded.record),
             added: (added) => load(added.record),
             updated: (updated) => load(updated.record),
-            removed: (removed) => remove(removed.record),
+            removed: (removed) {}, // never remove
           ));
 
   /// puts the record into memory
   Future<void> load(WalletDeviceRecord wallet) async =>
       await domain.wallets.save(DomainWallet.from(
         wallet,
-        // ??
-        // we derive addresses on device so we should have this data at that time
-        //  String hashedEntropy,
-        //  String privkey,
-        //  String receiveAddress, // should we remove this?
+        privkey: generateHDWallet(wallet.mnemonic).privKey!,
+        hashedEntropy: generateEntropy(wallet.mnemonic),
       ));
 
+  /// does not happen on wallets: just an example:
   /// only happens on reorgs
-  Future<void> remove(WalletDeviceRecord wallet) async =>
-      await domain.wallets.remove(DomainWallet.from(
-        wallet,
-        // ??
-        // we derive addresses on device so we should have this data at that time
-        //  String hashedEntropy,
-        //  String privkey,
-        //  String receiveAddress, // should we remove this?
-      ));
+  //Future<void> remove(WalletDeviceRecord wallet) async =>
+  //    await domain.wallets.remove(DomainWallet.from(
+  //      wallet,
+  //      // ??
+  //      // we derive addresses on device so we should have this data at that time
+  //      //  String hashedEntropy,
+  //      //  String privkey,
+  //      //  String receiveAddress, // should we remove this?
+  //    ));
 }

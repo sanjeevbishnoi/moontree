@@ -12,8 +12,8 @@ extension WRHasManyAddressDeviceRecords on WalletDeviceRecord {
 
 extension WDeviceRecordHasOneNextUnusedAddressDeviceRecord
     on WalletDeviceRecord {
-  AddressDeviceRecord get nextUnusedAddress => addresses
+  AddressDeviceRecord? get nextUnusedAddress => addresses
       .where((AddressDeviceRecord a) => !a.used)
       .sorted((a, b) => a.index.compareTo(b.index))
-      .first;
+      .firstOrNull;
 }

@@ -25,12 +25,12 @@ class DomainAddress with EquatableMixin, ToStringMixin {
   String get walletId => DomainWallet.generateId(walletPub, walletDerivation);
 
   factory DomainAddress.from(
-    AddressDeviceRecord address,
-    String privkey,
-    String pubkey,
-    String walletPub,
-    String walletDerivation,
-  ) =>
+    AddressDeviceRecord address, {
+    required String privkey,
+    required String pubkey,
+    required String walletPub,
+    required String walletDerivation,
+  }) =>
       DomainAddress(
         address: address.address,
         walletPub: walletPub,

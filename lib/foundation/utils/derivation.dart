@@ -34,13 +34,16 @@ WalletDeviceRecord generateWalletRecord({
   required String name,
   String? derivation,
   String? mnemonic,
-}) =>
-    WalletDeviceRecord(
-      pubkey: HDWallet.fromSeed(generateSeed(mnemonic)).pubKey,
-      derivation: derivation ?? Derivation.getPath(),
-      name: name,
-      mnemonic: mnemonic,
-    );
+}) {
+  final hd = HDWallet.fromSeed(generateSeed(mnemonic));
+  return WalletDeviceRecord(
+    pubkey: hd.pubKey,
+    derivation: derivation ?? Derivation.getPath(),
+    name: name,
+    mnemonic: mnemonic,
+    privkey: hd.privKey,
+  );
+}
 
 AddressDeviceRecord generateAddressRecord({
   required WalletDeviceRecord wallet,
@@ -59,5 +62,7 @@ AddressDeviceRecord generateAddressRecord({
     seed: addressHDWallet.seed!,
     used: used,
     index: index,
+    privkey: addressHDWallet.privKey,
+    pubkey: addressHDWallet.pubKey,
   );
 }

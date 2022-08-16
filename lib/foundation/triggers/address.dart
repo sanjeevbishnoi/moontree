@@ -15,30 +15,17 @@ class ToAddressDomain extends Trigger {
             loaded: (loaded) => load(loaded.record),
             added: (added) => load(added.record),
             updated: (updated) => load(updated.record),
-            removed: (removed) => remove(removed.record),
+            removed: (removed) {}, // never remove
           ));
 
   /// puts the record into memory
   Future<void> load(AddressDeviceRecord address) async =>
       await domain.addresses.save(DomainAddress.from(
         address,
-        // ??
-        // we derive addresses on device so we should have this data at that time
-        //  String privkey,
-        //  String pubkey,
-        //  String walletPub,
-        //  String walletDerivation,
-      ));
-
-  /// only happens on reorgs
-  Future<void> remove(AddressDeviceRecord address) async =>
-      await domain.addresses.remove(DomainAddress.from(
-        address,
-        // ??
-        // we derive addresses on device so we should have this data at that time
-        //  String privkey,
-        //  String pubkey,
-        //  String walletPub,
-        //  String walletDerivation,
+        privkey: address.privkey ?? 'get privkey using mnemonic or seed',
+        pubkey: address.pubkey ?? 'get',
+        walletPub: ,
+        walletDerivation: ,
       ));
 }
+//TODO: add privkey on wallet and address device records save when saving.
