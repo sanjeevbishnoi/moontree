@@ -1,3 +1,4 @@
+import 'package:moontree/foundation/data_model/joins/joins.dart';
 import 'package:proclaim/change.dart';
 import 'package:utils/trigger.dart';
 import 'package:moontree/foundation/domain_model/records/address.dart';
@@ -19,13 +20,13 @@ class ToAddressDomain extends Trigger {
           ));
 
   /// puts the record into memory
-  Future<void> load(AddressDeviceRecord address) async =>
-      await domain.addresses.save(DomainAddress.from(
-        address,
-        privkey: address.privkey ?? 'get privkey using mnemonic or seed',
-        pubkey: address.pubkey ?? 'get',
-        walletPub: ,
-        walletDerivation: ,
-      ));
+  Future<void> load(AddressDeviceRecord address) async => address.wallets
+      .forEach((wallet) async => await domain.addresses.save(DomainAddress.from(
+            address,
+            privkey: address.privkey!,
+            pubkey: address.pubkey!,
+            walletPub: wallet.pubkey,
+            walletDerivation: wallet.derivation,
+          )));
 }
 //TODO: add privkey on wallet and address device records save when saving.

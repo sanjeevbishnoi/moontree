@@ -8,8 +8,8 @@ class _IdKey extends Key<DomainWallet> {
 }
 
 extension ByIdMethodsForDomainWallet on Index<_IdKey, DomainWallet> {
-  DomainWallet? getOne(String pub, String derivation) =>
-      getByKeyStr(DomainWallet.generateId(pub, derivation)).firstOrNull;
+  DomainWallet? getOne(String pub) =>
+      getByKeyStr(DomainWallet.generateId(pub)).firstOrNull;
 }
 
 // name

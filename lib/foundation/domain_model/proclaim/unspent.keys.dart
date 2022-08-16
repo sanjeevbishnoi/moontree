@@ -51,6 +51,6 @@ class _WalletIdKey extends Key<DomainUnspent> {
 
 extension ByWalletIdMethodsForDomainUnspent
     on Index<_WalletIdKey, DomainUnspent> {
-  List<DomainUnspent> getAll(String sub, String derivation) =>
-      getByKeyStr(DomainWallet.generateId(sub, derivation));
+  List<DomainUnspent> getAll(String sub) =>
+      getByKeyStr(DomainWallet.generateId(sub));
 }

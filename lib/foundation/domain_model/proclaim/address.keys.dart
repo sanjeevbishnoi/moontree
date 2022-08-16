@@ -19,6 +19,6 @@ class _WalletIdKey extends Key<DomainAddress> {
 }
 
 extension ByWalletIdMethodsForAddress on Index<_WalletIdKey, DomainAddress> {
-  List<DomainAddress> getAll(String walletPub, String walletDerivation) =>
-      getByKeyStr(DomainWallet.generateId(walletPub, walletDerivation));
+  List<DomainAddress> getAll(String walletPub) =>
+      getByKeyStr(DomainWallet.generateId(walletPub));
 }

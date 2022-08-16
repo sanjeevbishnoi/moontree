@@ -17,7 +17,6 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
   final Protocol protocol;
   // wallet
   final String pub;
-  final String derivation;
   // details
   final Map<FeeType, int> fees;
   final String ipfsHash;
@@ -34,27 +33,24 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
     required this.symbol,
     required this.protocol,
     required this.pub,
-    required this.derivation,
     required this.fees,
     required this.ipfsHash,
     required this.note,
     required this.memo,
   });
 
-  String get id =>
-      generateId(transactionHash, symbol, protocol, pub, derivation);
+  String get id => generateId(transactionHash, symbol, protocol, pub);
   static String generateId(String transactionHash, String symbol,
-          Protocol protocol, String pub, String derviation) =>
-      '$transactionHash:$symbol:${protocol.name}:$pub:$derviation';
+          Protocol protocol, String pub) =>
+      '$transactionHash:$symbol:${protocol.name}:$pub';
 
   String get assetId => DomainAsset.generateId(symbol, protocol);
-  String get walletId => DomainWallet.generateId(pub, derivation);
+  String get walletId => DomainWallet.generateId(pub);
 
-  String get walletAssetId =>
-      generateWalletAssetId(pub, derivation, symbol, protocol);
+  String get walletAssetId => generateWalletAssetId(pub, symbol, protocol);
   static String generateWalletAssetId(
-          String pub, String derivation, String symbol, Protocol protocol) =>
-      '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub, derivation)}';
+          String pub, String symbol, Protocol protocol) =>
+      '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub)}';
 
   /* how to solve?
   factory DomainTransaction.from(
@@ -71,7 +67,6 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
         symbol: transaction.symbol,
         protocol: protocol,
         pub: transaction., 
-        derivation: transaction., 
         fees: transaction.,
         ipfsHash: transaction., 
         note: transaction., 

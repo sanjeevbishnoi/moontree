@@ -19,8 +19,8 @@ class DomainWallet with EquatableMixin, ToStringMixin {
     required this.derivation,
   });
 
-  String get id => generateId(pub, derivation);
-  static String generateId(String pub, String derviation) => '$pub:$derviation';
+  String get id => generateId(pub);
+  static String generateId(String pub) => pub;
 
   factory DomainWallet.from(
     WalletDeviceRecord wallet, {

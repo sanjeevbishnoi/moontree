@@ -12,10 +12,8 @@ extension ByIdMethodsForDomainHolding on Index<_IdKey, DomainHolding> {
     String symbol,
     Protocol protocol,
     String pub,
-    String derivation,
   ) =>
-      getByKeyStr(DomainHolding.generateId(symbol, protocol, pub, derivation))
-          .firstOrNull;
+      getByKeyStr(DomainHolding.generateId(symbol, protocol, pub)).firstOrNull;
 }
 
 // Asset
@@ -40,6 +38,6 @@ class _WalletIdKey extends Key<DomainHolding> {
 
 extension ByWalletIdMethodsForDomainHolding
     on Index<_WalletIdKey, DomainHolding> {
-  List<DomainHolding> getAll(String pub, String derivation) =>
-      getByKeyStr(DomainWallet.generateId(pub, derivation));
+  List<DomainHolding> getAll(String pub) =>
+      getByKeyStr(DomainWallet.generateId(pub));
 }

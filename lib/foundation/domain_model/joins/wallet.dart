@@ -6,23 +6,20 @@ import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
     as cache;
 
 extension DomainWalletHasManyDomainUnspent on DomainWallet {
-  Iterable<DomainUnspent> get unspents =>
-      cache.unspents.byWallet.getAll(pub, derivation);
+  Iterable<DomainUnspent> get unspents => cache.unspents.byWallet.getAll(pub);
 }
 
 extension DomainWalletHasManyDomainUnspents on DomainWallet {
-  Iterable<DomainAddress> get addresses =>
-      cache.addresses.byWallet.getAll(pub, derivation);
+  Iterable<DomainAddress> get addresses => cache.addresses.byWallet.getAll(pub);
 }
 
 extension DomainWalletHasManyDomainHoldings on DomainWallet {
-  Iterable<DomainHolding> get holdings =>
-      cache.holdings.byWallet.getAll(pub, derivation);
+  Iterable<DomainHolding> get holdings => cache.holdings.byWallet.getAll(pub);
 }
 
 extension DomainWalletHasManyDomainTransactions on DomainWallet {
   Iterable<DomainTransaction> get transactions =>
-      cache.transactions.byWallet.getAll(pub, derivation);
+      cache.transactions.byWallet.getAll(pub);
 }
 
 extension DomainWalletCorrespondsToADataModelWallet on DomainWallet {
