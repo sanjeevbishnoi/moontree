@@ -19,6 +19,7 @@
 ///   - the first one we subscribe to is holdings.
 ///   - then transactions
 ///   - ...but this is out side the scope of the derviation process now.
+import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
 import 'package:moontree/foundation/data_model/data_model.dart' as datamodel;
 import 'package:moontree/foundation/data_model/joins/joins.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
@@ -32,19 +33,27 @@ class DerivationProcessor {
   /// must be called after the data_model is loaded from hive boxes
   /// and before the derivation process is started.
   /// makes a wallet if there are none.
-  Future<void> makeFirstWallet() async {
+  Future<void> makeFirstWalletPair() async {
     // if there are no wallets, make one and save it to cache and database
-    final walletCount = datamodel.wallets.records.length;
-    if (walletCount == 0) {
-      // make a wallet
-      final wallet = generateWalletRecord(
-        name: 'default',
-        mnemonic: generateMnemoic(),
-      );
-      // save it to cache and database
-      await datamodel.wallets.save(wallet);
+    if (datamodel.wallets.records.length == 0) {
+      final mnemonic = generateMnemoic();
+      await makeSaveWallet(
+          'Wallet 1', mnemonic, Derivation.getPath(external: true));
+      await makeSaveWallet(
+          'Wallet 2', mnemonic, Derivation.getPath(external: false));
     }
   }
+
+  Future<void> makeSaveWallet(
+    String name,
+    String mnemonic,
+    String path,
+  ) async =>
+      await datamodel.wallets.save(generateWalletRecord(
+        name: name,
+        mnemonic: mnemonic,
+        derivation: path,
+      ));
 
   /// triggered by a listener on data incoming from server.
   Future<void> saveAddress(
@@ -76,7 +85,7 @@ class DerivationProcessor {
   }
 
   void run() {
-    makeFirstWallet();
+    makeFirstWalletPair();
 
     /// checkin with the server, proving the public key of the wallets we have.
     /// this process should be handled by listeners because the server will send

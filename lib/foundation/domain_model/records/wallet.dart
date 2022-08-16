@@ -1,6 +1,8 @@
 import 'package:equatable/equatable.dart';
-import 'package:moontree/foundation/data_model/joins/joins.dart';
+import 'package:moontree/foundation/utils/derivation.dart';
 import 'package:utils/mixins/string.dart';
+import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
+import 'package:moontree/foundation/data_model/joins/joins.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain_model/joins/joins.dart';
 
@@ -9,30 +11,36 @@ class DomainWallet with EquatableMixin, ToStringMixin {
   final String hashedEntropy;
   final String priv;
   final String pub;
-  final String derivation;
+  final String? derivation;
 
   DomainWallet({
     required this.name,
     required this.hashedEntropy,
     required this.priv,
     required this.pub,
-    required this.derivation,
+    this.derivation,
   });
 
   String get id => generateId(pub);
   static String generateId(String pub) => pub;
 
-  factory DomainWallet.from(
-    WalletDeviceRecord wallet, {
-    required String hashedEntropy,
-    required String privkey,
-  }) =>
-      DomainWallet(
+  factory DomainWallet.from(WalletDeviceRecord wallet) => DomainWallet(
         name: wallet.id,
-        hashedEntropy: hashedEntropy,
-        priv: privkey,
+        hashedEntropy: generateEntropy(wallet.mnemonic!),
+        priv: generateHDWallet(wallet.mnemonic!).privKey!,
         pub: wallet.pubkey,
-        derivation: wallet.derivation,
+        // the domain wallet has 2 hard coded derivation paths.
+        // 1. for the receive address
+        // 2. for the change address
+        // unless, the wallet.derivation is specified by the user...
+        // in which case this derivation is used.
+        // so if derivation is null the default derivations are used.
+        // if its present but empty string, just like the server that indicates
+        // a keypair wallet rather than a hierarchical wallet.
+        // or the user can specify a derivation path.
+        derivation: wallet.derivation == Derivation.getPath()
+            ? null
+            : wallet.derivation, // should not happen for hd but a bit flexible
       );
 
   @override
@@ -56,5 +64,9 @@ class DomainWallet with EquatableMixin, ToStringMixin {
   @override
   bool? get stringify => true;
 
-  String? get receiveAddress => datmodelWallet.nextUnusedAddress?.address;
+  String? get receiveAddress =>
+      datamodelWalletExternal.nextUnusedAddress?.address;
+
+  String? get changeAddress =>
+      datamodelWalletInternal.nextUnusedAddress?.address;
 }

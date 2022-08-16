@@ -22,11 +22,7 @@ class ToWalletDomain extends Trigger {
 
   /// puts the record into memory
   Future<void> load(WalletDeviceRecord wallet) async =>
-      await domain.wallets.save(DomainWallet.from(
-        wallet,
-        privkey: generateHDWallet(wallet.mnemonic).privKey!,
-        hashedEntropy: generateEntropy(wallet.mnemonic),
-      ));
+      await domain.wallets.save(DomainWallet.from(wallet));
 
   /// does not happen on wallets: just an example:
   /// only happens on reorgs

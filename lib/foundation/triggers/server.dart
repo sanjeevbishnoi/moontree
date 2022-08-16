@@ -51,7 +51,9 @@ class FromServerToDatamodel extends Trigger {
     } else if (item is WalletBalanceDeviceRecord) {
       await datamodel.walletBalances.save(item);
     } else if (item is WalletDeviceRecord) {
-      await datamodel.wallets.save(item);
+      print('WARNING: wallet record recieved from server. '
+          'We make our own wallets, why would we get one from the server?');
+      //await datamodel.wallets.save(item);
     } else if (item is GenericDeviceRecord) {
       await _handleMessage(item);
     } else if (item is ComboDeviceRecord) {
