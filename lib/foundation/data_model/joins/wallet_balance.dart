@@ -1,15 +1,15 @@
-import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as cache;
+import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 import 'package:moontree/foundation/data_model/records/records.dart';
 
 extension WBHaveAnAsset on WalletBalanceDeviceRecord {
-  AssetDeviceRecord? get asset => cache.assets.bySymbol.getOne(symbol);
+  AssetDeviceRecord? get asset => data.assets.bySymbol.getOne(symbol);
 }
 
 extension WBHaveAWallet on WalletBalanceDeviceRecord {
   WalletDeviceRecord? get wallet =>
-      cache.wallets.byId.getOne(pubkey, derivation);
+      data.wallets.byId.getOne(pubkey, derivation);
 }
 
 extension WBHashManyVouts on WalletBalanceDeviceRecord {
-  List<VoutDeviceRecord>? get vouts => cache.vouts.bySymbol.getAll(symbol);
+  List<VoutDeviceRecord>? get vouts => data.vouts.bySymbol.getAll(symbol);
 }

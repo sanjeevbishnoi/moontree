@@ -2,15 +2,16 @@
 
 import 'package:proclaim/proclaim.dart' show MapSource;
 import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
-    as pros;
+    as domain;
 
 class DomainModel {
   static void init() {
-    pros.addresses.setSource(MapSource(pros.AddressProclaim.defaults));
-    pros.assets.setSource(MapSource(pros.AssetProclaim.defaults));
-    pros.holdings.setSource(MapSource(pros.HoldingProclaim.defaults));
-    pros.transactions.setSource(MapSource(pros.TransactionProclaim.defaults));
-    pros.unspents.setSource(MapSource(pros.UnspentProclaim.defaults));
-    pros.wallets.setSource(MapSource(pros.WalletProclaim.defaults));
+    domain.addresses.setSource(MapSource(domain.AddressProclaim.defaults));
+    domain.assets.setSource(MapSource(domain.AssetProclaim.defaults));
+    domain.holdings.setSource(MapSource(domain.HoldingProclaim.defaults));
+    domain.transactions
+        .setSource(MapSource(domain.TransactionProclaim.defaults));
+    domain.unspents.setSource(MapSource(domain.UnspentProclaim.defaults));
+    domain.wallets.setSource(MapSource(domain.WalletProclaim.defaults));
   }
 }

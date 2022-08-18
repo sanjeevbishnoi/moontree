@@ -3,14 +3,13 @@ import 'package:proclaim/change.dart';
 import 'package:utils/trigger.dart';
 import 'package:moontree/foundation/domain_model/records/address.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
-import 'package:moontree/foundation/data_model/proclaim/proclaim.dart'
-    as datamodel;
+import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
     as domain;
 
 class ToAddressDomain extends Trigger {
   void init() => when(
-      thereIsA: datamodel.addresses.changes,
+      thereIsA: data.addresses.changes,
       andIf: null,
       doThis: (Change<AddressDeviceRecord> change) async => change.when(
             loaded: (loaded) => load(loaded.record),
@@ -23,10 +22,6 @@ class ToAddressDomain extends Trigger {
   Future<void> load(AddressDeviceRecord address) async => address.wallets
       .forEach((wallet) async => await domain.addresses.save(DomainAddress.from(
             address,
-            privkey: address.privkey!,
-            pubkey: address.pubkey!,
             walletPub: wallet.pubkey,
-            walletDerivation: wallet.derivation,
           )));
 }
-//TODO: add privkey on wallet and address device records save when saving.

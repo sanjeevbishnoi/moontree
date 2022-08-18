@@ -1,16 +1,16 @@
 import 'package:moontree/foundation/domain_model/records/records.dart';
 import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
-    as cache;
+    as domain;
 
 extension DomainHoldingHasOneDomainWallet on DomainHolding {
-  DomainWallet get wallet => cache.wallets.byId.getOne(pub)!;
+  DomainWallet get wallet => domain.wallets.byId.getOne(pub)!;
 }
 
 extension DomainHoldingHasOneDomainAsset on DomainHolding {
-  DomainAsset get asset => cache.assets.byId.getOne(symbol, protocol)!;
+  DomainAsset get asset => domain.assets.byId.getOne(symbol, protocol)!;
 }
 
 extension DomainHoldingHasManyDomainTransactions on DomainHolding {
   Iterable<DomainTransaction> get transactions =>
-      cache.transactions.byWalletAsset.getAll(pub, symbol, protocol);
+      domain.transactions.byWalletAsset.getAll(pub, symbol, protocol);
 }

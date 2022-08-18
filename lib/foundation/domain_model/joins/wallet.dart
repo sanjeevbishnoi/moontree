@@ -1,31 +1,31 @@
 import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain_model/records/records.dart';
-import 'package:moontree/foundation/data_model/proclaim/proclaim.dart'
-    as datamodel;
+import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
-    as cache;
+    as domain;
 
 extension DomainWalletHasManyDomainUnspent on DomainWallet {
-  Iterable<DomainUnspent> get unspents => cache.unspents.byWallet.getAll(pub);
+  Iterable<DomainUnspent> get unspents => domain.unspents.byWallet.getAll(pub);
 }
 
 extension DomainWalletHasManyDomainUnspents on DomainWallet {
-  Iterable<DomainAddress> get addresses => cache.addresses.byWallet.getAll(pub);
+  Iterable<DomainAddress> get addresses =>
+      domain.addresses.byWallet.getAll(pub);
 }
 
 extension DomainWalletHasManyDomainHoldings on DomainWallet {
-  Iterable<DomainHolding> get holdings => cache.holdings.byWallet.getAll(pub);
+  Iterable<DomainHolding> get holdings => domain.holdings.byWallet.getAll(pub);
 }
 
 extension DomainWalletHasManyDomainTransactions on DomainWallet {
   Iterable<DomainTransaction> get transactions =>
-      cache.transactions.byWallet.getAll(pub);
+      domain.transactions.byWallet.getAll(pub);
 }
 
 extension DomainWalletCorrespondsToADataModelWallet on DomainWallet {
-  WalletDeviceRecord get datamodelWalletExternal => datamodel.wallets.byId
+  WalletDeviceRecord get datamodelWalletExternal => data.wallets.byId
       .getOne(pub, derivation ?? Derivation.getPath(external: true))!;
-  WalletDeviceRecord get datamodelWalletInternal => datamodel.wallets.byId
+  WalletDeviceRecord get datamodelWalletInternal => data.wallets.byId
       .getOne(pub, derivation ?? Derivation.getPath(external: false))!;
 }

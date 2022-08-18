@@ -3,14 +3,13 @@ import 'package:utils/trigger.dart';
 import 'package:moontree/foundation/utils/structs.dart';
 import 'package:moontree/foundation/domain_model/records/asset.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
-import 'package:moontree/foundation/data_model/proclaim/proclaim.dart'
-    as datamodel;
+import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
     as domain;
 
 class ToAssetDomain extends Trigger {
   void init() => when(
-      thereIsA: datamodel.assets.changes,
+      thereIsA: data.assets.changes,
       andIf: null,
       doThis: (Change<AssetDeviceRecord> change) async => change.when(
             loaded: (loaded) => load(loaded.record),

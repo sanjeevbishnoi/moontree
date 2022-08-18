@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:utils/mixins/string.dart';
 import 'package:moontree/foundation/utils/structs.dart';
+import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain_model/records/asset.dart';
 import 'package:moontree/foundation/domain_model/records/wallet.dart';
 
@@ -52,17 +53,19 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
           String pub, String symbol, Protocol protocol) =>
       '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub)}';
 
-  /* how to solve?
+  /* a domain transaction is per asset, per wallet, per transaction hash.
+  so it doesn't connect to multiple vouts unless they are all the same asset.
   factory DomainTransaction.from(
     TransactionDeviceRecord transaction,
     Protocol protocol,
   ) =>
       DomainTransaction(
-        transactionHash: transaction., 
+        transactionHash: transaction.hash, 
+        height: transaction.height ?? -1, //0 is genesis block
+
         type: transaction., 
         sentReceived: transaction., 
         sats: transaction., 
-        height: transaction., 
         date: transaction., 
         symbol: transaction.symbol,
         protocol: protocol,

@@ -24,17 +24,14 @@ class DomainAddress with EquatableMixin, ToStringMixin {
 
   factory DomainAddress.from(
     AddressDeviceRecord address, {
-    required String privkey,
-    required String pubkey,
     required String walletPub,
-    required String walletDerivation,
   }) =>
       DomainAddress(
         address: address.address,
         walletPub: walletPub,
         index: address.index,
-        priv: privkey,
-        pub: pubkey,
+        priv: address.privkey!,
+        pub: address.pubkey!,
       );
 
   @override
@@ -50,7 +47,6 @@ class DomainAddress with EquatableMixin, ToStringMixin {
   List<String> get propNames => [
         'address',
         'walletPub',
-        'walletDerivation',
         'index',
         'priv',
         'pub',

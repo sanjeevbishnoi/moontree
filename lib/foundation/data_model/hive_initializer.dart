@@ -14,7 +14,7 @@
 import 'dart:io';
 import 'package:hive/hive.dart';
 import 'package:proclaim/proclaim.dart' show HiveSource;
-import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as cache;
+import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 import 'package:moontree/foundation/data_model/records/records.dart';
 
 /// all: loads all the tables
@@ -91,17 +91,17 @@ class HiveInitializer {
 
   void load(HiveLoadingStep step) {
     if ([HiveLoadingStep.all, HiveLoadingStep.step1].contains(step)) {
-      cache.assets.setSource(HiveSource('assets'));
-      cache.walletBalances.setSource(HiveSource('walletBalances'));
-      cache.wallets.setSource(HiveSource('wallets'));
+      data.assets.setSource(HiveSource('assets'));
+      data.walletBalances.setSource(HiveSource('walletBalances'));
+      data.wallets.setSource(HiveSource('wallets'));
     }
     if ([HiveLoadingStep.all, HiveLoadingStep.step2].contains(step)) {
-      cache.addressBalances.setSource(HiveSource('addressBalances'));
-      cache.addresses.setSource(HiveSource('addresses'));
-      cache.walletAddresses.setSource(HiveSource('walletAddresses'));
-      cache.transactions.setSource(HiveSource('transactions'));
-      cache.vins.setSource(HiveSource('vins'));
-      cache.vouts.setSource(HiveSource('vouts'));
+      data.addressBalances.setSource(HiveSource('addressBalances'));
+      data.addresses.setSource(HiveSource('addresses'));
+      data.walletAddresses.setSource(HiveSource('walletAddresses'));
+      data.transactions.setSource(HiveSource('transactions'));
+      data.vins.setSource(HiveSource('vins'));
+      data.vouts.setSource(HiveSource('vouts'));
     }
   }
 
