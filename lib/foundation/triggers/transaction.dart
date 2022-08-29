@@ -20,14 +20,14 @@ class ToTransactionDomain extends Trigger {
 
   /// puts the record into memory
   Future<void> load(TransactionDeviceRecord transaction) async =>
-      await domain.transactions.save(DomainTransaction.from(
+      await domain.transactions.saveAll(DomainTransaction.from(
         transaction,
         Protocol.ravencoinMainnet,
       ));
 
   /// only happens on reorgs
   Future<void> remove(TransactionDeviceRecord transaction) async =>
-      await domain.transactions.remove(DomainTransaction.from(
+      await domain.transactions.removeAll(DomainTransaction.from(
         transaction,
         Protocol.ravencoinMainnet,
       ));

@@ -8,6 +8,7 @@ extension WRHasManyAddressDeviceRecords on WalletDeviceRecord {
   Iterable<AddressDeviceRecord> get addresses => [
         for (var wal in links) data.addresses.byId.getOne(wal.address)
       ].whereType<AddressDeviceRecord>();
+  Iterable<String> get rawAddresses => [for (var link in links) link.address];
 }
 
 extension WDeviceRecordHasOneNextUnusedAddressDeviceRecord

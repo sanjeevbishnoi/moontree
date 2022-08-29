@@ -13,5 +13,22 @@ class AssetProclaim extends Proclaim<_SymbolKey, AssetDeviceRecord> {
     byId = bySymbol;
   }
 
+  static Map<String, AssetDeviceRecord> get defaults => {
+        'RVN': AssetDeviceRecord(
+          symbol: 'RVN',
+          /*name: 'Ravencoin',*/
+          divisibility: 8,
+          supply: 21000300000,
+          reissuable: false,
+        ),
+        //'MOONTREE': AssetDeviceRecord(
+        //  symbol: 'MOONTREE',
+        //  /*name: 'Moontree',*/
+        //  divisibility: 4,
+        //  supply: 12000000000,
+        //  reissuable: true,
+        //)
+      };
+
   Set<String> get ids => records.map((e) => e.id).toSet();
 }
