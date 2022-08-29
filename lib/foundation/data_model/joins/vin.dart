@@ -9,6 +9,6 @@ extension VinRHasOneTransactionDeviceRecord on VinDeviceRecord {
 extension VinRHasOneVoutDeviceRecord on VinDeviceRecord {
   VoutDeviceRecord? get vout =>
       voutTransactionHash == null || voutPosition == null
-          ? null
+          ? null // coinbase
           : data.vouts.byId.getOne(voutTransactionHash!, voutPosition!);
 }

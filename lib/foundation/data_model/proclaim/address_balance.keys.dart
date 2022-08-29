@@ -28,3 +28,15 @@ extension ByIdMethodsForAddressBalance
               AddressBalanceDeviceRecord.generateId(address, symbol, height))
           .firstOrNull;
 }
+
+/// bySymbol
+
+class _SymbolKey extends Key<AddressBalanceDeviceRecord> {
+  @override
+  String getKey(AddressBalanceDeviceRecord address) => address.symbol;
+}
+
+extension BySymbolKeyMethodsForAddressBalance
+    on IndexMultiple<_SymbolKey, AddressBalanceDeviceRecord> {
+  List<AddressBalanceDeviceRecord> getAll(String symbol) => getByKeyStr(symbol);
+}

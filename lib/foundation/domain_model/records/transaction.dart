@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:moontree/foundation/data_model/joins/joins.dart';
 import 'package:utils/mixins/string.dart';
 import 'package:moontree/foundation/utils/structs.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
@@ -55,11 +56,21 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
 
   /* a domain transaction is per asset, per wallet, per transaction hash.
   so it doesn't connect to multiple vouts unless they are all the same asset.
-  factory DomainTransaction.from(
+  */
+  static List<DomainTransaction> from(
     TransactionDeviceRecord transaction,
     Protocol protocol,
-  ) =>
-      DomainTransaction(
+  ) {
+    final assets = {for (final vout in transaction.vouts) 
+      (vout.asset) 
+    };
+    // get the asset
+    // get the wallet
+    // get the vins
+    // get the vouts
+
+
+    return DomainTransaction(
         transactionHash: transaction.hash, 
         height: transaction.height ?? -1, //0 is genesis block
 
@@ -75,7 +86,7 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
         note: transaction., 
         memo: transaction., 
       );
-  */
+  }
 
   @override
   List<Object?> get props => [

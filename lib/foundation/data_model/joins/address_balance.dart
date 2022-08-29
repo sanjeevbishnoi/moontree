@@ -6,6 +6,6 @@ extension ABHaveAnAsset on AddressBalanceDeviceRecord {
 }
 
 extension ABHaveAnAddress on AddressBalanceDeviceRecord {
-  AddressDeviceRecord? get address =>
+  AddressDeviceRecord? get ofAddress =>
       data.addresses.byAddress.getOne(this.address);
 }

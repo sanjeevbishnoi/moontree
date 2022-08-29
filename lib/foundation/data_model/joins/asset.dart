@@ -4,3 +4,13 @@ import 'package:moontree/foundation/data_model/records/records.dart';
 extension AssetRHasManyVoutDeviceRecords on AssetDeviceRecord {
   List<VoutDeviceRecord> get vouts => data.vouts.bySymbol.getAll(symbol);
 }
+
+extension AssetRHasManyAddressBalanceDeviceRecords on AssetDeviceRecord {
+  List<AddressBalanceDeviceRecord> get addressBalances =>
+      data.addressBalances.bySymbol.getAll(symbol);
+}
+
+extension AssetRHasManyWalletBalanceDeviceRecords on AssetDeviceRecord {
+  List<WalletBalanceDeviceRecord> get walletBalances =>
+      data.walletBalances.bySymbol.getAll(symbol);
+}

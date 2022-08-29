@@ -13,3 +13,8 @@ extension ARHasManyWalletDeviceRecords on AddressDeviceRecord {
 extension ARHasManyVoutDeviceRecords on AddressDeviceRecord {
   Iterable<VoutDeviceRecord> get vouts => data.vouts.byAddress.getAll(address);
 }
+
+extension ARHasManyABDeviceRecords on AddressDeviceRecord {
+  Iterable<AddressBalanceDeviceRecord> get balances =>
+      data.addressBalances.byAddress.getAll(address);
+}

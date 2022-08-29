@@ -14,7 +14,8 @@ extension VoutRHasOneVinDeviceRecord on VoutDeviceRecord {
 extension VoutRHasOneAddressDeviceRecord on VoutDeviceRecord {
   /// mempool records where the subscriber is present don't get assoicated
   /// with an address record, because the look up would usually be pointless.
-  AddressDeviceRecord? get address => data.addresses.byId.getOne(this.address);
+  AddressDeviceRecord? get toAddress =>
+      data.addresses.byId.getOne(this.address);
 }
 
 extension VoutRHasOneAssetDeviceRecord on VoutDeviceRecord {

@@ -8,10 +8,12 @@ class AddressBalanceProclaim
     extends Proclaim<_IdKey, AddressBalanceDeviceRecord> {
   late IndexMultiple<_IdKey, AddressBalanceDeviceRecord> byId;
   late IndexMultiple<_AddressKey, AddressBalanceDeviceRecord> byAddress;
+  late IndexMultiple<_SymbolKey, AddressBalanceDeviceRecord> bySymbol;
 
   AddressBalanceProclaim() : super(_IdKey()) {
     byId = addIndexMultiple('id', _IdKey());
-    byAddress = addIndexMultiple('addressid', _AddressKey());
+    byAddress = addIndexMultiple('address', _AddressKey());
+    bySymbol = addIndexMultiple('symbol', _SymbolKey());
   }
 
   Set<String> get ids => records.map((e) => e.id).toSet();
