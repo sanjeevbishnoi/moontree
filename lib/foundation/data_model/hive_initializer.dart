@@ -92,13 +92,13 @@ class HiveInitializer {
   void load(HiveLoadingStep step) {
     if ([HiveLoadingStep.all, HiveLoadingStep.step1].contains(step)) {
       data.assets.setSource(HiveSource('assets'));
-      data.walletBalances.setSource(HiveSource('walletBalances'));
+      data.walletsBalances.setSource(HiveSource('walletBalances'));
       data.wallets.setSource(HiveSource('wallets'));
     }
     if ([HiveLoadingStep.all, HiveLoadingStep.step2].contains(step)) {
       data.addressBalances.setSource(HiveSource('addressBalances'));
       data.addresses.setSource(HiveSource('addresses'));
-      data.walletAddresses.setSource(HiveSource('walletAddresses'));
+      data.walletsAddresses.setSource(HiveSource('walletAddresses'));
       data.transactions.setSource(HiveSource('transactions'));
       data.vins.setSource(HiveSource('vins'));
       data.vouts.setSource(HiveSource('vouts'));

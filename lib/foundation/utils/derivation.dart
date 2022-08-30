@@ -35,6 +35,7 @@ WalletDeviceRecord generateWalletRecord({
   String? derivation,
   String? mnemonic,
 }) {
+  mnemonic ??= generateMnemoic();
   final hd = HDWallet.fromSeed(generateSeed(mnemonic));
   return WalletDeviceRecord(
     pubkey: hd.pubKey,

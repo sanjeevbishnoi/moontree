@@ -12,5 +12,5 @@ extension AssetRHasManyAddressBalanceDeviceRecords on AssetDeviceRecord {
 
 extension AssetRHasManyWalletBalanceDeviceRecords on AssetDeviceRecord {
   List<WalletBalanceDeviceRecord> get walletBalances =>
-      data.walletBalances.bySymbol.getAll(symbol);
+      data.walletsBalances.bySymbol.getAll(symbol);
 }

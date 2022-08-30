@@ -12,7 +12,7 @@ class ToHoldingDomain extends Trigger {
   void init() {
     /// takes precedence
     when(
-        thereIsA: data.walletBalances.changes,
+        thereIsA: data.walletsBalances.changes,
         andIf: null,
         doThis: (Change<WalletBalanceDeviceRecord> change) async => change.when(
               loaded: (loaded) => load(loaded.record),

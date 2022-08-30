@@ -16,6 +16,8 @@ class WalletBalanceProclaim
     bySymbol = addIndexMultiple('symbol', _SymbolKey());
   }
 
+  static Map<String, WalletBalanceDeviceRecord> get defaults => {};
+
   Set<String> get ids => records.map((e) => e.id).toSet();
 
   Iterable<WalletBalanceDeviceRecord> byPubkeyAndLessThanHeight(

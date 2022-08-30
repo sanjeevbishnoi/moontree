@@ -19,5 +19,7 @@ class VoutProclaim extends Proclaim<_TxVoutKey, VoutDeviceRecord> {
     byId = byTransactionPosition;
   }
 
+  static Map<String, VoutDeviceRecord> get defaults => {};
+
   Set<String> get ids => records.map((e) => e.id).toSet();
 }

@@ -16,5 +16,7 @@ class WalletAddressProclaim
     byAddress = addIndexMultiple('addressid', _AddressKey());
   }
 
+  static Map<String, WalletAddressDeviceRecord> get defaults => {};
+
   Set<String> get ids => records.map((w) => w.id).toSet();
 }

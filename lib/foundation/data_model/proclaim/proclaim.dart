@@ -26,8 +26,8 @@ AssetProclaim assets = AssetProclaim();
 TransactionProclaim transactions = TransactionProclaim();
 VinProclaim vins = VinProclaim();
 VoutProclaim vouts = VoutProclaim();
-WalletAddressProclaim walletAddresses = WalletAddressProclaim();
-WalletBalanceProclaim walletBalances = WalletBalanceProclaim();
+WalletAddressProclaim walletsAddresses = WalletAddressProclaim();
+WalletBalanceProclaim walletsBalances = WalletBalanceProclaim();
 WalletProclaim wallets = WalletProclaim();
 
 // namespace
@@ -41,6 +41,7 @@ class DatamodelCache {
       await vouts.removeAll(transaction.vouts);
     });
     await transactions.removeAll(reorgedTransactions);
-    await walletBalances.removeAll(walletBalances.byHeightGreaterThan(height));
+    await walletsBalances
+        .removeAll(walletsBalances.byHeightGreaterThan(height));
   }
 }

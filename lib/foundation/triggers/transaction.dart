@@ -31,6 +31,4 @@ class ToTransactionDomain extends Trigger {
         transaction,
         Protocol.ravencoinMainnet,
       ));
-  /*
-      */
 }

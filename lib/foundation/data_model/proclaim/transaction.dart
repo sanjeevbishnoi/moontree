@@ -15,6 +15,8 @@ class TransactionProclaim extends Proclaim<_HashKey, TransactionDeviceRecord> {
     byId = byHash;
   }
 
+  static Map<String, TransactionDeviceRecord> get defaults => {};
+
   Set<String> get ids => records.map((e) => e.id).toSet();
 
   Iterable<TransactionDeviceRecord> byHeightGreaterThan(int height) =>

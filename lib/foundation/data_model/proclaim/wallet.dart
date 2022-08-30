@@ -15,5 +15,7 @@ class WalletProclaim extends Proclaim<_PubKey, WalletDeviceRecord> {
     byDerivation = addIndexMultiple('derivationid', _DerivationKey());
   }
 
+  static Map<String, WalletDeviceRecord> get defaults => {};
+
   Set<String> get ids => records.map((w) => w.id).toSet();
 }

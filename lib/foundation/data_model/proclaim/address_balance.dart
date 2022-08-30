@@ -16,6 +16,8 @@ class AddressBalanceProclaim
     bySymbol = addIndexMultiple('symbol', _SymbolKey());
   }
 
+  static Map<String, AddressBalanceDeviceRecord> get defaults => {};
+
   Set<String> get ids => records.map((e) => e.id).toSet();
 
   Iterable<AddressBalanceDeviceRecord> byAddressAndLessThanHeight(

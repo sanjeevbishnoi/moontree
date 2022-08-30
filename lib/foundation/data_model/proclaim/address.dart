@@ -15,5 +15,7 @@ class AddressProclaim extends Proclaim<_AddressKey, AddressDeviceRecord> {
     byId = byAddress;
   }
 
+  static Map<String, AddressDeviceRecord> get defaults => {};
+
   Set<String> get ids => records.map((e) => e.id).toSet();
 }

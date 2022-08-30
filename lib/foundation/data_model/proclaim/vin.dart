@@ -17,5 +17,7 @@ class VinProclaim extends Proclaim<_IdKey, VinDeviceRecord> {
     byCoinbase = addIndexMultiple('coinbase', _CoinbaseKey());
   }
 
+  static Map<String, VinDeviceRecord> get defaults => {};
+
   Set<String> get ids => records.map((e) => e.id).toSet();
 }

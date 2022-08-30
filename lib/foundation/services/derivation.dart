@@ -21,10 +21,8 @@
 ///   - ...but this is out side the scope of the derviation process now.
 import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
 import 'package:moontree/foundation/data_model/data_model.dart' as datamodel;
-import 'package:moontree/foundation/data_model/joins/joins.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/utils/derivation.dart';
-import 'package:utils/list.dart';
 
 // a namespace class
 class DerivationProcessor {

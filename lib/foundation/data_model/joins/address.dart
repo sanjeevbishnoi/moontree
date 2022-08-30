@@ -3,7 +3,7 @@ import 'package:moontree/foundation/data_model/records/records.dart';
 
 extension ARHasManyWalletDeviceRecords on AddressDeviceRecord {
   Iterable<WalletAddressDeviceRecord> get links =>
-      data.walletAddresses.byAddress.getAll(address);
+      data.walletsAddresses.byAddress.getAll(address);
   Iterable<WalletDeviceRecord> get wallets => [
         for (var wal in links)
           data.wallets.byId.getOne(wal.pubkey, wal.derivation)

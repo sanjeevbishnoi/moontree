@@ -4,7 +4,7 @@ import 'package:moontree/foundation/data_model/records/records.dart';
 
 extension WRHasManyAddressDeviceRecords on WalletDeviceRecord {
   Iterable<WalletAddressDeviceRecord> get links =>
-      data.walletAddresses.byWallet.getAll(pubkey, derivation);
+      data.walletsAddresses.byWallet.getAll(pubkey, derivation);
   Iterable<AddressDeviceRecord> get addresses => [
         for (var wal in links) data.addresses.byId.getOne(wal.address)
       ].whereType<AddressDeviceRecord>();
