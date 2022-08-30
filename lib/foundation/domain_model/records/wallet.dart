@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:moontree/foundation/utils/derivation.dart';
 import 'package:utils/mixins/string.dart';
 import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
+import 'package:moontree/foundation/utils/derivation.dart';
 import 'package:moontree/foundation/data_model/joins/joins.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain_model/joins/joins.dart';

@@ -26,7 +26,7 @@ AssetType assetTypeOf(String symbol) {
   if (symbol.endsWith('!')) {
     return AssetType.admin;
   }
-  if (symbol == 'RVN') {
+  if (['RVN', 'RAVENCOIN'].contains(symbol)) {
     return AssetType.currency;
   }
   if (boolValidateFullName(symbol)) {

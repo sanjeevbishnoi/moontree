@@ -51,6 +51,7 @@ AddressDeviceRecord generateAddressRecord({
   required int index,
   required bool used,
 }) {
+  final seed = generateSeed(wallet.mnemonic);
   final addressHDWallet = wallet.derivation == ''
       ? generateHDWallet(wallet.mnemonic)
       : Derive.subWallet(
@@ -60,7 +61,7 @@ AddressDeviceRecord generateAddressRecord({
         );
   return AddressDeviceRecord(
     address: addressHDWallet.address!,
-    seed: addressHDWallet.seed!,
+    seed: addressHDWallet.seed ?? seed,
     used: used,
     index: index,
     privkey: addressHDWallet.privKey,

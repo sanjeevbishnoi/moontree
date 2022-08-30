@@ -19,7 +19,7 @@ class ToAddressDomain extends Trigger {
           ));
 
   /// puts the record into memory
-  Future<void> load(AddressDeviceRecord address) async => address.wallets
+  static Future<void> load(AddressDeviceRecord address) async => address.wallets
       .forEach((wallet) async => await domain.addresses.save(DomainAddress.from(
             address,
             walletPub: wallet.pubkey,

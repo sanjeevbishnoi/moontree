@@ -19,14 +19,14 @@ class ToAssetDomain extends Trigger {
           ));
 
   /// puts the record into memory
-  Future<void> load(AssetDeviceRecord asset) async =>
+  static Future<void> load(AssetDeviceRecord asset) async =>
       await domain.assets.save(DomainAsset.from(
         asset,
         Protocol.ravencoinMainnet,
       ));
 
   /// only happens on reorgs
-  Future<void> remove(AssetDeviceRecord asset) async =>
+  static Future<void> remove(AssetDeviceRecord asset) async =>
       await domain.assets.remove(DomainAsset.from(
         asset,
         Protocol.ravencoinMainnet,
