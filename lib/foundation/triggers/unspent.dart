@@ -8,11 +8,10 @@ import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
     as domain;
 
 class ToUnspentDomain extends Trigger {
-  /*
   void init() => when(
-      thereIsA: data.transactions.changes,
+      thereIsA: data.vouts.changes,
       andIf: null,
-      doThis: (Change<UnspentDeviceRecord> change) async => change.when(
+      doThis: (Change<VoutDeviceRecord> change) async => change.when(
             loaded: (loaded) => load(loaded.record),
             added: (added) => load(added.record),
             updated: (updated) => load(updated.record),
@@ -20,17 +19,18 @@ class ToUnspentDomain extends Trigger {
           ));
 
   /// puts the record into memory
-  Future<void> load(UnspentDeviceRecord transaction) async =>
-      await domain.transactions.save(DomainUnspent.from(
-        transaction,
+  static Future<void> load(VoutDeviceRecord vout) async =>
+      await domain.unspents.saveAll(DomainUnspent.from(
+        vout,
         Protocol.ravencoinMainnet,
       ));
 
   /// only happens on reorgs
-  Future<void> remove(UnspentDeviceRecord transaction) async =>
-      await domain.transactions.remove(DomainUnspent.from(
-        transaction,
+  static Future<void> remove(VoutDeviceRecord vout) async =>
+      await domain.unspents.removeAll(DomainUnspent.from(
+        vout,
         Protocol.ravencoinMainnet,
       ));
+  /*
 */
 }

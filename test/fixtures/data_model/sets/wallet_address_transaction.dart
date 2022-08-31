@@ -51,6 +51,15 @@ class WalletWithAddressAndTransactions extends EmptySet {
     symbol: asset.symbol,
     address: address.address,
   );
+  static final vout3 = VoutDeviceRecord(
+    transactionHash: exampleHash2,
+    position: 1,
+    sats: 100000000,
+    lockingScript: '',
+    symbol: asset.symbol,
+    address: address.address,
+    unspent: true,
+  );
   static final vin0 = VinDeviceRecord(transactionHash: exampleHash1);
   static final vin1 = VinDeviceRecord(
     transactionHash: exampleHash2,
