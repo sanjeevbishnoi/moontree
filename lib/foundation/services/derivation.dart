@@ -57,16 +57,25 @@ class DerivationProcessor {
   Future<void> saveAddress(
     WalletDeviceRecord serverWallet,
     AddressDeviceRecord serverAddress,
-  ) async {
-    final localAddress = datamodel.addresses.byId.getOne(serverAddress.id);
+  ) async =>
+      await datamodel.addresses.save(makeAddress(serverWallet, serverAddress));
+
+  /// triggered by a listener on data incoming from server.
+  AddressDeviceRecord makeAddress(
+    WalletDeviceRecord serverWallet,
+    AddressDeviceRecord serverAddress,
+  ) {
+    final localAddress = datamodel.addresses.byId.getOne(serverAddress.address);
     if (localAddress != null) {
       // update the address in the cache and database
-      await datamodel.addresses.save(AddressDeviceRecord(
+      return AddressDeviceRecord(
         address: localAddress.address,
-        seed: localAddress.seed!,
+        seed: localAddress.seed,
         used: serverAddress.used,
         index: serverAddress.index,
-      ));
+        privkey: localAddress.privkey,
+        pubkey: localAddress.pubkey,
+      );
     } else {
       // find the wallet so it has a mnemonic present
       final localWallet = datamodel.wallets.byId.getOne(
@@ -74,11 +83,11 @@ class DerivationProcessor {
         serverWallet.derivation,
       )!; // if it's not there... I wanna hear about it.
       // save the address to the cache and database
-      await datamodel.addresses.save(generateAddressRecord(
+      return generateAddressRecord(
         wallet: localWallet,
         index: serverAddress.index,
         used: serverAddress.used,
-      ));
+      );
     }
   }
 
