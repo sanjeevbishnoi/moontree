@@ -17,12 +17,11 @@ void main() {
       domain_fixtures.useFixture();
       useFixture(WalletWithAddress());
       final address = WalletWithAddress.address;
-      expect(domain.addresses.byId.getOne(address.address), isNull);
-
+      final call = () => domain.addresses.byId.getOne(address.address);
+      expect(call(), isNull);
       await ToAddressDomain.load(address);
-      expect(domain.addresses.byId.getOne(address.address), isNotNull);
-      expect(domain.addresses.byId.getOne(address.address)!.walletPub,
-          WalletWithAddress.wallet.pubkey);
+      expect(call(), isNotNull);
+      expect(call()!.walletPub, WalletWithAddress.wallet.pubkey);
     });
   });
 }

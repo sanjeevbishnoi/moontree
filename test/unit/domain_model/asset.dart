@@ -37,21 +37,13 @@ void main() {
         supply: 1000,
         divisibility: 4,
       );
-      expect(domain.assets.byId.getOne(asset.symbol, Protocol.ravencoinMainnet),
-          isNull);
+      final call = () =>
+          domain.assets.byId.getOne(asset.symbol, Protocol.ravencoinMainnet);
+      expect(call(), isNull);
       await ToAssetDomain.load(asset);
-      expect(domain.assets.byId.getOne(asset.symbol, Protocol.ravencoinMainnet),
-          isNotNull);
-      expect(
-          domain.assets.byId
-              .getOne(asset.symbol, Protocol.ravencoinMainnet)!
-              .assetType,
-          AssetType.main);
-      expect(
-          domain.assets.byId
-              .getOne(asset.symbol, Protocol.ravencoinMainnet)!
-              .name,
-          'Moontree');
+      expect(call(), isNotNull);
+      expect(call()!.assetType, AssetType.main);
+      expect(call()!.name, 'Moontree');
     });
   });
 }

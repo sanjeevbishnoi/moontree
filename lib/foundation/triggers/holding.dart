@@ -23,14 +23,14 @@ class ToHoldingDomain extends Trigger {
   }
 
   /// puts the record into memory
-  Future<void> load(WalletBalanceDeviceRecord balance) async =>
+  static Future<void> load(WalletBalanceDeviceRecord balance) async =>
       await domain.holdings.save(DomainHolding.from(
         balance,
         Protocol.ravencoinMainnet,
       ));
 
   /// only happens on reorgs
-  Future<void> remove(WalletBalanceDeviceRecord balance) async =>
+  static Future<void> remove(WalletBalanceDeviceRecord balance) async =>
       await domain.holdings.remove(DomainHolding.from(
         balance,
         Protocol.ravencoinMainnet,

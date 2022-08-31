@@ -25,10 +25,11 @@ void main() {
         privkey:
             '4a72457e41c65f084a798649c3918dd76744baff6023bd3b0f5878fc01c45a7c',
       );
-      expect(domain.wallets.byWallet.getOne(wallet.pubkey), isNull);
+      final call = () => domain.wallets.byWallet.getOne(wallet.pubkey);
+      expect(call(), isNull);
       await ToWalletDomain.load(wallet);
-      expect(domain.wallets.byWallet.getOne(wallet.pubkey), isNotNull);
-      expect(domain.wallets.byWallet.getOne(wallet.pubkey)!.derivation, isNull);
+      expect(call(), isNotNull);
+      expect(call()!.derivation, isNull);
     });
     test('data_model wallet to domain_wallet without given derivation',
         () async {
@@ -42,11 +43,11 @@ void main() {
         privkey:
             '4a72457e41c65f084a798649c3918dd76744baff6023bd3b0f5878fc01c45a7c',
       );
-      expect(domain.wallets.byWallet.getOne(walletCustom.pubkey), isNull);
+      final call = () => domain.wallets.byWallet.getOne(walletCustom.pubkey);
+      expect(call(), isNull);
       await ToWalletDomain.load(walletCustom);
-      expect(domain.wallets.byWallet.getOne(walletCustom.pubkey), isNotNull);
-      expect(domain.wallets.byWallet.getOne(walletCustom.pubkey)!.derivation,
-          walletCustom.derivation);
+      expect(call(), isNotNull);
+      expect(call()!.derivation, walletCustom.derivation);
     });
   });
 }

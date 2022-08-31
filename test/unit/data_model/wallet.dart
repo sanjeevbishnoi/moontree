@@ -30,12 +30,12 @@ void main() {
 
     test('save data_model wallet', () async {
       useFixture();
-      expect(
-          data.wallets.byId.getOne(wallet.pubkey, wallet.derivation), isNull);
+      final call =
+          () => data.wallets.byId.getOne(wallet.pubkey, wallet.derivation);
+      expect(call(), isNull);
       await DerivationProcessor()
           .makeSaveWallet(wallet.name!, wallet.mnemonic!, wallet.derivation);
-      expect(
-          data.wallets.byId.getOne(wallet.pubkey, wallet.derivation), wallet);
+      expect(call(), wallet);
     });
   });
 }
