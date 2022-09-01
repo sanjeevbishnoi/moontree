@@ -5,6 +5,7 @@ import 'package:moontree/domain/holding/entity.dart';
 import 'package:moontree/domain/holding/failure.dart';
 
 abstract class IHoldingRepository {
-  Future<Either<HoldingFailure, Holding>> getHolding();
+  Future<Either<HoldingFailure, Holding>>
+      getHolding(); // should we specify the asset of holding?
   Future<Either<HoldingFailure, List<Holding>>> getHoldings();
 }

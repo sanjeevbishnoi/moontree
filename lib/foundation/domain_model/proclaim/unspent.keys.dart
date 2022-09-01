@@ -11,7 +11,7 @@ extension ByIdMethodsForDomainUnspent on Index<_IdKey, DomainUnspent> {
   DomainUnspent? getOne(
     String transactionHash,
     int position,
-    Protocol protocol,
+    Protocols protocol,
   ) =>
       getByKeyStr(DomainUnspent.generateId(transactionHash, position, protocol))
           .firstOrNull;
@@ -26,7 +26,7 @@ class _AssetIdKey extends Key<DomainUnspent> {
 
 extension ByAssetIdMethodsForDomainUnspent
     on Index<_AssetIdKey, DomainUnspent> {
-  List<DomainUnspent> getAll(String symbol, Protocol protocol) =>
+  List<DomainUnspent> getAll(String symbol, Protocols protocol) =>
       getByKeyStr(DomainAsset.generateId(symbol, protocol));
 }
 

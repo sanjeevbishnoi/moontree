@@ -14,7 +14,7 @@ class DomainUnspent with EquatableMixin, ToStringMixin {
   final String lockingScript;
   // link to asset
   final String symbol;
-  final Protocol protocol;
+  final Protocols protocol;
 
   /// optimization...
   // link to wallet instead of through address
@@ -33,7 +33,7 @@ class DomainUnspent with EquatableMixin, ToStringMixin {
 
   String get id => generateId(transactionHash, position, protocol);
   static String generateId(
-          String transactionHash, int position, Protocol protocol) =>
+          String transactionHash, int position, Protocols protocol) =>
       '$transactionHash:$position:${protocol.name}';
 
   String get assetId => DomainAsset.generateId(symbol, protocol);
@@ -41,10 +41,10 @@ class DomainUnspent with EquatableMixin, ToStringMixin {
 
   String get walletAssetId => generateWalletAssetId(pub, symbol, protocol);
   static String generateWalletAssetId(
-          String pub, String symbol, Protocol protocol) =>
+          String pub, String symbol, Protocols protocol) =>
       '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub)}';
 
-  static List<DomainUnspent> from(VoutDeviceRecord vout, Protocol protocol) =>
+  static List<DomainUnspent> from(VoutDeviceRecord vout, Protocols protocol) =>
       vout.unspent && vout.vin == null // verify
           ? [
               for (final wallet

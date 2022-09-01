@@ -7,6 +7,7 @@ import 'package:moontree/domain/transactionDetail/failure.dart';
 import 'package:moontree/domain/transactionDetail/irepository.dart';
 import 'package:moontree/domain/transactionDetail/values.dart';
 import 'package:moontree/domain/transactionDetail/entity.dart';
+import 'package:moontree/foundation/domain_model/records/transaction.dart';
 
 @Environment('test')
 @Injectable(as: ITransactionDetailRepository)
@@ -34,5 +35,12 @@ class TransactionDetailRepository implements ITransactionDetailRepository {
         memo: Memo(''),
       ),
     );
+  }
+
+  @override
+  Future<Either<TransactionDetailFailure, TransactionDetail>>
+      getTransactionDetailOf(DomainTransaction tx) async {
+    // TODO: implement getHoldings
+    throw UnimplementedError();
   }
 }

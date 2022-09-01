@@ -2,6 +2,9 @@ import 'dart:math';
 
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
+import 'package:moontree/foundation/domain_model/joins/joins.dart';
+import 'package:moontree/foundation/domain_model/proclaim/proclaim.dart'
+    as domain;
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/transaction/failure.dart';
 import 'package:moontree/domain/transaction/irepository.dart';
@@ -33,8 +36,23 @@ class TransactionRepository implements ITransactionRepository {
   }
 
   @override
-  Future<Either<TransactionFailure, List<Transaction>>> getTransactions() {
-    // TODO: implement getTransactions
-    throw UnimplementedError();
+  Future<Either<TransactionFailure, List<Transaction>>>
+      getTransactions() async {
+    return right([
+      for (final tx in domain.transactions.records)
+        Transaction(
+          txId: TxId(tx.hash),
+          type: TxType(tx.type),
+          sentReceived: tx.sentReceived,
+          amount: Amount(tx.amount),
+          confirmations: TxConfirmations(
+              0), // TxConfirmations(tx.confirmations), not captured yet
+          date: TxDate(DateTime.now()), // TxDate(tx.date), not caputred yet
+          transactionDetail: await const TransactionDetailRepository()
+              .getTransactionDetailOf(tx)
+              .then((value) =>
+                  value.fold((l) => TransactionDetail.empty(), (r) => r)),
+        ),
+    ]);
   }
 }

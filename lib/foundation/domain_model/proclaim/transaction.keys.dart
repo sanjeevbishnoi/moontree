@@ -11,7 +11,7 @@ extension ByIdMethodsForDomainTransaction on Index<_IdKey, DomainTransaction> {
   DomainTransaction? getOne(
     String transactionHash,
     String symbol,
-    Protocol protocol,
+    Protocols protocol,
     String pub,
   ) =>
       getByKeyStr(DomainTransaction.generateId(
@@ -28,7 +28,7 @@ class _AssetIdKey extends Key<DomainTransaction> {
 
 extension ByAssetIdMethodsForDomainTransaction
     on Index<_AssetIdKey, DomainTransaction> {
-  List<DomainTransaction> getAll(String symbol, Protocol protocol) =>
+  List<DomainTransaction> getAll(String symbol, Protocols protocol) =>
       getByKeyStr(DomainAsset.generateId(symbol, protocol));
 }
 
@@ -55,7 +55,7 @@ class _WalletAssetIdKey extends Key<DomainTransaction> {
 extension ByWalletAssetIdMethodsForDomainTransaction
     on Index<_WalletAssetIdKey, DomainTransaction> {
   List<DomainTransaction> getAll(
-          String pub, String symbol, Protocol protocol) =>
+          String pub, String symbol, Protocols protocol) =>
       getByKeyStr(
           DomainTransaction.generateWalletAssetId(pub, symbol, protocol));
 }

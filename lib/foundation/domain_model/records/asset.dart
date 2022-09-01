@@ -7,7 +7,7 @@ import 'package:moontree/foundation/utils/structs.dart';
 
 class DomainAsset with EquatableMixin, ToStringMixin {
   final String symbol;
-  final Protocol protocol;
+  final Protocols protocol;
   final AssetType assetType;
   final String name;
 
@@ -19,10 +19,10 @@ class DomainAsset with EquatableMixin, ToStringMixin {
   });
 
   String get id => generateId(symbol, protocol);
-  static String generateId(String symbol, Protocol protocol) =>
+  static String generateId(String symbol, Protocols protocol) =>
       '$symbol:${protocol.name}';
 
-  factory DomainAsset.from(AssetDeviceRecord asset, Protocol protocol) =>
+  factory DomainAsset.from(AssetDeviceRecord asset, Protocols protocol) =>
       DomainAsset(
         symbol: asset.symbol,
         protocol: protocol,

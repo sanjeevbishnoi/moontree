@@ -2,6 +2,8 @@ import 'package:dartz/dartz.dart';
 import 'package:moontree/domain/core/value_object.dart';
 import 'package:moontree/domain/core/value_failures.dart';
 import 'package:moontree/domain/holding/validators.dart';
+import 'package:moontree/foundation/utils/structs.dart' show AssetType;
+export 'package:moontree/foundation/utils/structs.dart' show AssetType;
 
 class FullName extends ValueObject<String> {
   @override
@@ -23,17 +25,6 @@ class Name extends ValueObject<String> {
   factory Name.fromFullName(String name) => Name(_fromFullName(name));
   factory Name.empty() => Name('');
   static String _fromFullName(String name) => name.split('/').last;
-}
-
-enum AssetType {
-  unknown,
-  currency,
-  main,
-  admin,
-  restricted,
-  nft,
-  channel,
-  qualifier,
 }
 
 AssetType assetTypeOf(String symbol) {

@@ -22,14 +22,14 @@ class ToUnspentDomain extends Trigger {
   static Future<void> load(VoutDeviceRecord vout) async =>
       await domain.unspents.saveAll(DomainUnspent.from(
         vout,
-        Protocol.ravencoinMainnet,
+        Protocols.ravencoinMainnet,
       ));
 
   /// only happens on reorgs
   static Future<void> remove(VoutDeviceRecord vout) async =>
       await domain.unspents.removeAll(DomainUnspent.from(
         vout,
-        Protocol.ravencoinMainnet,
+        Protocols.ravencoinMainnet,
       ));
   /*
 */

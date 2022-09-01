@@ -22,13 +22,13 @@ class ToAssetDomain extends Trigger {
   static Future<void> load(AssetDeviceRecord asset) async =>
       await domain.assets.save(DomainAsset.from(
         asset,
-        Protocol.ravencoinMainnet,
+        Protocols.ravencoinMainnet,
       ));
 
   /// only happens on reorgs
   static Future<void> remove(AssetDeviceRecord asset) async =>
       await domain.assets.remove(DomainAsset.from(
         asset,
-        Protocol.ravencoinMainnet,
+        Protocols.ravencoinMainnet,
       ));
 }

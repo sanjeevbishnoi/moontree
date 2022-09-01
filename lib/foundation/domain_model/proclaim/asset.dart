@@ -19,14 +19,14 @@ class AssetProclaim extends Proclaim<_IdKey, DomainAsset> {
   }
 
   static Map<String, DomainAsset> get defaults => {
-        DomainAsset.generateId('RVN', Protocol.ravencoinMainnet): DomainAsset(
+        DomainAsset.generateId('RVN', Protocols.ravencoinMainnet): DomainAsset(
             assetType: AssetType.currency,
-            protocol: Protocol.ravencoinMainnet,
+            protocol: Protocols.ravencoinMainnet,
             symbol: 'RVN',
             name: 'Ravencoin'),
-        DomainAsset.generateId('RVN', Protocol.ravencoinTestnet): DomainAsset(
+        DomainAsset.generateId('RVN', Protocols.ravencoinTestnet): DomainAsset(
             assetType: AssetType.currency,
-            protocol: Protocol.ravencoinTestnet,
+            protocol: Protocols.ravencoinTestnet,
             symbol: 'RVN',
             name: 'Ravencoin')
       };

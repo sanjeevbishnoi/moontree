@@ -1,6 +1,7 @@
 /// an attempt at a interim transaction object.
 import 'package:equatable/equatable.dart';
 import 'package:moontree/foundation/data_model/joins/joins.dart';
+import 'package:utils/extensions/extensions.dart';
 import 'package:utils/mixins/string.dart';
 import 'package:moontree/foundation/utils/structs.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
@@ -15,7 +16,7 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
   final int fee;
   // asset
   final String symbol;
-  final Protocol protocol;
+  final Protocols protocol;
   // wallet
   final String pub;
 
@@ -29,14 +30,14 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
   });
 
   int? _sats;
-  TxType? _type;
+  TxTypes? _type;
   late Iterable<VinDeviceRecord> _vins;
   late Iterable<VoutDeviceRecord> _vouts;
   late WalletDeviceRecord _wallet;
 
   String get id => generateId(hash, symbol, protocol, pub);
   static String generateId(
-          String hash, String symbol, Protocol protocol, String pub) =>
+          String hash, String symbol, Protocols protocol, String pub) =>
       '$hash:$symbol:${protocol.name}:$pub';
 
   String get assetId => DomainAsset.generateId(symbol, protocol);
@@ -44,7 +45,7 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
 
   String get walletAssetId => generateWalletAssetId(pub, symbol, protocol);
   static String generateWalletAssetId(
-          String pub, String symbol, Protocol protocol) =>
+          String pub, String symbol, Protocols protocol) =>
       '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub)}';
 
   /* a domain transaction is per asset, per wallet, per transaction hash.
@@ -52,7 +53,7 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
   */
   static List<DomainTransaction> from(
     TransactionDeviceRecord transaction,
-    Protocol protocol,
+    Protocols protocol,
   ) {
     final wallets = [
       for (final vout in transaction.vouts) vout.toAddress!.wallets
@@ -145,27 +146,30 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
     return _sats!;
   }
 
+  double get amount => sats.toAmount();
+  double get feeAmount => fee.toAmount();
+
   SentReceived get sentReceived =>
       sats > 0 ? SentReceived.received : SentReceived.sent;
 
   /// logic on vins and vouts to determin type
-  TxType get type {
+  TxTypes get type {
     _type ??= () {
       final addresses = _vouts.map((v) => v.address).toSet();
       final net = (p) {
         switch (p) {
-          case Protocol.ravencoinMainnet:
+          case Protocols.ravencoinMainnet:
             return networks.mainnet;
-          case Protocol.ravencoinTestnet:
+          case Protocols.ravencoinTestnet:
             return networks.testnet;
           default:
             return networks.mainnet;
         }
       }(protocol);
       if (addresses.contains(net.burnAddresses.addTag)) {
-        return TxType.tag;
+        return TxTypes.tag;
       } else if (addresses.contains(net.burnAddresses.reissue)) {
-        return TxType.reissue;
+        return TxTypes.reissue;
       } else if (addresses.toSet().intersection({
         net.burnAddresses.issueMain,
         net.burnAddresses.issueQualifier,
@@ -175,9 +179,9 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
         net.burnAddresses.issueUnique,
         net.burnAddresses.issueMessage,
       }).isNotEmpty) {
-        return TxType.creation;
+        return TxTypes.creation;
       } else if (addresses.contains(net.burnAddresses.burn)) {
-        return TxType.burn;
+        return TxTypes.burn;
         /* dividend
     } else if (addresses.contains(net.burnAddresses.???)) {
       return TxType.dividend;
@@ -185,14 +189,14 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
       return TxType.message;
     */
       } else if (symbol == 'RVN' && sats == fee) {
-        return TxType.fee;
+        return TxTypes.fee;
       } else if ((symbol != 'RVN' && sats == 0) ||
           (symbol == 'RVN' && sats + fee == 0)) {
-        return TxType.self;
+        return TxTypes.self;
       } else if (sats != 0) {
-        return TxType.transfer;
+        return TxTypes.transfer;
       }
-      return TxType.unknown;
+      return TxTypes.unknown;
     }();
     return _type!;
   }

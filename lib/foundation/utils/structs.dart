@@ -9,6 +9,11 @@
 /// will require us to migrate the datbase. That's even worse! Each layer has
 /// its own datastruture and therefore it's own "domain" thus, we actually
 /// _should_ duplicate these datastructures even though they currently match.
+///
+/// So the UI domain pulls from these unless and until it's needs change in
+/// which case everthing above the domain pulls from it and it can define it's
+/// own structures. But the reservoirs will have to convert from these to those.
+///
 
 enum AssetType {
   unknown,
@@ -21,7 +26,7 @@ enum AssetType {
   qualifier,
 }
 
-enum Protocol {
+enum Protocols {
   ravencoinTestnet,
   ravencoinMainnet,
   evrmoreTestnet,
@@ -35,7 +40,7 @@ enum SentReceived {
   received,
 }
 
-enum TxType {
+enum TxTypes {
   transfer,
   self,
   fee,

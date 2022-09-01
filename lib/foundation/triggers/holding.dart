@@ -26,13 +26,13 @@ class ToHoldingDomain extends Trigger {
   static Future<void> load(WalletBalanceDeviceRecord balance) async =>
       await domain.holdings.save(DomainHolding.from(
         balance,
-        Protocol.ravencoinMainnet,
+        Protocols.ravencoinMainnet,
       ));
 
   /// only happens on reorgs
   static Future<void> remove(WalletBalanceDeviceRecord balance) async =>
       await domain.holdings.remove(DomainHolding.from(
         balance,
-        Protocol.ravencoinMainnet,
+        Protocols.ravencoinMainnet,
       ));
 }

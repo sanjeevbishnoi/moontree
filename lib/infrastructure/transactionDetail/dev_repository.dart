@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
+import 'package:moontree/foundation/domain_model/records/transaction.dart';
 import 'package:utils/future.dart';
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/holding/values.dart';
@@ -36,5 +37,12 @@ class TransactionDetailRepository implements ITransactionDetailRepository {
         memo: Memo(''),
       ),
     );
+  }
+
+  @override
+  Future<Either<TransactionDetailFailure, TransactionDetail>>
+      getTransactionDetailOf(DomainTransaction tx) async {
+    // TODO: implement getHoldings
+    throw UnimplementedError();
   }
 }

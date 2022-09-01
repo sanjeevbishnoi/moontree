@@ -4,6 +4,8 @@ import 'package:moontree/domain/core/errors.dart';
 import 'package:moontree/domain/core/value_object.dart';
 import 'package:moontree/domain/core/value_failures.dart';
 import 'package:moontree/domain/transactionDetail/validators.dart';
+import 'package:moontree/foundation/utils/structs.dart' show FeeType;
+export 'package:moontree/foundation/utils/structs.dart' show FeeType;
 
 class IpfsHash extends ValueObject<String> {
   @override
@@ -13,14 +15,6 @@ class IpfsHash extends ValueObject<String> {
 
   factory IpfsHash(String ipfsHash) => IpfsHash._(validateIpfsHash(ipfsHash));
   factory IpfsHash.empty() => IpfsHash('');
-}
-
-enum FeeType {
-  transaction,
-  create,
-  reissue,
-  broadcast,
-  ipfs, // ipfs storage
 }
 
 class Fees extends ValueObject<Map<FeeType, Amount>> {

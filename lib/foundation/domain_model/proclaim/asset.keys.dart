@@ -8,7 +8,7 @@ class _IdKey extends Key<DomainAsset> {
 }
 
 extension ByIdMethodsForAsset on Index<_IdKey, DomainAsset> {
-  DomainAsset? getOne(String symbol, Protocol protocol) =>
+  DomainAsset? getOne(String symbol, Protocols protocol) =>
       getByKeyStr(DomainAsset.generateId(symbol, protocol)).firstOrNull;
 }
 
@@ -31,5 +31,5 @@ class _ProtocolKey extends Key<DomainAsset> {
 }
 
 extension ByProtocolMethodsForAsset on Index<_ProtocolKey, DomainAsset> {
-  List<DomainAsset> getAll(Protocol protocol) => getByKeyStr(protocol.name);
+  List<DomainAsset> getAll(Protocols protocol) => getByKeyStr(protocol.name);
 }

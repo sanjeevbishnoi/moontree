@@ -3,6 +3,9 @@ import 'package:moontree/domain/core/value_object.dart';
 import 'package:moontree/domain/core/value_failures.dart';
 import 'package:moontree/domain/blockchain/validators.dart';
 
+import 'package:moontree/foundation/utils/structs.dart' show Protocols;
+export 'package:moontree/foundation/utils/structs.dart' show Protocols;
+
 enum Protocols {
   ravencoinTestnet,
   ravencoinMainnet,

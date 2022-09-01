@@ -4,24 +4,9 @@ import 'package:moontree/domain/core/value_object.dart';
 import 'package:moontree/domain/core/value_failures.dart';
 import 'package:moontree/domain/transaction/validators.dart';
 import 'package:date_format/date_format.dart';
-
-enum SentReceived {
-  sent,
-  received,
-}
-
-enum TxTypes {
-  transfer,
-  self,
-  fee,
-  burn,
-  creation,
-  reissue,
-  dividend,
-  message,
-  tag,
-  unknown,
-}
+import 'package:moontree/foundation/utils/structs.dart' show TxTypes;
+export 'package:moontree/foundation/utils/structs.dart'
+    show SentReceived, TxTypes;
 
 class TxType extends ValueObject<TxTypes> {
   @override

@@ -22,13 +22,13 @@ class ToTransactionDomain extends Trigger {
   static Future<void> load(TransactionDeviceRecord transaction) async =>
       await domain.transactions.saveAll(DomainTransaction.from(
         transaction,
-        Protocol.ravencoinMainnet,
+        Protocols.ravencoinMainnet,
       ));
 
   /// only happens on reorgs
   static Future<void> remove(TransactionDeviceRecord transaction) async =>
       await domain.transactions.removeAll(DomainTransaction.from(
         transaction,
-        Protocol.ravencoinMainnet,
+        Protocols.ravencoinMainnet,
       ));
 }

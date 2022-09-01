@@ -10,7 +10,7 @@ class _IdKey extends Key<DomainHolding> {
 extension ByIdMethodsForDomainHolding on Index<_IdKey, DomainHolding> {
   DomainHolding? getOne(
     String symbol,
-    Protocol protocol,
+    Protocols protocol,
     String pub,
   ) =>
       getByKeyStr(DomainHolding.generateId(symbol, protocol, pub)).firstOrNull;
@@ -25,7 +25,7 @@ class _AssetIdKey extends Key<DomainHolding> {
 
 extension ByAssetIdMethodsForDomainHolding
     on Index<_AssetIdKey, DomainHolding> {
-  List<DomainHolding> getAll(String symbol, Protocol protocol) =>
+  List<DomainHolding> getAll(String symbol, Protocols protocol) =>
       getByKeyStr(DomainAsset.generateId(symbol, protocol));
 }
 
