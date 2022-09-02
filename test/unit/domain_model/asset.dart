@@ -38,7 +38,7 @@ void main() {
         divisibility: 4,
       );
       final call = () =>
-          domain.assets.byId.getOne(asset.symbol, Protocol.ravencoinMainnet);
+          domain.assets.byId.getOne(asset.symbol, Protocols.ravencoinMainnet);
       expect(call(), isNull);
       await ToAssetDomain.load(asset);
       expect(call(), isNotNull);

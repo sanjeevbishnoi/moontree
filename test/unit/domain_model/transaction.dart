@@ -21,13 +21,13 @@ void main() {
       final tx1Call = () => domain.transactions.byId.getOne(
             WalletWithAddressAndTransactions.transaction1.hash,
             WalletWithAddressAndTransactions.asset.symbol,
-            Protocol.ravencoinMainnet,
+            Protocols.ravencoinMainnet,
             WalletWithAddressAndTransactions.wallet.pubkey,
           );
       final tx2Call = () => domain.transactions.byId.getOne(
             WalletWithAddressAndTransactions.transaction2.hash,
             WalletWithAddressAndTransactions.asset.symbol,
-            Protocol.ravencoinMainnet,
+            Protocols.ravencoinMainnet,
             WalletWithAddressAndTransactions.wallet.pubkey,
           );
       expect(tx1Call(), isNull);

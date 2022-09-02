@@ -31,7 +31,7 @@ void main() {
       );
       final call = () => domain.holdings.byId.getOne(
             balance.symbol,
-            Protocol.ravencoinMainnet,
+            Protocols.ravencoinMainnet,
             balance.pubkey,
           );
       expect(call(), isNull);

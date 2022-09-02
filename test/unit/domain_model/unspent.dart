@@ -20,7 +20,7 @@ void main() {
       final voutCall = () => domain.unspents.byId.getOne(
             WalletWithAddressAndTransactions.vout1.transactionHash,
             WalletWithAddressAndTransactions.vout1.position,
-            Protocol.ravencoinMainnet,
+            Protocols.ravencoinMainnet,
           );
       expect(voutCall(), isNull);
       await ToUnspentDomain.load(WalletWithAddressAndTransactions.vout1);
@@ -33,7 +33,7 @@ void main() {
       final unspentCall = () => domain.unspents.byId.getOne(
             WalletWithAddressAndTransactions.vout3.transactionHash,
             WalletWithAddressAndTransactions.vout3.position,
-            Protocol.ravencoinMainnet,
+            Protocols.ravencoinMainnet,
           );
       expect(unspentCall(), isNull);
       await ToUnspentDomain.load(WalletWithAddressAndTransactions.vout3);
