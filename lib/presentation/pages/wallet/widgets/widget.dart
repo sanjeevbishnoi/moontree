@@ -17,7 +17,7 @@ class WalletHoldingsWidget extends StatelessWidget {
               child: const CircularProgressIndicator());
         }
         return Stack(
-          children: [
+          children: <Widget>[
             ListView.builder(
               shrinkWrap: true,
               itemCount: cubit.itemCount(),

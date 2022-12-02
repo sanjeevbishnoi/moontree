@@ -20,7 +20,7 @@ class TransactionRepository implements ITransactionRepository {
 
   @override
   Future<Either<TransactionFailure, Transaction>> getTransaction() async {
-    await Future.delayed(Duration(milliseconds: Random().nextInt(10000)));
+    await Future<void>.delayed(Duration(milliseconds: Random().nextInt(10000)));
     return right(Transaction(
       txId: TxId(''),
       type: TxType(TxTypes.transfer),

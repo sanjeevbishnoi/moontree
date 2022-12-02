@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
-          children: [
+          children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(bottom: 16.0),
               child: TextField(

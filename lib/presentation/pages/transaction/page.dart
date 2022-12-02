@@ -17,7 +17,7 @@ class TransactionDetailPage extends StatelessWidget {
         frontAlignment: Alignment.center,
         back: const BlankBack(),
         front: Stack(
-          children: [
+          children: <Widget>[
             FrontCurve(
               alignment: Alignment.topCenter,
               fuzzyTop: true,

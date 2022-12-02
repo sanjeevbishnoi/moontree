@@ -20,7 +20,7 @@ class HoldingRepository implements IHoldingRepository {
 
   @override
   Future<Either<HoldingFailure, Holding>> getHolding() async {
-    await Future.delayed(Duration(milliseconds: Random().nextInt(10000)));
+    await Future<void>.delayed(Duration(milliseconds: Random().nextInt(10000)));
     return right(Holding(
         fullName: FullName(''),
         assetType: AssetType.unknown,

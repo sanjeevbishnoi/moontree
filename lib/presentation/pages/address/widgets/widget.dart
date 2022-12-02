@@ -17,7 +17,7 @@ class AddressWidget extends StatelessWidget {
               child: const CircularProgressIndicator());
         }
         return Column(
-          children: [
+          children: <Widget>[
             Text(cubit.getAddress()),
             Text(cubit.getPrivateKey()),
             Text(cubit.getPublicKey()),

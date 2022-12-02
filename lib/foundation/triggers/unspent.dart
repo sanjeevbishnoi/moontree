@@ -1,5 +1,5 @@
 import 'package:proclaim/change.dart';
-import 'package:moontree_utils/trigger.dart';
+import 'package:moontree_utils/moontree_utils.dart' show Trigger;
 import 'package:moontree/foundation/utils/structs.dart';
 import 'package:moontree/foundation/domain_model/records/unspent.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';

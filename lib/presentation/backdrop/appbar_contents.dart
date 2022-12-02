@@ -59,7 +59,7 @@ class BackdropAppBarContents extends StatelessWidget
           );*/
     return Stack(
       alignment: Alignment.bottomCenter,
-      children: [
+      children: <Widget>[
         if (Platform.isIOS)
           FrontCurve(
             height: 56,

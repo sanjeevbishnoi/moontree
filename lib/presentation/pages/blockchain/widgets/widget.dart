@@ -17,7 +17,7 @@ class BlockchainWidget extends StatelessWidget {
               child: const CircularProgressIndicator());
         }
         return Column(
-          children: [
+          children: <Widget>[
             Text(cubit.getProtocol()),
             ...[for (var name in cubit.getWalletNames()) Text(name)],
           ],

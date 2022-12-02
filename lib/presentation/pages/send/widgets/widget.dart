@@ -23,7 +23,7 @@ class SendWidget extends StatelessWidget {
               child: const CircularProgressIndicator());
         }
         return Column(
-          children: [
+          children: <Widget>[
             Text(cubit.getHoldingFullName()),
             Text(cubit.getHoldingName()),
             Text(cubit.getHoldingAssetType()),
