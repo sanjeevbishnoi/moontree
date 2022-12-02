@@ -2,41 +2,37 @@ part of 'address_balance.dart';
 
 /// byAddress
 
-class _AddressKey extends Key<AddressBalanceDeviceRecord> {
+class _AddressKey extends Key<AddressBalanceRecord> {
   @override
-  String getKey(AddressBalanceDeviceRecord address) => address.address;
+  String getKey(AddressBalanceRecord address) => address.address;
 }
 
 extension ByAddressKeyMethodsForAddressBalance
-    on IndexMultiple<_AddressKey, AddressBalanceDeviceRecord> {
-  List<AddressBalanceDeviceRecord> getAll(String address) =>
-      getByKeyStr(address);
+    on IndexMultiple<_AddressKey, AddressBalanceRecord> {
+  List<AddressBalanceRecord> getAll(String address) => getByKeyStr(address);
 }
 
 /// byId - primary key
 
-class _IdKey extends Key<AddressBalanceDeviceRecord> {
+class _IdKey extends Key<AddressBalanceRecord> {
   @override
-  String getKey(AddressBalanceDeviceRecord address) => address.id;
+  String getKey(AddressBalanceRecord address) => address.id;
 }
 
-extension ByIdMethodsForAddressBalance
-    on Index<_IdKey, AddressBalanceDeviceRecord> {
-  AddressBalanceDeviceRecord? getOne(
-          String address, String symbol, int? height) =>
-      getByKeyStr(
-              AddressBalanceDeviceRecord.generateId(address, symbol, height))
+extension ByIdMethodsForAddressBalance on Index<_IdKey, AddressBalanceRecord> {
+  AddressBalanceRecord? getOne(String address, String symbol, int? height) =>
+      getByKeyStr(AddressBalanceRecord.generateId(address, symbol, height))
           .firstOrNull;
 }
 
 /// bySymbol
 
-class _SymbolKey extends Key<AddressBalanceDeviceRecord> {
+class _SymbolKey extends Key<AddressBalanceRecord> {
   @override
-  String getKey(AddressBalanceDeviceRecord address) => address.symbol;
+  String getKey(AddressBalanceRecord address) => address.symbol;
 }
 
 extension BySymbolKeyMethodsForAddressBalance
-    on IndexMultiple<_SymbolKey, AddressBalanceDeviceRecord> {
-  List<AddressBalanceDeviceRecord> getAll(String symbol) => getByKeyStr(symbol);
+    on IndexMultiple<_SymbolKey, AddressBalanceRecord> {
+  List<AddressBalanceRecord> getAll(String symbol) => getByKeyStr(symbol);
 }

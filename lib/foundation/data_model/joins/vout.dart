@@ -1,23 +1,21 @@
 import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 import 'package:moontree/foundation/data_model/records/records.dart';
 
-extension VoutRHasOneTransactionDeviceRecord on VoutDeviceRecord {
-  TransactionDeviceRecord? get transaction =>
+extension VoutRHasOneTransactionRecord on VoutRecord {
+  TransactionRecord? get transaction =>
       data.transactions.byHash.getOne(transactionHash);
 }
 
-extension VoutRHasOneVinDeviceRecord on VoutDeviceRecord {
-  VinDeviceRecord? get vin =>
-      data.vins.byVout.getOne(transactionHash, position);
+extension VoutRHasOneVinRecord on VoutRecord {
+  VinRecord? get vin => data.vins.byVout.getOne(transactionHash, position);
 }
 
-extension VoutRHasOneAddressDeviceRecord on VoutDeviceRecord {
+extension VoutRHasOneAddressRecord on VoutRecord {
   /// mempool records where the subscriber is present don't get assoicated
   /// with an address record, because the look up would usually be pointless.
-  AddressDeviceRecord? get toAddress =>
-      data.addresses.byId.getOne(this.address);
+  AddressRecord? get toAddress => data.addresses.byId.getOne(this.address);
 }
 
-extension VoutRHasOneAssetDeviceRecord on VoutDeviceRecord {
-  AssetDeviceRecord? get asset => data.assets.bySymbol.getOne(symbol);
+extension VoutRHasOneAssetRecord on VoutRecord {
+  AssetRecord? get asset => data.assets.bySymbol.getOne(symbol);
 }

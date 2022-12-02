@@ -4,24 +4,24 @@ import 'package:proclaim/proclaim.dart';
 
 part 'asset.keys.dart';
 
-class AssetProclaim extends Proclaim<_SymbolKey, AssetDeviceRecord> {
-  late IndexMultiple<_SymbolKey, AssetDeviceRecord> byId;
-  late IndexMultiple<_SymbolKey, AssetDeviceRecord> bySymbol;
+class AssetProclaim extends Proclaim<_SymbolKey, AssetRecord> {
+  late IndexMultiple<_SymbolKey, AssetRecord> byId;
+  late IndexMultiple<_SymbolKey, AssetRecord> bySymbol;
 
   AssetProclaim() : super(_SymbolKey()) {
     bySymbol = addIndexMultiple('bySymbol', _SymbolKey());
     byId = bySymbol;
   }
 
-  static Map<String, AssetDeviceRecord> get defaults => {
-        'RVN': AssetDeviceRecord(
+  static Map<String, AssetRecord> get defaults => {
+        'RVN': AssetRecord(
           symbol: 'RVN',
           /*name: 'Ravencoin',*/
           divisibility: 8,
           supply: 21000300000,
           reissuable: false,
         ),
-        //'MOONTREE': AssetDeviceRecord(
+        //'MOONTREE': AssetRecord(
         //  symbol: 'MOONTREE',
         //  /*name: 'Moontree',*/
         //  divisibility: 4,

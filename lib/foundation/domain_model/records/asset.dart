@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:utils/extensions/string.dart';
-import 'package:utils/mixins/string.dart';
+import 'package:moontree_utils/extensions/string.dart';
+import 'package:moontree_utils/mixins/string.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/utils/helpers.dart';
 import 'package:moontree/foundation/utils/structs.dart';
@@ -22,7 +22,7 @@ class DomainAsset with EquatableMixin, ToStringMixin {
   static String generateId(String symbol, Protocols protocol) =>
       '$symbol:${protocol.name}';
 
-  factory DomainAsset.from(AssetDeviceRecord asset, Protocols protocol) =>
+  factory DomainAsset.from(AssetRecord asset, Protocols protocol) =>
       DomainAsset(
         symbol: asset.symbol,
         protocol: protocol,

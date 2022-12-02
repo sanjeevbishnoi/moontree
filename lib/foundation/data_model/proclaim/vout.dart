@@ -4,12 +4,12 @@ import 'package:moontree/foundation/data_model/records/records.dart';
 
 part 'vout.keys.dart';
 
-class VoutProclaim extends Proclaim<_TxVoutKey, VoutDeviceRecord> {
-  late IndexMultiple<_TxVoutKey, VoutDeviceRecord> byId;
-  late IndexMultiple<_TxVoutKey, VoutDeviceRecord> byTransactionPosition;
-  late IndexMultiple<_TxHashKey, VoutDeviceRecord> byTransactionHash;
-  late IndexMultiple<_SymbolKey, VoutDeviceRecord> bySymbol;
-  late IndexMultiple<_AddressKey, VoutDeviceRecord> byAddress;
+class VoutProclaim extends Proclaim<_TxVoutKey, VoutRecord> {
+  late IndexMultiple<_TxVoutKey, VoutRecord> byId;
+  late IndexMultiple<_TxVoutKey, VoutRecord> byTransactionPosition;
+  late IndexMultiple<_TxHashKey, VoutRecord> byTransactionHash;
+  late IndexMultiple<_SymbolKey, VoutRecord> bySymbol;
+  late IndexMultiple<_AddressKey, VoutRecord> byAddress;
 
   VoutProclaim() : super(_TxVoutKey()) {
     byTransactionPosition = addIndexMultiple('txhashposition', _TxVoutKey());
@@ -19,7 +19,7 @@ class VoutProclaim extends Proclaim<_TxVoutKey, VoutDeviceRecord> {
     byId = byTransactionPosition;
   }
 
-  static Map<String, VoutDeviceRecord> get defaults => {};
+  static Map<String, VoutRecord> get defaults => {};
 
   Set<String> get ids => records.map((e) => e.id).toSet();
 }

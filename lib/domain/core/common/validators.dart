@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Validation;
+import 'package:wallet_utils/wallet_utils.dart' show Validation;
 import 'package:moontree/domain/core/value_failures.dart';
 
 /// the problem with validating decimals on Amounts, so we should not.

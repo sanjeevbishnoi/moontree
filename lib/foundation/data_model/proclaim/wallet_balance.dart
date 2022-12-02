@@ -4,11 +4,10 @@ import 'package:moontree/foundation/data_model/records/records.dart';
 
 part 'wallet_balance.keys.dart';
 
-class WalletBalanceProclaim
-    extends Proclaim<_IdKey, WalletBalanceDeviceRecord> {
-  late IndexMultiple<_IdKey, WalletBalanceDeviceRecord> byId;
-  late IndexMultiple<_WalletKey, WalletBalanceDeviceRecord> byWallet;
-  late IndexMultiple<_SymbolKey, WalletBalanceDeviceRecord> bySymbol;
+class WalletBalanceProclaim extends Proclaim<_IdKey, WalletBalanceRecord> {
+  late IndexMultiple<_IdKey, WalletBalanceRecord> byId;
+  late IndexMultiple<_WalletKey, WalletBalanceRecord> byWallet;
+  late IndexMultiple<_SymbolKey, WalletBalanceRecord> bySymbol;
 
   WalletBalanceProclaim() : super(_IdKey()) {
     byId = addIndexMultiple('id', _IdKey());
@@ -16,11 +15,11 @@ class WalletBalanceProclaim
     bySymbol = addIndexMultiple('symbol', _SymbolKey());
   }
 
-  static Map<String, WalletBalanceDeviceRecord> get defaults => {};
+  static Map<String, WalletBalanceRecord> get defaults => {};
 
   Set<String> get ids => records.map((e) => e.id).toSet();
 
-  Iterable<WalletBalanceDeviceRecord> byPubkeyAndLessThanHeight(
+  Iterable<WalletBalanceRecord> byPubkeyAndLessThanHeight(
     String pubkey,
     String derivation,
     int? height, // null is mempool
@@ -31,6 +30,6 @@ class WalletBalanceProclaim
               .getAll(pubkey, derivation)
               .where((e) => e.height != null && e.height! < height);
 
-  Iterable<WalletBalanceDeviceRecord> byHeightGreaterThan(int height) =>
+  Iterable<WalletBalanceRecord> byHeightGreaterThan(int height) =>
       records.where((e) => e.height != null && e.height! > height);
 }

@@ -1,4 +1,4 @@
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Validation;
+import 'package:wallet_utils/wallet_utils.dart' show Validation;
 import 'package:moontree/foundation/utils/structs.dart';
 
 AssetType assetTypeOf(String symbol) {

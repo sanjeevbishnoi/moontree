@@ -2,44 +2,40 @@ part of 'wallet_address.dart';
 
 /// byId
 
-class _IdKey extends Key<WalletAddressDeviceRecord> {
+class _IdKey extends Key<WalletAddressRecord> {
   @override
-  String getKey(WalletAddressDeviceRecord walletAddress) =>
+  String getKey(WalletAddressRecord walletAddress) =>
       walletAddress.id.toString();
 }
 
-extension ByIdMethodsForWalletAddress
-    on Index<_IdKey, WalletAddressDeviceRecord> {
-  WalletAddressDeviceRecord? getOne(
+extension ByIdMethodsForWalletAddress on Index<_IdKey, WalletAddressRecord> {
+  WalletAddressRecord? getOne(
           String pubkey, String derivation, String address) =>
-      getByKeyStr(
-              WalletAddressDeviceRecord.generateId(pubkey, derivation, address))
+      getByKeyStr(WalletAddressRecord.generateId(pubkey, derivation, address))
           .firstOrNull;
 }
 
 /// byWallet
 
-class _WalletKey extends Key<WalletAddressDeviceRecord> {
+class _WalletKey extends Key<WalletAddressRecord> {
   @override
-  String getKey(WalletAddressDeviceRecord balance) => balance.walletId;
+  String getKey(WalletAddressRecord balance) => balance.walletId;
 }
 
 extension ByWalletKeyMethodsForWalletBalanceIncremental
-    on IndexMultiple<_WalletKey, WalletAddressDeviceRecord> {
-  List<WalletAddressDeviceRecord> getAll(String pubkey, String? derviation) =>
-      getByKeyStr(
-          WalletAddressDeviceRecord.generateWalletId(pubkey, derviation));
+    on IndexMultiple<_WalletKey, WalletAddressRecord> {
+  List<WalletAddressRecord> getAll(String pubkey, String? derviation) =>
+      getByKeyStr(WalletAddressRecord.generateWalletId(pubkey, derviation));
 }
 
 /// byAddress
 
-class _AddressKey extends Key<WalletAddressDeviceRecord> {
+class _AddressKey extends Key<WalletAddressRecord> {
   @override
-  String getKey(WalletAddressDeviceRecord wallet) => wallet.address;
+  String getKey(WalletAddressRecord wallet) => wallet.address;
 }
 
 extension ByAddressMethodsForWalletAddress
-    on Index<_AddressKey, WalletAddressDeviceRecord> {
-  List<WalletAddressDeviceRecord> getAll(String address) =>
-      getByKeyStr(address);
+    on Index<_AddressKey, WalletAddressRecord> {
+  List<WalletAddressRecord> getAll(String address) => getByKeyStr(address);
 }

@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:utils/mixins/string.dart';
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
+import 'package:moontree_utils/mixins/string.dart';
+import 'package:wallet_utils/wallet_utils.dart' show Derivation;
 import 'package:moontree/foundation/utils/derivation.dart';
 import 'package:moontree/foundation/data_model/joins/joins.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
@@ -24,7 +24,7 @@ class DomainWallet with EquatableMixin, ToStringMixin {
   String get id => generateId(pub);
   static String generateId(String pub) => pub;
 
-  factory DomainWallet.from(WalletDeviceRecord wallet) => DomainWallet(
+  factory DomainWallet.from(WalletRecord wallet) => DomainWallet(
         name: wallet.id,
         hashedEntropy: generateEntropy(wallet.mnemonic!),
         priv: generateHDWallet(wallet.mnemonic!).privKey!,

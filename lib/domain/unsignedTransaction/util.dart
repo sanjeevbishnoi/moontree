@@ -1,6 +1,6 @@
 import 'package:moontree/domain/unspent/entity.dart';
-import 'package:utils/extensions/iterable.dart';
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' as ravencoin;
+import 'package:moontree_utils/extensions/iterable.dart';
+import 'package:wallet_utils/wallet_utils.dart' as ravencoin;
 
 extension SignEachInput on ravencoin.TransactionBuilder {
   /// Since addresses don't have access to their private key for signing, we

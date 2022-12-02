@@ -6,7 +6,7 @@ import 'sets.dart';
 class WalletWithAddress extends EmptySet {
   static final mnemonic =
       'strike faint hockey bean average crazy carry spatial hammer glow sorry fiscal';
-  static final wallet = WalletDeviceRecord(
+  static final wallet = WalletRecord(
     pubkey:
         '03995ebd7d84f6c435391035f45a44cf6bd1d8c0ac627233706d0b0ad0f49a2c6d',
     derivation: "m/44'/175'/0'/0",
@@ -19,19 +19,19 @@ class WalletWithAddress extends EmptySet {
     index: 0,
     used: false,
   );
-  static final walletAddress = WalletAddressDeviceRecord(
+  static final walletAddress = WalletAddressRecord(
     address: address.id,
     pubkey: wallet.pubkey,
     derivation: wallet.derivation,
   );
 
   @override
-  Map<String, AddressDeviceRecord> get addresses => {address.id: address};
+  Map<String, AddressRecord> get addresses => {address.id: address};
 
   @override
-  Map<String, WalletAddressDeviceRecord> get walletsAddresses =>
+  Map<String, WalletAddressRecord> get walletsAddresses =>
       {walletAddress.id: walletAddress};
 
   @override
-  Map<String, WalletDeviceRecord> get wallets => {wallet.id: wallet};
+  Map<String, WalletRecord> get wallets => {wallet.id: wallet};
 }

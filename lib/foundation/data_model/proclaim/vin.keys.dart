@@ -2,55 +2,54 @@ part of 'vin.dart';
 
 /// byId
 
-class _IdKey extends Key<VinDeviceRecord> {
+class _IdKey extends Key<VinRecord> {
   @override
-  String getKey(VinDeviceRecord vin) => vin.id;
+  String getKey(VinRecord vin) => vin.id;
 }
 
-extension ByIdMethodsForVin on Index<_IdKey, VinDeviceRecord> {
-  VinDeviceRecord? getOne(String transactionHash, String? voutTransactionHash,
+extension ByIdMethodsForVin on Index<_IdKey, VinRecord> {
+  VinRecord? getOne(String transactionHash, String? voutTransactionHash,
           int? voutPosition) =>
-      getByKeyStr(VinDeviceRecord.generateId(
+      getByKeyStr(VinRecord.generateId(
               transactionHash, voutTransactionHash, voutPosition))
           .firstOrNull;
 }
 
 /// byVout
 
-class _VoutKey extends Key<VinDeviceRecord> {
+class _VoutKey extends Key<VinRecord> {
   @override
-  String getKey(VinDeviceRecord vin) => vin.voutId;
+  String getKey(VinRecord vin) => vin.voutId;
 }
 
-extension ByVoutMethodsForVin on Index<_VoutKey, VinDeviceRecord> {
-  VinDeviceRecord? getOne(
+extension ByVoutMethodsForVin on Index<_VoutKey, VinRecord> {
+  VinRecord? getOne(
     String voutTransactionHash,
     int voutPosition,
   ) =>
-      getByKeyStr(
-              VoutDeviceRecord.generateId(voutTransactionHash, voutPosition))
+      getByKeyStr(VoutRecord.generateId(voutTransactionHash, voutPosition))
           .firstOrNull;
 }
 
 /// byCoinbase
 
-class _CoinbaseKey extends Key<VinDeviceRecord> {
+class _CoinbaseKey extends Key<VinRecord> {
   @override
-  String getKey(VinDeviceRecord vin) => vin.voutId;
+  String getKey(VinRecord vin) => vin.voutId;
 }
 
-extension ByCoinbaseMethodsForVin on Index<_CoinbaseKey, VinDeviceRecord> {
-  Iterable<VinDeviceRecord> getAll() => getByKeyStr('null:null');
+extension ByCoinbaseMethodsForVin on Index<_CoinbaseKey, VinRecord> {
+  Iterable<VinRecord> getAll() => getByKeyStr('null:null');
 }
 
 /// txHash
 
-class _TxHashKey extends Key<VinDeviceRecord> {
+class _TxHashKey extends Key<VinRecord> {
   @override
-  String getKey(VinDeviceRecord vin) => vin.transactionHash;
+  String getKey(VinRecord vin) => vin.transactionHash;
 }
 
-extension ByTxHashMethodsForVin on IndexMultiple<_TxHashKey, VinDeviceRecord> {
-  List<VinDeviceRecord> getAll(String transactionHash) =>
+extension ByTxHashMethodsForVin on IndexMultiple<_TxHashKey, VinRecord> {
+  List<VinRecord> getAll(String transactionHash) =>
       getByKeyStr(transactionHash);
 }

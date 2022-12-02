@@ -1,4 +1,4 @@
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
+import 'package:wallet_utils/wallet_utils.dart' show Derivation;
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain_model/records/records.dart';
 import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
@@ -24,8 +24,8 @@ extension DomainWalletHasManyDomainTransactions on DomainWallet {
 }
 
 extension DomainWalletCorrespondsToADataModelWallet on DomainWallet {
-  WalletDeviceRecord get datamodelWalletExternal => data.wallets.byId
+  WalletRecord get datamodelWalletExternal => data.wallets.byId
       .getOne(pub, derivation ?? Derivation.getPath(external: true))!;
-  WalletDeviceRecord get datamodelWalletInternal => data.wallets.byId
+  WalletRecord get datamodelWalletInternal => data.wallets.byId
       .getOne(pub, derivation ?? Derivation.getPath(external: false))!;
 }

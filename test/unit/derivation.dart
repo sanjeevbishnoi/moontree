@@ -4,7 +4,7 @@
 /// wallet
 
 import 'package:test/test.dart';
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' show HDWallet, Derive;
+import 'package:wallet_utils/wallet_utils.dart' show HDWallet, Derive;
 import 'package:moontree/foundation/utils/derivation.dart';
 
 void main() {

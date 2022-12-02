@@ -25,7 +25,7 @@ void main() {
     test('data_model wallet to domain_wallet without given derivation',
         () async {
       useFixture();
-      final walletCustom = WalletDeviceRecord(
+      final walletCustom = WalletRecord(
         pubkey: wallet.pubkey,
         derivation: "m/44'/0",
         name: wallet.name,

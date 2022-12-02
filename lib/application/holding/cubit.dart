@@ -5,7 +5,7 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:utils/extensions/string.dart';
+import 'package:moontree_utils/extensions/string.dart';
 import 'package:moontree/domain/holding/entity.dart';
 import 'package:moontree/domain/holding/failure.dart';
 import 'package:moontree/domain/holding/irepository.dart';

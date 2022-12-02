@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:utils/mixins/string.dart';
+import 'package:moontree_utils/mixins/string.dart';
 import 'package:moontree/foundation/utils/structs.dart';
 import 'package:moontree/foundation/data_model/joins/joins.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
@@ -44,7 +44,7 @@ class DomainUnspent with EquatableMixin, ToStringMixin {
           String pub, String symbol, Protocols protocol) =>
       '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub)}';
 
-  static List<DomainUnspent> from(VoutDeviceRecord vout, Protocols protocol) =>
+  static List<DomainUnspent> from(VoutRecord vout, Protocols protocol) =>
       vout.unspent && vout.vin == null // verify
           ? [
               for (final wallet

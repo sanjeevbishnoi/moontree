@@ -1,13 +1,13 @@
 /// an attempt at a interim transaction object.
 import 'package:equatable/equatable.dart';
 import 'package:moontree/foundation/data_model/joins/joins.dart';
-import 'package:utils/extensions/extensions.dart';
-import 'package:utils/mixins/string.dart';
+import 'package:moontree_utils/extensions/extensions.dart';
+import 'package:moontree_utils/mixins/string.dart';
 import 'package:moontree/foundation/utils/structs.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain_model/records/asset.dart';
 import 'package:moontree/foundation/domain_model/records/wallet.dart';
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' as networks;
+import 'package:wallet_utils/wallet_utils.dart' as networks;
 
 class DomainTransaction with EquatableMixin, ToStringMixin {
   // connect to a wallet or address?
@@ -31,9 +31,9 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
 
   int? _sats;
   TxTypes? _type;
-  late Iterable<VinDeviceRecord> _vins;
-  late Iterable<VoutDeviceRecord> _vouts;
-  late WalletDeviceRecord _wallet;
+  late Iterable<VinRecord> _vins;
+  late Iterable<VoutRecord> _vouts;
+  late WalletRecord _wallet;
 
   String get id => generateId(hash, symbol, protocol, pub);
   static String generateId(
@@ -52,7 +52,7 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
   so it doesn't connect to multiple vouts unless they are all the same asset.
   */
   static List<DomainTransaction> from(
-    TransactionDeviceRecord transaction,
+    TransactionRecord transaction,
     Protocols protocol,
   ) {
     final wallets = [
@@ -107,9 +107,9 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
     return retObjects;
   }
 
-  setWallet(WalletDeviceRecord wallet) => _wallet = wallet;
-  setVins(Iterable<VinDeviceRecord> vins) => _vins = vins;
-  setVouts(Iterable<VoutDeviceRecord> vouts) => _vouts = vouts;
+  setWallet(WalletRecord wallet) => _wallet = wallet;
+  setVins(Iterable<VinRecord> vins) => _vins = vins;
+  setVouts(Iterable<VoutRecord> vouts) => _vouts = vouts;
 
   @override
   List<Object?> get props => [

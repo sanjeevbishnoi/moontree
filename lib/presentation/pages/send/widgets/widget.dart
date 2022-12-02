@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:utils/utils.dart' show range;
+import 'package:moontree_utils/moontree_utils.dart' show range;
 import 'package:moontree/application/send/cubit.dart';
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/holding/values.dart';

@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:utils/extensions/uint8list.dart';
+import 'package:moontree_utils/extensions/uint8list.dart';
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/send/entity.dart';
 import 'package:moontree/domain/send/values.dart';
@@ -9,7 +9,7 @@ import 'package:moontree/domain/unsignedTransaction/values.dart';
 import 'package:moontree/domain/unsignedTransaction/entity.dart';
 import 'package:moontree/domain/unsignedTransaction/failure.dart';
 import 'package:moontree/domain/unsignedTransaction/util.dart' as util;
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' as ravencoin;
+import 'package:wallet_utils/wallet_utils.dart' as ravencoin;
 
 @Environment('dev')
 @Injectable()
@@ -77,8 +77,8 @@ class UnsignedTransactionService {
     ravencoin.Transaction tx = txb.buildSpoofedSigs();
     int feeAsSats = tx.fee(
         goal: send.feeSelection == FeeSelection.fast
-            ? ravencoin.TxGoals.fast
-            : ravencoin.TxGoals.standard);
+            ? ravencoin.FeeRates.fast
+            : ravencoin.FeeRates.standard);
 
     return UnsignedTransaction(
         fee: Amount.fromSats(feeAsSats),

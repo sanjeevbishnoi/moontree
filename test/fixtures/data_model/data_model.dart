@@ -5,17 +5,17 @@ import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 /// can be called from or moved to anywhere - like spash screen:
 class DataModel {
   static Future<void> init({
-    Map<String, AddressBalanceDeviceRecord>? addressBalances,
-    Map<String, AddressDeviceRecord>? addresses,
-    Map<String, AssetDeviceRecord>? assets,
-    Map<String, ComboDeviceRecord>? combo,
-    Map<String, GenericDeviceRecord>? generic,
-    Map<String, TransactionDeviceRecord>? transactions,
-    Map<String, VinDeviceRecord>? vins,
-    Map<String, VoutDeviceRecord>? vouts,
-    Map<String, WalletAddressDeviceRecord>? walletsAddresses,
-    Map<String, WalletBalanceDeviceRecord>? walletBalances,
-    Map<String, WalletDeviceRecord>? wallets,
+    Map<String, AddressBalanceRecord>? addressBalances,
+    Map<String, AddressRecord>? addresses,
+    Map<String, AssetRecord>? assets,
+    Map<String, ComboRecord>? combo,
+    Map<String, GenericRecord>? generic,
+    Map<String, TransactionRecord>? transactions,
+    Map<String, VinRecord>? vins,
+    Map<String, VoutRecord>? vouts,
+    Map<String, WalletAddressRecord>? walletsAddresses,
+    Map<String, WalletBalanceRecord>? walletBalances,
+    Map<String, WalletRecord>? wallets,
   }) async {
     data.addressBalances.setSource(
       MapSource(addressBalances ?? data.AddressBalanceProclaim.defaults),

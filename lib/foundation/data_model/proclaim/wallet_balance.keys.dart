@@ -2,43 +2,41 @@ part of 'wallet_balance.dart';
 
 /// byWalletId
 
-class _WalletKey extends Key<WalletBalanceDeviceRecord> {
+class _WalletKey extends Key<WalletBalanceRecord> {
   @override
-  String getKey(WalletBalanceDeviceRecord balance) => balance.walletId;
+  String getKey(WalletBalanceRecord balance) => balance.walletId;
 }
 
 extension ByWalletKeyMethodsForWalletBalance
-    on IndexMultiple<_WalletKey, WalletBalanceDeviceRecord> {
-  List<WalletBalanceDeviceRecord> getAll(String pubkey, String? derviation) =>
-      getByKeyStr(
-          WalletBalanceDeviceRecord.generateWalletId(pubkey, derviation));
+    on IndexMultiple<_WalletKey, WalletBalanceRecord> {
+  List<WalletBalanceRecord> getAll(String pubkey, String? derviation) =>
+      getByKeyStr(WalletBalanceRecord.generateWalletId(pubkey, derviation));
 }
 
 /// byId - primary key
 
-class _IdKey extends Key<WalletBalanceDeviceRecord> {
+class _IdKey extends Key<WalletBalanceRecord> {
   @override
-  String getKey(WalletBalanceDeviceRecord balance) => balance.id;
+  String getKey(WalletBalanceRecord balance) => balance.id;
 }
 
-extension ByIdMethodsForWalletBalance
-    on Index<_IdKey, WalletBalanceDeviceRecord> {
-  WalletBalanceDeviceRecord? getOne(
+extension ByIdMethodsForWalletBalance on Index<_IdKey, WalletBalanceRecord> {
+  WalletBalanceRecord? getOne(
           String pubkey, String? derviation, String symbol, int? height) =>
-      getByKeyStr(WalletBalanceDeviceRecord.generateId(
+      getByKeyStr(WalletBalanceRecord.generateId(
               pubkey, derviation, symbol, height))
           .firstOrNull;
 }
 
 /// bySymbol
 
-class _SymbolKey extends Key<WalletBalanceDeviceRecord> {
+class _SymbolKey extends Key<WalletBalanceRecord> {
   @override
-  String getKey(WalletBalanceDeviceRecord balance) => balance.symbol;
+  String getKey(WalletBalanceRecord balance) => balance.symbol;
 }
 
 extension BySymbolKeyMethodsForWalletBalance
-    on Index<_SymbolKey, WalletBalanceDeviceRecord> {
-  List<WalletBalanceDeviceRecord> getAll(String? symbol) =>
+    on Index<_SymbolKey, WalletBalanceRecord> {
+  List<WalletBalanceRecord> getAll(String? symbol) =>
       getByKeyStr(symbol ?? 'RVN');
 }

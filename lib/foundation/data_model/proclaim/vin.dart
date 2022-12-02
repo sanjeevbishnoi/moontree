@@ -4,11 +4,11 @@ import 'package:moontree/foundation/data_model/records/records.dart';
 
 part 'vin.keys.dart';
 
-class VinProclaim extends Proclaim<_IdKey, VinDeviceRecord> {
-  late IndexMultiple<_IdKey, VinDeviceRecord> byId;
-  late IndexMultiple<_VoutKey, VinDeviceRecord> byVout;
-  late IndexMultiple<_TxHashKey, VinDeviceRecord> byTransactionHash;
-  late IndexMultiple<_CoinbaseKey, VinDeviceRecord> byCoinbase;
+class VinProclaim extends Proclaim<_IdKey, VinRecord> {
+  late IndexMultiple<_IdKey, VinRecord> byId;
+  late IndexMultiple<_VoutKey, VinRecord> byVout;
+  late IndexMultiple<_TxHashKey, VinRecord> byTransactionHash;
+  late IndexMultiple<_CoinbaseKey, VinRecord> byCoinbase;
 
   VinProclaim() : super(_IdKey()) {
     byId = addIndexMultiple('id', _IdKey());
@@ -17,7 +17,7 @@ class VinProclaim extends Proclaim<_IdKey, VinDeviceRecord> {
     byCoinbase = addIndexMultiple('coinbase', _CoinbaseKey());
   }
 
-  static Map<String, VinDeviceRecord> get defaults => {};
+  static Map<String, VinRecord> get defaults => {};
 
   Set<String> get ids => records.map((e) => e.id).toSet();
 }

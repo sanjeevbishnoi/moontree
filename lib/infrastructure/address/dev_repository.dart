@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:utils/future.dart';
+import 'package:moontree_utils/moontree_utils.dart' show simulateWait;
 import 'package:moontree/domain/address/values.dart';
 import 'package:moontree/domain/address/entity.dart';
 import 'package:moontree/domain/address/failure.dart';

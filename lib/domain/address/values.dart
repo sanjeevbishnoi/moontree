@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
+import 'package:wallet_utils/wallet_utils.dart' show Derivation;
 import 'package:moontree/domain/core/value_object.dart';
 import 'package:moontree/domain/core/value_failures.dart';
 import 'package:moontree/domain/address/validators.dart';

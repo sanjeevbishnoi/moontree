@@ -1,16 +1,16 @@
 import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 import 'package:moontree/foundation/data_model/records/records.dart';
 
-extension AssetRHasManyVoutDeviceRecords on AssetDeviceRecord {
-  List<VoutDeviceRecord> get vouts => data.vouts.bySymbol.getAll(symbol);
+extension AssetRHasManyVoutRecords on AssetRecord {
+  List<VoutRecord> get vouts => data.vouts.bySymbol.getAll(symbol);
 }
 
-extension AssetRHasManyAddressBalanceDeviceRecords on AssetDeviceRecord {
-  List<AddressBalanceDeviceRecord> get addressBalances =>
+extension AssetRHasManyAddressBalanceRecords on AssetRecord {
+  List<AddressBalanceRecord> get addressBalances =>
       data.addressBalances.bySymbol.getAll(symbol);
 }
 
-extension AssetRHasManyWalletBalanceDeviceRecords on AssetDeviceRecord {
-  List<WalletBalanceDeviceRecord> get walletBalances =>
+extension AssetRHasManyWalletBalanceRecords on AssetRecord {
+  List<WalletBalanceRecord> get walletBalances =>
       data.walletsBalances.bySymbol.getAll(symbol);
 }

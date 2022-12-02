@@ -5,7 +5,7 @@ import 'dart:async';
 
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:moontree/foundation/data_model/hive_initializer.dart';
-import 'package:utils/lock.dart';
+import 'package:moontree_utils/moontree_utils.dart' show ReaderWriterLock;
 
 enum HiveLoaded { True, False, Partial }
 

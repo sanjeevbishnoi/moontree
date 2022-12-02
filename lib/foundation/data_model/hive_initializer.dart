@@ -62,30 +62,30 @@ class HiveInitializer {
 
   /// fast so we just do them all at once
   void registerAdapters() {
-    Hive.registerAdapter(AddressBalanceDeviceRecordAdapter());
-    Hive.registerAdapter(AddressDeviceRecordAdapter());
-    Hive.registerAdapter(AssetDeviceRecordAdapter());
-    Hive.registerAdapter(TransactionDeviceRecordAdapter());
-    Hive.registerAdapter(VinDeviceRecordAdapter());
-    Hive.registerAdapter(VoutDeviceRecordAdapter());
-    Hive.registerAdapter(WalletAddressDeviceRecordAdapter());
-    Hive.registerAdapter(WalletBalanceDeviceRecordAdapter());
-    Hive.registerAdapter(WalletDeviceRecordAdapter());
+    Hive.registerAdapter(AddressBalanceRecordAdapter());
+    Hive.registerAdapter(AddressRecordAdapter());
+    Hive.registerAdapter(AssetRecordAdapter());
+    Hive.registerAdapter(TransactionRecordAdapter());
+    Hive.registerAdapter(VinRecordAdapter());
+    Hive.registerAdapter(VoutRecordAdapter());
+    Hive.registerAdapter(WalletAddressRecordAdapter());
+    Hive.registerAdapter(WalletBalanceRecordAdapter());
+    Hive.registerAdapter(WalletRecordAdapter());
   }
 
   Future openBoxes(HiveLoadingStep step) async {
     if ([HiveLoadingStep.all, HiveLoadingStep.step1].contains(step)) {
-      await Hive.openBox<AssetDeviceRecord>('assets');
-      await Hive.openBox<WalletBalanceDeviceRecord>('walletBalances');
-      await Hive.openBox<WalletDeviceRecord>('wallets');
+      await Hive.openBox<AssetRecord>('assets');
+      await Hive.openBox<WalletBalanceRecord>('walletBalances');
+      await Hive.openBox<WalletRecord>('wallets');
     }
     if ([HiveLoadingStep.all, HiveLoadingStep.step2].contains(step)) {
-      await Hive.openBox<AddressBalanceDeviceRecord>('addressBalances');
-      await Hive.openBox<AddressDeviceRecord>('addresses');
-      await Hive.openBox<WalletAddressDeviceRecord>('walletAddresses');
-      await Hive.openBox<TransactionDeviceRecord>('transactions');
-      await Hive.openBox<VinDeviceRecord>('vins');
-      await Hive.openBox<VoutDeviceRecord>('vouts');
+      await Hive.openBox<AddressBalanceRecord>('addressBalances');
+      await Hive.openBox<AddressRecord>('addresses');
+      await Hive.openBox<WalletAddressRecord>('walletAddresses');
+      await Hive.openBox<TransactionRecord>('transactions');
+      await Hive.openBox<VinRecord>('vins');
+      await Hive.openBox<VoutRecord>('vouts');
     }
   }
 

@@ -2,41 +2,40 @@ import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 
 class EmptySet {
-  Map<String, AddressBalanceDeviceRecord> get addressBalances => {};
-  Map<String, AddressDeviceRecord> get addresses => {};
-  Map<String, AssetDeviceRecord> get assets => {};
-  Map<String, ComboDeviceRecord> get combo => {};
-  Map<String, GenericDeviceRecord> get generic => {};
-  Map<String, TransactionDeviceRecord> get transactions => {};
-  Map<String, VinDeviceRecord> get vins => {};
-  Map<String, VoutDeviceRecord> get vouts => {};
-  Map<String, WalletAddressDeviceRecord> get walletsAddresses => {};
-  Map<String, WalletBalanceDeviceRecord> get walletBalances => {};
-  Map<String, WalletDeviceRecord> get wallets => {};
+  Map<String, AddressBalanceRecord> get addressBalances => {};
+  Map<String, AddressRecord> get addresses => {};
+  Map<String, AssetRecord> get assets => {};
+  Map<String, ComboRecord> get combo => {};
+  Map<String, GenericRecord> get generic => {};
+  Map<String, TransactionRecord> get transactions => {};
+  Map<String, VinRecord> get vins => {};
+  Map<String, VoutRecord> get vouts => {};
+  Map<String, WalletAddressRecord> get walletsAddresses => {};
+  Map<String, WalletBalanceRecord> get walletBalances => {};
+  Map<String, WalletRecord> get wallets => {};
 }
 
 class DefaultSet extends EmptySet {
   @override
-  Map<String, AddressBalanceDeviceRecord> get addressBalances =>
+  Map<String, AddressBalanceRecord> get addressBalances =>
       data.AddressBalanceProclaim.defaults;
   @override
-  Map<String, AddressDeviceRecord> get addresses =>
-      data.AddressProclaim.defaults;
+  Map<String, AddressRecord> get addresses => data.AddressProclaim.defaults;
   @override
-  Map<String, AssetDeviceRecord> get assets => data.AssetProclaim.defaults;
+  Map<String, AssetRecord> get assets => data.AssetProclaim.defaults;
   @override
-  Map<String, TransactionDeviceRecord> get transactions =>
+  Map<String, TransactionRecord> get transactions =>
       data.TransactionProclaim.defaults;
   @override
-  Map<String, VinDeviceRecord> get vins => data.VinProclaim.defaults;
+  Map<String, VinRecord> get vins => data.VinProclaim.defaults;
   @override
-  Map<String, VoutDeviceRecord> get vouts => data.VoutProclaim.defaults;
+  Map<String, VoutRecord> get vouts => data.VoutProclaim.defaults;
   @override
-  Map<String, WalletAddressDeviceRecord> get walletsAddresses =>
+  Map<String, WalletAddressRecord> get walletsAddresses =>
       data.WalletAddressProclaim.defaults;
   @override
-  Map<String, WalletBalanceDeviceRecord> get walletBalances =>
+  Map<String, WalletBalanceRecord> get walletBalances =>
       data.WalletBalanceProclaim.defaults;
   @override
-  Map<String, WalletDeviceRecord> get wallets => data.WalletProclaim.defaults;
+  Map<String, WalletRecord> get wallets => data.WalletProclaim.defaults;
 }

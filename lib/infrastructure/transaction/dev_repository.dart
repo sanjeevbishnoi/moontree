@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:utils/future.dart';
+import 'package:moontree_utils/moontree_utils.dart' show simulateWait;
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/transaction/failure.dart';
 import 'package:moontree/domain/transaction/irepository.dart';

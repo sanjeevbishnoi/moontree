@@ -31,7 +31,7 @@ void main() {
     });
     test('data_model asset to domain_model asset', () async {
       useFixture();
-      final asset = AssetDeviceRecord(
+      final asset = AssetRecord(
         symbol: 'MOONTREE',
         reissuable: false,
         supply: 1000,

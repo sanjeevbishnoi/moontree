@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
+import 'package:moontree_utils/moontree_utils.dart' show simulateWait;
 import 'package:moontree/foundation/domain_model/records/transaction.dart';
-import 'package:utils/future.dart';
 import 'package:moontree/domain/core/common/values.dart';
 import 'package:moontree/domain/holding/values.dart';
 import 'package:moontree/domain/transaction/values.dart';

@@ -4,9 +4,9 @@ import 'package:proclaim/proclaim.dart';
 
 part 'address.keys.dart';
 
-class AddressProclaim extends Proclaim<_AddressKey, AddressDeviceRecord> {
-  late IndexMultiple<_AddressKey, AddressDeviceRecord> byId;
-  late IndexMultiple<_AddressKey, AddressDeviceRecord> byAddress;
+class AddressProclaim extends Proclaim<_AddressKey, AddressRecord> {
+  late IndexMultiple<_AddressKey, AddressRecord> byId;
+  late IndexMultiple<_AddressKey, AddressRecord> byAddress;
   //used
   //index
 
@@ -15,7 +15,7 @@ class AddressProclaim extends Proclaim<_AddressKey, AddressDeviceRecord> {
     byId = byAddress;
   }
 
-  static Map<String, AddressDeviceRecord> get defaults => {};
+  static Map<String, AddressRecord> get defaults => {};
 
   Set<String> get ids => records.map((e) => e.id).toSet();
 }

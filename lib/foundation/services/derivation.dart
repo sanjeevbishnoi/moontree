@@ -19,7 +19,7 @@
 ///   - the first one we subscribe to is holdings.
 ///   - then transactions
 ///   - ...but this is out side the scope of the derviation process now.
-import 'package:ravencoin_wallet/ravencoin_wallet.dart' show Derivation;
+import 'package:wallet_utils/wallet_utils.dart' show Derivation;
 import 'package:moontree/foundation/data_model/data_model.dart' as datamodel;
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/utils/derivation.dart';
@@ -55,20 +55,20 @@ class DerivationProcessor {
 
   /// triggered by a listener on data incoming from server.
   Future<void> saveAddress(
-    WalletDeviceRecord serverWallet,
-    AddressDeviceRecord serverAddress,
+    WalletRecord serverWallet,
+    AddressRecord serverAddress,
   ) async =>
       await datamodel.addresses.save(makeAddress(serverWallet, serverAddress));
 
   /// triggered by a listener on data incoming from server.
-  AddressDeviceRecord makeAddress(
-    WalletDeviceRecord serverWallet,
-    AddressDeviceRecord serverAddress,
+  AddressRecord makeAddress(
+    WalletRecord serverWallet,
+    AddressRecord serverAddress,
   ) {
     final localAddress = datamodel.addresses.byId.getOne(serverAddress.address);
     if (localAddress != null) {
       // update the address in the cache and database
-      return AddressDeviceRecord(
+      return AddressRecord(
         address: localAddress.address,
         seed: localAddress.seed,
         used: serverAddress.used,

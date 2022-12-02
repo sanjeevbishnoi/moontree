@@ -4,11 +4,10 @@ import 'package:moontree/foundation/data_model/records/records.dart';
 
 part 'address_balance.keys.dart';
 
-class AddressBalanceProclaim
-    extends Proclaim<_IdKey, AddressBalanceDeviceRecord> {
-  late IndexMultiple<_IdKey, AddressBalanceDeviceRecord> byId;
-  late IndexMultiple<_AddressKey, AddressBalanceDeviceRecord> byAddress;
-  late IndexMultiple<_SymbolKey, AddressBalanceDeviceRecord> bySymbol;
+class AddressBalanceProclaim extends Proclaim<_IdKey, AddressBalanceRecord> {
+  late IndexMultiple<_IdKey, AddressBalanceRecord> byId;
+  late IndexMultiple<_AddressKey, AddressBalanceRecord> byAddress;
+  late IndexMultiple<_SymbolKey, AddressBalanceRecord> bySymbol;
 
   AddressBalanceProclaim() : super(_IdKey()) {
     byId = addIndexMultiple('id', _IdKey());
@@ -16,11 +15,11 @@ class AddressBalanceProclaim
     bySymbol = addIndexMultiple('symbol', _SymbolKey());
   }
 
-  static Map<String, AddressBalanceDeviceRecord> get defaults => {};
+  static Map<String, AddressBalanceRecord> get defaults => {};
 
   Set<String> get ids => records.map((e) => e.id).toSet();
 
-  Iterable<AddressBalanceDeviceRecord> byAddressAndLessThanHeight(
+  Iterable<AddressBalanceRecord> byAddressAndLessThanHeight(
     String address,
     int height,
   ) =>
@@ -28,6 +27,6 @@ class AddressBalanceProclaim
           .getAll(address)
           .where((e) => e.height != null && e.height! < height);
 
-  Iterable<AddressBalanceDeviceRecord> byHeightGreaterThan(int height) =>
+  Iterable<AddressBalanceRecord> byHeightGreaterThan(int height) =>
       records.where((e) => e.height != null && e.height! > height);
 }

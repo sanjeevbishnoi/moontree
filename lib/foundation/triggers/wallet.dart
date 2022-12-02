@@ -1,5 +1,5 @@
 import 'package:proclaim/change.dart';
-import 'package:utils/trigger.dart';
+import 'package:moontree_utils/trigger.dart';
 import 'package:moontree/foundation/domain_model/records/wallet.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
@@ -10,7 +10,7 @@ class ToWalletDomain extends Trigger {
   void init() => when(
       thereIsA: data.wallets.changes,
       andIf: null,
-      doThis: (Change<WalletDeviceRecord> change) async => change.when(
+      doThis: (Change<WalletRecord> change) async => change.when(
             loaded: (loaded) => load(loaded.record),
             added: (added) => load(added.record),
             updated: (updated) => load(updated.record),
@@ -18,12 +18,12 @@ class ToWalletDomain extends Trigger {
           ));
 
   /// puts the record into memory
-  static Future<void> load(WalletDeviceRecord wallet) async =>
+  static Future<void> load(WalletRecord wallet) async =>
       await domain.wallets.save(DomainWallet.from(wallet));
 
   /// does not happen on wallets: just an example:
   /// only happens on reorgs
-  //Future<void> remove(WalletDeviceRecord wallet) async =>
+  //Future<void> remove(WalletRecord wallet) async =>
   //    await domain.wallets.remove(DomainWallet.from(
   //      wallet,
   //      // ??

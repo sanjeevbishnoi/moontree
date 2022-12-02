@@ -16,13 +16,13 @@ void main() {
     setUp(() {});
     test('data_model balance to domain_model holding', () async {
       useFixture();
-      final asset = AssetDeviceRecord(
+      final asset = AssetRecord(
         symbol: 'MOONTREE',
         reissuable: false,
         supply: 1000,
         divisibility: 4,
       );
-      final balance = WalletBalanceDeviceRecord(
+      final balance = WalletBalanceRecord(
         pubkey: WalletWithAddress.wallet.pubkey,
         derivation: WalletWithAddress.wallet.derivation,
         symbol: asset.symbol,

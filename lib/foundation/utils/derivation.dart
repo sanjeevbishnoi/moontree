@@ -1,4 +1,4 @@
-/// raw functionality of creating WalletDeviceRecord and AddressDeviceRecord
+/// raw functionality of creating WalletRecord and AddressRecord
 ///
 /// We must perform address derviations on the device to verify the addresses,
 /// such as the change and receive addresses the server gives us. This is a
@@ -10,7 +10,7 @@
 
 import 'dart:typed_data';
 import 'package:bip39/bip39.dart' as bip39;
-import 'package:ravencoin_wallet/ravencoin_wallet.dart'
+import 'package:wallet_utils/wallet_utils.dart'
     show HDWallet, Derive, Derivation;
 import 'package:moontree/foundation/data_model/records/records.dart';
 
@@ -30,14 +30,14 @@ Uint8List generateSeedFromEntropy(String entropy) =>
 HDWallet generateHDWallet([String? mnemonic]) =>
     HDWallet.fromSeed(generateSeed(mnemonic));
 
-WalletDeviceRecord generateWalletRecord({
+WalletRecord generateWalletRecord({
   required String name,
   String? derivation,
   String? mnemonic,
 }) {
   mnemonic ??= generateMnemoic();
   final hd = HDWallet.fromSeed(generateSeed(mnemonic));
-  return WalletDeviceRecord(
+  return WalletRecord(
     pubkey: hd.pubKey,
     derivation: derivation ?? Derivation.getPath(),
     name: name,
@@ -46,8 +46,8 @@ WalletDeviceRecord generateWalletRecord({
   );
 }
 
-AddressDeviceRecord generateAddressRecord({
-  required WalletDeviceRecord wallet,
+AddressRecord generateAddressRecord({
+  required WalletRecord wallet,
   required int index,
   required bool used,
 }) {
@@ -59,7 +59,7 @@ AddressDeviceRecord generateAddressRecord({
           path: wallet.derivation,
           index: index,
         );
-  return AddressDeviceRecord(
+  return AddressRecord(
     address: addressHDWallet.address!,
     seed: addressHDWallet.seed ?? seed,
     used: used,

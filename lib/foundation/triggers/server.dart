@@ -6,12 +6,12 @@
 
 import 'package:moontree/foundation/foundation.dart';
 import 'package:moontree_client/moontree_client.dart';
-import 'package:utils/trigger.dart';
+import 'package:moontree_utils/moontree_utils.dart' show Trigger;
 import 'package:moontree/foundation/data_model/proclaim/proclaim.dart' as data;
 
 /// maybe this should be used to save all datamodel objects to cache? idk.
 class FromServerToDatamodel extends Trigger {
-  /// From server DeviceRecord to client DeviceRecord:
+  /// From server Record to client Record:
   void init() {
     /// handles all messages from the server used by the serverRecord since this
     /// endpoint's send message function is what is attacthed to the
@@ -27,35 +27,35 @@ class FromServerToDatamodel extends Trigger {
   }
 
   Future<void> _handleItem(SerializableEntity item) async {
-    if (item is AddressBalanceDeviceRecord) {
+    if (item is AddressBalanceRecord) {
       await data.addressBalances.save(item);
-    } else if (item is AddressDeviceRecord) {
+    } else if (item is AddressRecord) {
       await data.addresses.save(item);
-    } else if (item is AssetDeviceRecord) {
+    } else if (item is AssetRecord) {
       await data.assets.save(item);
-    } else if (item is TransactionDeviceRecord) {
+    } else if (item is TransactionRecord) {
       await data.transactions.save(item);
-    } else if (item is VinDeviceRecord) {
+    } else if (item is VinRecord) {
       await data.vins.save(item);
-    } else if (item is VoutDeviceRecord) {
+    } else if (item is VoutRecord) {
       await data.vouts.save(item);
-    } else if (item is WalletAddressDeviceRecord) {
+    } else if (item is WalletAddressRecord) {
       await data.walletsAddresses.save(item);
-    } else if (item is WalletBalanceDeviceRecord) {
+    } else if (item is WalletBalanceRecord) {
       await data.walletsBalances.save(item);
-    } else if (item is WalletDeviceRecord) {
+    } else if (item is WalletRecord) {
       print('WARNING: wallet record recieved from server. '
           'We make our own wallets, why would we get one from the server?');
       //await data.wallets.save(item);
-    } else if (item is GenericDeviceRecord) {
+    } else if (item is GenericRecord) {
       await _handleMessage(item);
-    } else if (item is ComboDeviceRecord) {
+    } else if (item is ComboRecord) {
       await _handleCombo(item);
     } else {}
   }
 
   // handles reorgs only at this point.
-  Future<void> _handleMessage(GenericDeviceRecord item) async => item.message ==
+  Future<void> _handleMessage(GenericRecord item) async => item.message ==
           'reorg'
 
       /// delete all objects from data with height > item.value
@@ -66,11 +66,11 @@ class FromServerToDatamodel extends Trigger {
 
   /// handles addresses from derviation process for keypair and hd wallets
   /// as well as runtime derivation process for hd wallets
-  Future<void> _handleCombo(ComboDeviceRecord item) async =>
-      item.item1 is WalletDeviceRecord && item.item2 is AddressDeviceRecord
+  Future<void> _handleCombo(ComboRecord item) async =>
+      item.item1 is WalletRecord && item.item2 is AddressRecord
           ? DerivationProcessor().saveAddress(
-              item.item1 as WalletDeviceRecord,
-              item.item2 as AddressDeviceRecord,
+              item.item1 as WalletRecord,
+              item.item2 as AddressRecord,
             )
           : null // place to allow for other combinations
       ;

@@ -4,10 +4,10 @@ import 'package:moontree/foundation/data_model/records/records.dart';
 
 part 'wallet.keys.dart';
 
-class WalletProclaim extends Proclaim<_PubKey, WalletDeviceRecord> {
-  late IndexMultiple<_IdKey, WalletDeviceRecord> byId;
-  late IndexMultiple<_PubKey, WalletDeviceRecord> byPubKey;
-  late IndexMultiple<_DerivationKey, WalletDeviceRecord> byDerivation;
+class WalletProclaim extends Proclaim<_PubKey, WalletRecord> {
+  late IndexMultiple<_IdKey, WalletRecord> byId;
+  late IndexMultiple<_PubKey, WalletRecord> byPubKey;
+  late IndexMultiple<_DerivationKey, WalletRecord> byDerivation;
 
   WalletProclaim() : super(_PubKey()) {
     byId = addIndexMultiple('id', _IdKey());
@@ -15,7 +15,7 @@ class WalletProclaim extends Proclaim<_PubKey, WalletDeviceRecord> {
     byDerivation = addIndexMultiple('derivationid', _DerivationKey());
   }
 
-  static Map<String, WalletDeviceRecord> get defaults => {};
+  static Map<String, WalletRecord> get defaults => {};
 
   Set<String> get ids => records.map((w) => w.id).toSet();
 }

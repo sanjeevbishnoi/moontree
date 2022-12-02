@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:utils/extensions/extensions.dart';
-import 'package:utils/mixins/string.dart';
+import 'package:moontree_utils/extensions/extensions.dart';
+import 'package:moontree_utils/mixins/string.dart';
 import 'package:moontree/foundation/utils/structs.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain_model/records/asset.dart';
@@ -37,7 +37,7 @@ class DomainHolding with EquatableMixin, ToStringMixin {
       '${DomainAsset.generateId(symbol, protocol)}:${DomainWallet.generateId(pub)}';
 
   factory DomainHolding.from(
-    WalletBalanceDeviceRecord balance,
+    WalletBalanceRecord balance,
     Protocols protocol,
   ) =>
       DomainHolding(
