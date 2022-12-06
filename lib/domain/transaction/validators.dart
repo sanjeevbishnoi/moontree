@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:wallet_utils/wallet_utils.dart' show Validation;
+import 'package:wallet_utils/wallet_utils.dart' as validation;
 import 'package:moontree/domain/core/value_failures.dart';
 
 Either<ValueFailure<String>, String> validateTxId(String txId) {
-  if (!Validation.isTxIdRVN(txId)) {
+  if (!validation.isTxIdRVN(txId)) {
     return left(ValueFailure.invalidTxId(txId));
   } else {
     return right(txId);

@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:wallet_utils/wallet_utils.dart' show Validation;
+import 'package:wallet_utils/wallet_utils.dart' as validation;
 import 'package:moontree/domain/core/value_failures.dart';
 
 /// the problem with validating decimals on Amounts, so we should not.
@@ -27,7 +27,7 @@ Either<ValueFailure<String>, String> validateNote(String note) {
 }
 
 Either<ValueFailure<String>, String> validateMemo(String memo) {
-  if (memo.isNotEmpty && !Validation.isMemo(memo)) {
+  if (memo.isNotEmpty && !validation.isMemo(memo)) {
     return left(ValueFailure.invalidMemo(memo));
   } else {
     return right(memo);
@@ -35,7 +35,7 @@ Either<ValueFailure<String>, String> validateMemo(String memo) {
 }
 
 Either<ValueFailure<String>, String> validateTxId(String txId) {
-  if (!Validation.isTxIdRVN(txId)) {
+  if (!validation.isTxIdRVN(txId)) {
     return left(ValueFailure.invalidTxId(txId));
   } else {
     return right(txId);
@@ -55,7 +55,7 @@ Either<ValueFailure<String>, String> validatePubKeyAddress(
   String key, {
   bool mainnet = true,
 }) {
-  if (!Validation.isPublicKeyAddress(key, mainnet: mainnet)) {
+  if (!validation.isPublicKeyAddress(key, mainnet: mainnet)) {
     return left(ValueFailure.invalidPubKeyAddress(key));
   } else {
     return right(key);

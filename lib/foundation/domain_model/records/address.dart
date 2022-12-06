@@ -35,7 +35,7 @@ class DomainAddress with EquatableMixin, ToStringMixin {
       );
 
   @override
-  List<Object?> get props => [
+  List<Object?> get props => <Object?>[
         address,
         walletPub,
         index,

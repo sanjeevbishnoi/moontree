@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:wallet_utils/wallet_utils.dart' show Validation;
+import 'package:wallet_utils/wallet_utils.dart' as validation;
 import 'package:moontree/domain/core/value_failures.dart';
 
 Either<ValueFailure<String>, String> validateFullName(String name) {
@@ -11,8 +11,8 @@ Either<ValueFailure<String>, String> validateFullName(String name) {
 }
 
 bool boolValidateFullName(String name) {
-  if (!Validation.isAssetPath(name.toUpperCase()) &&
-      !Validation.isRavencoinPath(name.toUpperCase())) {
+  if (!validation.isAssetPath(name.toUpperCase()) &&
+      !validation.isRavencoinPath(name.toUpperCase())) {
     return false;
   } else {
     return true;

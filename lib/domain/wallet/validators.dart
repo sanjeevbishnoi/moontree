@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:wallet_utils/wallet_utils.dart' show Validation;
+import 'package:wallet_utils/wallet_utils.dart' as validation;
 import 'package:moontree/domain/core/value_failures.dart';
 
 Either<ValueFailure<String>, String> validateWalletName(String walletName) {
@@ -19,7 +19,7 @@ Either<ValueFailure<String>, String> validateHashedEntropy(String entropy) {
 }
 
 Either<ValueFailure<String>, String> validatePrivKey(String key) {
-  if (!Validation.isPrivateKey(key)) {
+  if (!validation.isPrivateKey(key)) {
     return left(ValueFailure.invalidPrivKey(key));
   } else {
     return right(key);
@@ -27,7 +27,7 @@ Either<ValueFailure<String>, String> validatePrivKey(String key) {
 }
 
 Either<ValueFailure<String>, String> validatePubKey(String key) {
-  if (!Validation.isPublicKey(key)) {
+  if (!validation.isPublicKey(key)) {
     return left(ValueFailure.invalidPubKey(key));
   } else {
     return right(key);
@@ -35,7 +35,7 @@ Either<ValueFailure<String>, String> validatePubKey(String key) {
 }
 
 Either<ValueFailure<String>, String> validatePubKeyAddress(String key) {
-  if (!Validation.isPublicKeyAddress(key)) {
+  if (!validation.isPublicKeyAddress(key)) {
     return left(ValueFailure.invalidPubKeyAddress(key));
   } else {
     return right(key);

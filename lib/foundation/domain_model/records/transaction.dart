@@ -112,7 +112,7 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
   setVouts(Iterable<VoutRecord> vouts) => _vouts = vouts;
 
   @override
-  List<Object?> get props => [
+  List<Object?> get props => <Object?>[
         hash,
         height,
         symbol,

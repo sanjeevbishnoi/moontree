@@ -48,7 +48,7 @@ class DomainHolding with EquatableMixin, ToStringMixin {
       );
 
   @override
-  List<Object?> get props => [
+  List<Object?> get props => <Object?>[
         symbol,
         protocol,
         sats,
