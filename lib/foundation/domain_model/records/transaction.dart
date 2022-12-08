@@ -1,7 +1,6 @@
 /// an attempt at a interim transaction object.
 import 'package:equatable/equatable.dart';
 import 'package:moontree/foundation/data_model/joins/joins.dart';
-import 'package:moontree_utils/extensions/extensions.dart';
 import 'package:moontree_utils/mixins/string.dart';
 import 'package:moontree/foundation/utils/structs.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
@@ -146,8 +145,8 @@ class DomainTransaction with EquatableMixin, ToStringMixin {
     return _sats!;
   }
 
-  double get amount => sats.toAmount();
-  double get feeAmount => fee.toAmount();
+  double get amount => sats.asCoin;
+  double get feeAmount => fee.asCoin;
 
   SentReceived get sentReceived =>
       sats > 0 ? SentReceived.received : SentReceived.sent;

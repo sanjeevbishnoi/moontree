@@ -1,10 +1,10 @@
 import 'package:equatable/equatable.dart';
-import 'package:moontree_utils/extensions/extensions.dart';
 import 'package:moontree_utils/mixins/string.dart';
 import 'package:moontree/foundation/utils/structs.dart';
 import 'package:moontree/foundation/data_model/records/records.dart';
 import 'package:moontree/foundation/domain_model/records/asset.dart';
 import 'package:moontree/foundation/domain_model/records/wallet.dart';
+import 'package:wallet_utils/wallet_utils.dart';
 
 class DomainHolding with EquatableMixin, ToStringMixin {
   // holdings point to an domain asset by symbol
@@ -66,5 +66,5 @@ class DomainHolding with EquatableMixin, ToStringMixin {
   @override
   bool? get stringify => true;
 
-  double get amount => sats.toAmount();
+  double get amount => sats.asCoin;
 }

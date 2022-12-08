@@ -65,7 +65,7 @@ class BackdropAppBarContents extends StatelessWidget
             height: 56,
             color: Theme.of(context).backgroundColor,
             fuzzyTop: false,
-            frontLayerBoxShadow: const [],
+            frontLayerBoxShadow: const <BoxShadow>[],
           ),
         testAppBar(appBar, test: false),
       ],

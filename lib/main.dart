@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 //import 'package:moontree_client/moontree_client.dart';
 import 'package:moontree/injection.dart';
 import 'package:moontree/foundation/foundation.dart'; // setsup hive sources
-import 'package:moontree/presentation/core/app.dart';
 
 //late SessionManager sessionManager;
 //late Client client_;

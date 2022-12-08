@@ -9,7 +9,7 @@ class AddressWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AddressCubit, AddressCubitState>(
       bloc: BlocProvider.of<AddressCubit>(context)..enter(),
-      builder: (context, state) {
+      builder: (BuildContext context, state) {
         final cubit = BlocProvider.of<AddressCubit>(context);
         if (state.isSubmitting) {
           return Container(

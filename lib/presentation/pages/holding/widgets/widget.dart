@@ -9,7 +9,7 @@ class TransactionsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HoldingCubit, HoldingCubitState>(
       bloc: BlocProvider.of<HoldingCubit>(context)..enter(),
-      builder: (context, state) {
+      builder: (BuildContext context, state) {
         final cubit = BlocProvider.of<HoldingCubit>(context);
         if (state.isSubmitting) {
           return Container(

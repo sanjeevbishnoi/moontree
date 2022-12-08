@@ -15,7 +15,7 @@ class SendWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<SendCubit, SendCubitState>(
       bloc: BlocProvider.of<SendCubit>(context)..enter(),
-      builder: (context, state) {
+      builder: (BuildContext context, state) {
         final cubit = BlocProvider.of<SendCubit>(context);
         if (state.isSubmitting) {
           return Container(

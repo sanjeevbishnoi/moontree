@@ -9,7 +9,7 @@ class BlockchainWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<BlockchainCubit, BlockchainCubitState>(
       bloc: BlocProvider.of<BlockchainCubit>(context)..enter(),
-      builder: (context, state) {
+      builder: (BuildContext context, state) {
         final cubit = BlocProvider.of<BlockchainCubit>(context);
         if (state.isSubmitting) {
           return Container(
