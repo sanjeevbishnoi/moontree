@@ -43,8 +43,9 @@ class DerivationPath extends ValueObject<String> {
   String get receiveNumber => _splitPath()[4];
   String get hdIndexNumber => _splitPath()[5];
 
-  bool get isReceive => receiveNumber == Derivation.receiveNumber();
-  bool get isMainnet => mainnetNumber == Derivation.mainnetNumber();
-  bool get isRavencoin => networkNumber == Derivation.ravencoinNumber;
+  bool get isReceive => receiveNumber == Derivation.receiveNumber().toString();
+  bool get isMainnet => mainnetNumber == Derivation.mainnetNumber().toString();
+  bool get isRavencoin =>
+      networkNumber == Derivation.ravencoinNumber.toString();
   int get index => int.parse(hdIndexNumber);
 }
